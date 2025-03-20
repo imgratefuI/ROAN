@@ -1,0 +1,1670 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog produktů Roan</title>
+    <link rel="icon" href="kosik.png" type="image/png">
+    <style>
+        body { 
+            font-family: Roboto; 
+            text-align: center; 
+            background-color: #f8f9fa; 
+            margin: 0;
+            padding: 0;
+            background-size: cover;
+            overflow: visible; /* Zajistí, že se text nebude schovávat */
+            }
+
+        h1 { 
+            font-size: 3.5em; 
+            color: #ffffff; 
+            margin: 3px;
+            text-shadow: 4px 4px 10px rgba(0,0,0,0.6); 
+            font-weight: bold;
+            letter-spacing: 2px;
+            display: inline-flex; 
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            max-width: 100%;
+            flex-wrap: wrap; /* Umožní správné zalomení */
+            gap: 3px; /* Mezera mezi textem a obrázkem */
+        }
+
+        .divh1{
+            display: inline-flex; 
+        }
+
+        
+@media (max-width: 510px) {
+    .divh1 h1 {
+        font-size: 3rem;
+    }
+}
+@media (max-width: 450px) {
+    .divh1 h1 {
+        font-size: 2.7rem;
+    }
+}
+
+        .h1-background{
+            background: linear-gradient(135deg, #4c35c0, #0c0c0c);
+            padding: 0;
+            margin: 0;
+            margin-bottom: 5px;
+        }
+
+        h1 span {
+            white-space: nowrap; /* Zabraňuje zalomení textu */
+        }
+
+        h1 img {
+            width: 125px;
+            height: auto;
+            flex-shrink: 0; /* Zabrání zmenšování loga */
+        }
+
+        @media (max-width: 450px) {
+    .divh1 h1 img {
+        width: 100px;
+        }
+    }
+
+        h5 { 
+            font-size: 3.7em; 
+            color: #ffffff; 
+            margin: 0px; 
+            margin-top: 0px;
+            margin-bottom: 0px;
+            text-shadow: 4px 4px 10px rgba(0,0,0,0.6); 
+            font-weight: bold;
+            letter-spacing: 2px;
+            padding: 25px 30px;
+            border-radius: 15px;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+        @media (max-width: 768px) {
+    .h5div h5 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .h5div h5 {
+        font-size: 2.8rem;
+    }
+}
+@media (max-width: 390px) {
+    .h5div h5 {
+        font-size: 2.5rem;
+    }
+}
+
+
+        h4 { 
+            font-size: 1.2em; 
+            color: #ffffff; 
+            margin: 0px; 
+            text-shadow: 4px 4px 10px rgba(0,0,0,0.6); 
+            font-weight: bold;
+            letter-spacing: 1px;
+            display: block;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        h2 { 
+            color: #ffffff; 
+            text-shadow: 4px 4px 10px rgba(0,0,0,0.6); 
+            background: linear-gradient(135deg, #4c35c0, #0c0c0c);
+            padding: 15px 5px;
+            border-radius: 15px;
+            display: inline-block;
+            font-family: Arial;
+            
+        }
+
+        .header-container {
+            animation: backgroundAnimation 18s infinite linear;
+    background-size: cover;
+    background-repeat: no-repeat;
+        padding-bottom: 10px;
+        box-shadow: 0px 2px 4px rgba(0,0,0,0.2); 
+        background-position: center 0%; /* Posune obrázek níže */
+
+        }
+        /* Animace postupně mění obrázky */
+@keyframes backgroundAnimation {
+    0%, 100% { background-image: url('bck2.png'); }
+    25% { background-image: url('bck1.png'); }
+    50% { background-image: url('bck1.png'); }
+    75% { background-image: url('bck2.png'); }
+}
+
+/* Tlačítka pro hlavní kontejner */
+        .nav, .nav1 { 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 18px;
+            padding: 10px;
+            border-radius: 10px;
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-bottom: 0px;
+        }
+        .nav1{
+            margin-bottom: 2px;
+
+        }
+        .nav button{ 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            border: none;
+            border-radius: 10px;
+            padding: 10px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            width: 230px;
+            height: 80px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+            font-size: 1em;
+            font-weight: bold;
+            min-width: 140px;
+        }
+
+        .nav1 button { 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            border: none;
+            border-radius: 10px;
+            padding: 10px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            width: 400px;
+            height: 40px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+
+
+
+        .nav button:hover,.nav1 button:hover {
+            transform: scale(1.1);
+            box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.5);
+        }
+
+/* Modelová část */
+        .models-container {
+            text-align: center;
+            padding: 20px;
+            margin-bottom: px;
+        }
+
+        .models-container h2 {
+            font-size: 1rem;
+            margin: 0 0 3px;
+            width: 300px;
+        }
+
+        .models-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .model-button {
+            font-family:Arial, Helvetica, sans-serif;
+            font-size: 0.85rem;
+            width: 120px;
+            height: 120px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            padding: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .model-button:hover {
+            transform: scale(1.1);
+            box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .model-button img {
+            width: 65px;
+            height: 65px;
+            object-fit: contain;
+            flex-shrink: 0;
+            margin-bottom: 8px;
+        }
+
+/* Specifikace konkrétního kočárku */
+        .catalog { 
+            display: flex; 
+            flex-wrap: wrap; 
+            gap: 24px; 
+            justify-content: center; 
+            padding: 40px 20px; 
+            background-image: url(bck.jpg);
+        }
+
+        .item { 
+            width: 250px; 
+            border: none; 
+            padding: 20px; 
+            text-align: center; 
+            cursor: pointer; 
+            border-radius: 12px; 
+            background-color: #fff; 
+            transition: transform 0.3s ease, box-shadow 0.3s ease; 
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); 
+            overflow: hidden;
+        }
+
+        .item:hover { 
+            transform: translateY(-5px); 
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15); 
+        }
+
+        .item img { 
+            width: 100%; 
+            border-radius: 12px; 
+            transition: opacity 0.3s;
+        }
+
+        .item:hover img { 
+            opacity: 0.9;
+        }
+
+        .item h3 { 
+            font-size: 18px; 
+            font-weight: bold; 
+            color: #333; 
+            margin: 12px 0 6px; 
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .item p { 
+            font-size: 15px; 
+            color: #666; 
+            margin: 4px 0; 
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+/* Bližší specifikace konkrétního kočárku */
+        .detail-container { 
+            max-width: 1000px;
+            margin: 50px auto; 
+            padding: 30px; 
+            border-radius: 12px; 
+            background: #fff; 
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15); 
+            position: relative; 
+            display: flex; 
+            align-items: center; 
+            flex-wrap: wrap; /* Povolení zalamování obsahu */
+            justify-content: center; /* Zarovná obsah na střed */
+            text-align: center; 
+            gap: 30px; 
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        .detail-container.show {
+            display: flex; 
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .detail-container img { 
+            flex: 1 1 330px; /* Obrázek bude mít minimálně 300px a přizpůsobí se */
+            max-width: 40%; /* Zabrání, aby byl moc velký */
+            border-radius: 12px;  
+            object-fit: cover;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        @media (max-width: 700px) {
+    .detail-container img {
+        max-width: 80%; /* Zabrání, aby byl moc velký */
+    }
+}
+
+@media (max-width: 500px) {
+    .detail-container img {
+        max-width: 90%; /* Zabrání, aby byl moc velký */
+    }
+}
+
+        .detail-container img:hover { 
+            transform: scale(1.05); 
+            cursor: pointer;
+        }
+
+        .detail-text { 
+            flex: 1 1 300px; /* Text se také přizpůsobí */
+            font-family: 'Arial', sans-serif;
+            color: #333;
+        }
+
+        .detail-text h4 { 
+        font-size: 25px; 
+        font-weight: bold; 
+        margin-bottom: 15px; 
+        color: #ffffff;
+        /* Box styling */
+        box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15); 
+        padding: 10px 15px; /* Vnitřní mezery */
+        display: inline-block; /* Přizpůsobení šířky textu */
+        border-radius: 8px; /* Zaoblené rohy */
+        background: linear-gradient(135deg, #4c35c0, #0c0c0c);
+        }
+
+        .detail-text p { 
+            font-size: 17px; 
+            margin: 8px 0; 
+            color: #555;
+        }
+
+        .detail-text strong { 
+            color: #000; 
+        }
+
+        .color-options { 
+            display: flex; 
+            justify-content: center;  /* Vycentrování horizontálně */
+            align-items: center;
+            gap: 8px; 
+            margin-top: 8px; 
+        }
+
+        .color-circle { 
+            width: 20px; 
+            height: 20px; 
+            border-radius: 50%; 
+            border: 2px solid #ddd; 
+            cursor: pointer; 
+            transition: transform 0.2s ease-in-out, border 0.2s ease-in-out;
+        }
+
+        .color-circle:hover { 
+            transform: scale(1.2); 
+            border: 1px solid #000000; 
+        }
+
+        .detail-container-button {
+        background: none; /* Žádné pozadí */
+        color: #4c35c0; /* Fialová barva textu */
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 10px 15px;
+        border: none; /* Žádný okraj */
+        border-radius: 8px; /* Zaoblené rohy */
+        cursor: pointer;
+        transition: transform 0.2s, color 0.2s, text-shadow 0.2s;
+        margin-top: 1px;
+        }
+
+        .detail-container-button:hover {
+            transform: scale(1.1); /* Lehké zvětšení */
+            color: #2303c4; /* Tmavší fialová při hoveru */
+        }
+
+        .detail-container.expanded {
+            max-height: 800px; /* Když je otevřené, zvětší výšku */
+        }
+
+/* Skrytá sekce s popisem */
+        .expanded-section {
+            opacity: 0; /* Skryté při startu */
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out;
+            background: #f8f9fa;
+            padding: 0 20px;
+            border-top: 1px solid #ddd;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        /* Když se zobrazí */
+        .expanded-section.show {
+            max-height: 2000px; /* Roztáhne se */
+            opacity: 1;
+            padding: 20px;
+        }
+
+        .expanded-section h3 {
+            font-size: 1.2em;
+            margin-bottom: 5px;
+            color: #4c35c0;
+        }
+
+        .expanded-section p {
+            font-size: 1em;
+            color: #333;
+            margin-top: 10px;
+        }
+
+        .extra-description{
+            font-weight: bold;
+            margin: 0px;
+            margin-bottom: 5px;
+        }
+
+        .expanded-section-des{
+            font-size: 16px;
+        }
+
+        .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        align-items: center;
+        justify-content: center;
+    }
+
+    .modal-content {
+        max-width: 80%;
+        max-height: 80%;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 15px;
+        right: 25px;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+    }
+
+    .prev, .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 40px;
+        color: rgb(0, 0, 0);
+        cursor: pointer;
+        padding: 10px;
+        z-index: 2;
+    }
+
+    .prev {
+        left: 20px;
+    }
+
+    .next {
+        right: 20px;
+    }
+
+    
+    @media (max-width: 768px) {
+    .contact-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }}
+
+    </style>
+</head>
+<body>
+  <div class="header-container">
+
+    <div class="bg2"></div>
+    <div class="bg3"></div>
+    <div class="bg4"></div>
+    <div class="bg5"></div>
+    <div class="h5div"><h5 onclick="location.reload()" style="margin-top: 0px; cursor: pointer;">Armami s. r. o.</h5></div>
+    <h4 style="margin-bottom: 17px;">Oficiální distributor pro ROAN ČR/SK</h4>
+    <div class="h1-background"> 
+        <div class="divh1"><h1>Katalog produktů <img src="ROAN logo bck.png" alt="Ikona"></h1></div>
+    </div>
+    
+    <div class="nav">
+        <button onclick="showCategory('klasicke', true)">KLASICKÉ KOČÁRKY</button>
+        <button onclick="showCategory('kombinovane', true)">KOMBINOVANÉ KOČÁRKY</button>
+    </div>
+    
+    <div class="nav1">
+        <button onclick="showCategory('doplnkove', true)">DOPLŇKOVÉ ZBOŽÍ</button>
+    </div>
+    
+
+  </div>
+
+    <div class="models-container">
+
+        <h2>MODELY</h2>
+        <div class="models-buttons">
+          <div class="model-button" onclick="showCategory('roanivivintage', true)">
+              <img src="modely/stroller1.jpg" alt="Model 0">
+              <span>Roan Ivi Vintage</span>
+          </div>
+            <div class="model-button" onclick="showCategory('ivi', true)">
+                <img src="modely/stroller2.jpg" alt="Model 1">
+                <span>Roan Ivi</span>
+            </div>
+            <div class="model-button" onclick="showCategory('bassnext', true)">
+                <img src="modely/stroller3.jpg" alt="Model 2">
+                <span>Roan Bass Next</span>
+            </div>
+            <div class="model-button" onclick="showCategory('bloom', true)">
+                <img src="modely/stroller4.png" alt="Model 3">
+                <span>Roan Bloom</span>
+            </div>
+            <div class="model-button" onclick="showCategory('coss', true)">
+                <img src="modely/stroller5.png" alt="Model 4">
+                <span>Roan Coss</span>
+            </div>
+            <div class="model-button" onclick="showCategory('cossclassic', true)">
+                <img src="modely/stroller6.png" alt="Model 5">
+                <span>Roan Coss Classic</span>
+            </div>
+            <div class="model-button" onclick="showCategory('emma', true)">
+                <img src="modely/stroller7.png" alt="Model 6">
+                <span>Roan Emma</span>
+            </div>
+            <div class="model-button" onclick="showCategory('marita', true)">
+                <img src="modely/stroller8.png" alt="Model 7">
+                <span>Roan Marita</span>
+            </div>
+        </div>
+    
+    </div>
+
+    <div class="catalog" id="catalog"></div>
+    
+    <div class="detail-container" id="detail" style="display: none;">
+        <img id="detailImage" src="kocarek.jpg" alt="Kočárek" onclick="openImageModal(this)">
+    <!-- Modální okno -->
+    <div id="imageModal" class="modal">
+        <span class="close-btn" onclick="closeImageModal()">&times;</span>
+        <span class="prev" onclick="changeImage(-1)">&#10094;</span>
+        <div class="imgdiv"><img id="modalImage" class="modal-content"></div>
+        <span class="next" onclick="changeImage(1)">&#10095;</span>
+    </div>
+
+        <div class="detail-text" >
+            <h4 style="font-family:Arial, Helvetica, sans-serif" id="detailTitle"></h4>
+            <p><strong>Kód:</strong> <span id="detailSpecs"></span></p>
+            <p><strong>Cena s DPH:</strong> <span id="detailPriceWithVAT"></span></p>
+            <p><strong>Cena bez DPH:</strong> <span id="detailPriceWithoutVAT"></span></p>
+            <p><strong>Dostupnost:</strong> <span id="detailAvailability"></span></p>
+                <div id="detailColors" class="color-options" style="display: none;"></div>
+
+            <button id="toggle-panel" class="detail-container-button">Zobrazit bližší popis</button>
+        </div>
+    
+    </div>
+
+    <div id="expanded-section" class="expanded-section">
+        <h3>Bližší popis produktu</h3>
+        <div class="expanded-section-des">
+            <!-- Sem se dynamicky vkládá popis -->
+        </div>
+    </div>
+    
+        
+    <div class="contact-card" style="margin: 0 auto; padding: 15px; background: linear-gradient(100deg, #4c35c0, #0c0c0cdb); box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3); color: white; display: flex; justify-content: space-between; flex-wrap: wrap; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; border-top: solid 1px #000; ">
+        <!-- Kontakty -->
+        <div style="flex: 1 1 23%; padding: 8px; margin: 8px; background-color: #00000083; border-radius: 10px;">
+            <h5 style="font-size: 1.3em; text-align: center; margin-bottom: 5px;">Kontakty</h5>
+            <p><b>Adresa pro doručení:</b> Máchova 1147/1, 742 21 Kopřivnice</p>
+            <p><b>Telefon:</b> +420 608 618 027</p>
+            <p><b>Email:</b> <a href="mailto:armami@email.cz" style="color: #fff; text-decoration: underline;">armami@email.cz</a></p>
+            <p><b>Fakturační adresa:</b> Husova 388/7b</p>
+            <p>IČO: 22317031, DIČ: CZ22317031</p>
+        </div>
+    
+        <!-- O nás -->
+        <div style="flex: 1 1 23%; padding: 10px; margin: 8px; background-color: #00000083; border-radius: 10px;">
+            <h5 style="font-size: 1.3em; text-align: center; margin-bottom: 5px;">O nás</h5>
+            <p style="font-size: 1em;">Jsme firma s více než 20 lety zkušeností v oblasti kočárků a dětského zboží. Společnost ARMAMI s.r.o. je oficiálním distributorem značky ROAN pro Českou republiku a Slovensko. Nabízíme pouze kvalitní a moderní výrobky, které splňují nejvyšší standardy a nároky na bezpečnost a komfort.</p>
+        </div>
+    
+        <!-- Sociální sítě -->
+        <div style="flex: 1 1 23%; padding: 10px; margin: 8px; background-color: #00000083; border-radius: 10px;">
+            <h5 style="font-size: 1.3em; text-align: center; margin-bottom: 5px;">Sociální sítě</h5>
+            <p style="font-size: 1em; text-align: center; margin-bottom: 25px;">Sledujte nás na našich sociálních sítích pro novinky a inspiraci:</p>
+            <p style="display: flex; justify-content: center; align-items: center; gap: 15px;">
+                <a href="https://www.facebook.com">
+                    <img src="ikony/facebook.svg" alt="Facebook" width="26" height="26">
+                </a>
+                <a href="https://www.youtube.com/channel/UCqmXOPQcLaGiNu4TeCRU5Mw">
+                    <img src="ikony/youtube.svg" alt="Pinterest" width="30" height="30">
+                </a>
+                <a href="https://www.instagram.com">
+                    <img src="ikony/instagram.svg" alt="Instagram" width="30" height="30">
+                </a>
+            </p>
+            
+        </div>
+    
+        <!-- Naše obchody -->
+<!-- Naše obchody -->
+<div style="
+    flex: 1 1 23%;
+    padding: 15px;
+    margin: 10px;
+    background-color: #00000083;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+">
+    <h5 style="font-size: 1.4em; margin-bottom: 5px;">Naše obchody</h5>
+    <p style="font-size: 1em; margin-bottom: 5px; margin-top: 5px;">
+        Naše produkty si můžete zakoupit v těchto obchodech:
+    </p>
+
+    <!-- Odkazy v gridu -->
+    <div style="
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 10px;
+        justify-content: center;
+        padding: 10px;
+        font-size: 15px;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        text-decoration: underline;
+
+        
+    ">
+        <a href="https://www.zirafa-shop.cz/" style="text-decoration: none; color: #fff; padding: 8px; border-radius: 5px; transition: 0.3s;">Dětský obchůdek Žirafa</a>
+        <a href="https://www.babyadore.sk/" style="text-decoration: none; color: #fff; padding: 8px; border-radius: 5px; transition: 0.3s;">BabyAdore</a>
+        <a href="https://www.bambino.cz/" style="text-decoration: none; color: #fff; padding: 8px; border-radius: 5px; transition: 0.3s;">Bambino.cz</a>
+        <a href="https://www.babyplace.cz/" style="text-decoration: none; color: #fff; padding: 8px; border-radius: 5px; transition: 0.3s;">BabyPlace</a>
+        <a href="https://www.kocarky.cz/" style="text-decoration: none; color: #fff; padding: 8px; border-radius: 5px; transition: 0.3s;">Daniela Kočárky</a>
+        <a href="https://www.detskydum.cz/" style="text-decoration: none; color: #fff; padding: 8px; border-radius: 5px; transition: 0.3s;">Dětský Dům</a>
+        <a href="https://www.eshopbaby.cz/" style="text-decoration: none; color: #fff; padding: 8px; border-radius: 5px; transition: 0.3s;">EshopBaby</a>
+        <a href="https://www.nakupujskacenkou.cz/" style="text-decoration: none; color: #fff; padding: 8px; border-radius: 5px; transition: 0.3s;">Dětský Svět</a>
+        <a href="https://www.kocarky-kocarek.cz/" style="text-decoration: none; color: #fff; padding: 8px; border-radius: 5px; transition: 0.3s;">HAPU</a>
+        <a href="https://www.nejlepsikocarky.cz/" style="text-decoration: none; color: #fff; padding: 8px; border-radius: 5px; transition: 0.3s;">John Nell</a>
+        <a href="https://www.mimisk.eu/" style="text-decoration: none; color: #fff; padding: 8px; border-radius: 5px; transition: 0.3s;">MimiSk</a>
+        <a href="https://shop.modrykonik.sk/sk-eur/sk/" style="text-decoration: none; color: #fff; padding: 8px; border-radius: 5px; transition: 0.3s;">ModrýKoník.sk</a>
+        <a href="https://www.malvik.cz/" style="text-decoration: none; color: #fff; padding: 8px; border-radius: 5px; transition: 0.3s;">Malvík</a>
+        <a href="https://www.mojkocik.sk/" style="text-decoration: none; color: #fff; padding: 8px; border-radius: 5px; transition: 0.3s;">MojKočík SK</a>
+        <a href="https://www.mujandilek.cz/" style="text-decoration: none; color: #fff; padding: 8px; border-radius: 5px; transition: 0.3s;">MůjAndílek</a>
+        <a href="https://www.kocarek.cz/" style="text-decoration: none; color: #fff; padding: 8px; border-radius: 5px; transition: 0.3s;">Kočárek.cz</a>
+        <a href="https://www.detskyruzek.cz/" style="text-decoration: none; color: #fff; padding: 8px; border-radius: 5px; transition: 0.3s;">Dětský Růžek</a>
+        <a href="http://www.bambino-mladaboleslav.cz/bambino" style="text-decoration: none; color: #fff; padding: 8px; border-radius: 5px; transition: 0.3s;">Bambino Mladá Boleslav</a>
+        <a href="https://www.sambaby.com/" style="text-decoration: none; color: #fff; padding: 8px; border-radius: 5px; transition: 0.3s;">SAMBABY</a>
+        <a href="https://www.123kociky.sk/" style="text-decoration: none; color: #fff; padding: 8px; border-radius: 5px; transition: 0.3s;">123kociky.sk</a>
+        <a href="https://www.kocarkov.cz/" style="text-decoration: none; color: #fff; padding: 8px; border-radius: 5px; transition: 0.3s;">Kočárkov</a>
+        <a href="http://www.bambinomelnik.cz/" style="text-decoration: none; color: #fff; padding: 8px; border-radius: 5px; transition: 0.3s;">Bambino Mělník</a>
+    </div>
+</div>
+
+    
+    
+    
+    
+    </div>
+
+    
+    
+
+    </div>
+
+    <script>
+        const products = {
+            kombinovane: [
+                { name: "Roan Ivi Vintage Iced Coffee Limited Edition", priceWithVAT: "19 200 CZK", priceWithoutVAT: "15 300 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller18.jpg" },
+                { name: "Roan Ivi Vintage Cooper Glow Limited Edition", priceWithVAT: "19 200 CZK", priceWithoutVAT: "15 300 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller19.jpg" },
+                { name: "Roan Ivi Vintage Marzipan", priceWithVAT: "19 200 CZK", priceWithoutVAT: "15 300 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller35.jpg" },
+                { name: "Roan Ivi Vintage Lobster", priceWithVAT: "19 200 CZK", priceWithoutVAT: "15 300 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller36.jpg" },
+
+                { name: "Roan Ivi Vintage Hazel", priceWithVAT: "19 200 CZK", priceWithoutVAT: "15 300 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller37.jpg" },
+                { name: "Roan Ivi Vintage Caviar", priceWithVAT: "19 200 CZK", priceWithoutVAT: "15 300 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller38.jpg" },
+                { name: "Roan Ivi Vintage Praline", priceWithVAT: "19 200 CZK", priceWithoutVAT: "15 300 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller40.jpg" },
+                { name: "Roan Ivi Vintage Sicilian Olive", priceWithVAT: "19 200 CZK", priceWithoutVAT: "15 300 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller41.jpg" },
+
+                { name: "Roan Ivi Vintage Collection Matcha", priceWithVAT: "19 200 CZK", priceWithoutVAT: "15 300 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller44.jpg" },
+           
+          
+                { name: "Roan Ivi Black Forest", priceWithVAT: "18 700 CZK", priceWithoutVAT: "14 800 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller22.jpg" },
+                { name: "Roan Ivi Boho Green", priceWithVAT: "18 700 CZK", priceWithoutVAT: "14 800 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller23.jpg" },
+                { name: "Roan Ivi Cocoa", priceWithVAT: "18 700 CZK", priceWithoutVAT: "14 800 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller24.jpg" },
+                { name: "Roan Ivi Mystic Blue", priceWithVAT: "18 700 CZK", priceWithoutVAT: "14 800 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller25.jpg" },
+
+                { name: "Roan Ivi Pearl Shell", priceWithVAT: "18 700 CZK", priceWithoutVAT: "14 800 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller26.jpg" },
+                { name: "Roan Ivi Raven", priceWithVAT: "18 700 CZK", priceWithoutVAT: "14 800 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller27.jpg" },
+                { name: "Roan Ivi Sesame", priceWithVAT: "18 700 CZK", priceWithoutVAT: "14 800 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller28.jpg" },
+                { name: "Roan Ivi True Black", priceWithVAT: "18 700 CZK", priceWithoutVAT: "14 800 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller29.jpg" },
+
+                { name: "Roan Ivi Cocoa Rose Gold", priceWithVAT: "18 700 CZK", priceWithoutVAT: "14 800 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller30.jpg" },
+                { name: "Roan Ivi Choco", priceWithVAT: "18 700 CZK", priceWithoutVAT: "14 800 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller31.jpg" },
+                { name: "Roan Ivi Mystic Blue Rose Gold", priceWithVAT: "18 700 CZK", priceWithoutVAT: "14 800 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller32.jpg" },
+                { name: "Roan Ivi Viva Magenta", priceWithVAT: "18 700 CZK", priceWithoutVAT: "14 800 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller33.jpg" },
+
+                { name: "Roan Ivi Pine Green", priceWithVAT: "18 700 CZK", priceWithoutVAT: "14 800 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller34.jpg" },
+                { name: "Roan Ivi Mocca", priceWithVAT: "18 700 CZK", priceWithoutVAT: "14 800 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller39.jpg" },
+                { name: "Roan Ivi Taupe", priceWithVAT: "18 700 CZK", priceWithoutVAT: "14 800 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller42.jpg" },
+                { name: "Roan Ivi Tea Leaf", priceWithVAT: "18 700 CZK", priceWithoutVAT: "14 800 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller43.jpg" },
+           
+           
+                { name: "Roan Bass Next Amber", priceWithVAT: "18 000 CZK", priceWithoutVAT: "14 100 CZK", availability: "2-3 týdny", colors: "Zelená, Černá", specs: "12036", image: "kombinované kočárky/stroller1.jpg" },
+                { name: "Roan Bass Next Black", priceWithVAT: "18 000 CZK", priceWithoutVAT: "14 100 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "12035", image: "kombinované kočárky/stroller2.jpg" },
+                { name: "Roan Bass Next Misty Mood", priceWithVAT: "18 000 CZK", priceWithoutVAT: "14 100 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller3.jpg" },
+                { name: "Roan Bass Next Rosy Mood", priceWithVAT: "18 000 CZK", priceWithoutVAT: "14 100 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller4.jpg" },
+
+                { name: "Roan Bass Next Titanium", priceWithVAT: "18 000 CZK", priceWithoutVAT: "14 100 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "12034", image: "kombinované kočárky/stroller5.jpg" },
+                { name: "Roan Bass Next Night Green", priceWithVAT: "18 000 CZK", priceWithoutVAT: "14 100 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "12037", image: "kombinované kočárky/stroller6.jpg" },
+                { name: "Roan Bass Next Ocean Mood", priceWithVAT: "18 000 CZK", priceWithoutVAT: "14 100 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller7.jpg" },
+                { name: "Roan Bass Next Cypress", priceWithVAT: "18 000 CZK", priceWithoutVAT: "14 100 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller8.jpg" },
+
+                { name: "Roan Bass Next Oreo", priceWithVAT: "18 000 CZK", priceWithoutVAT: "14 100 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller9.jpg" },            
+                { name: "Roan Bass Next Hunter Queen", priceWithVAT: "18 000 CZK", priceWithoutVAT: "14 100 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller13.jpg" },
+                { name: "Roan Bass Next Resort Blue", priceWithVAT: "18 000 CZK", priceWithoutVAT: "14 100 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller14.jpg" },
+                { name: "Roan Bass Next Emerald Mood", priceWithVAT: "18 000 CZK", priceWithoutVAT: "14 100 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller20.jpg" },
+
+                { name: "Roan Bass Next Pacific Green", priceWithVAT: "18 000 CZK", priceWithoutVAT: "14 100 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller21.jpg" },
+            
+
+                { name: "Roan Bloom - Night Green", priceWithVAT: "17 600 CZK", priceWithoutVAT: "13 800 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "12031", image: "kombinované kočárky/stroller10.jpg" },
+                { name: "Roan Bloom - Night Trip", priceWithVAT: "17 600 CZK", priceWithoutVAT: "13 800 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "12032", image: "kombinované kočárky/stroller11.jpg" },
+                { name: "Roan Bloom - Titanium", priceWithVAT: "17 600 CZK", priceWithoutVAT: "13 800 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "12032", image: "kombinované kočárky/stroller12.jpg" },
+
+                { name: "Roan Coss - Night Green", priceWithVAT: "17 100 CZK", priceWithoutVAT: "13 500 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller15.jpg" },
+                { name: "Roan Coss - Night Trip", priceWithVAT: "17 100 CZK", priceWithoutVAT: "13 500 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller16.jpg" },
+                { name: "Roan Coss - Titanium", priceWithVAT: "17 100 CZK", priceWithoutVAT: "13 500 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller17.jpg" },
+            ],
+            klasicke: [
+                { name: "Roan Coss Classic - Night Green", priceWithVAT: "15 800 CZK", priceWithoutVAT: "13 058 CZK", availability: "2-3 týdny", colors: "Šedá, Stříbrná", specs: "12041", image: "klasické kočárky/stroller1.jpg" },
+                { name: "Roan Coss Classic - Night Trip", priceWithVAT: "15 800 CZK", priceWithoutVAT: "13 058 CZK", availability: "2-3 týdny", colors: "Zelená, Černá", specs: "12040", image: "klasické kočárky/stroller2.jpg" },
+                { name: "Roan Coss Classic - Titanium", priceWithVAT: "15 800 CZK", priceWithoutVAT: "13 058 CZK", availability: "2-3 týdny", colors: "Šedá, Stříbrná", specs: "12042", image: "klasické kočárky/stroller3.jpg" },
+                { name: "Roan Emma E - 92", priceWithVAT: "14 500 CZK", priceWithoutVAT: "11 983 CZK", availability: "2-3 týdny", colors: "Zelená, Černá", specs: "-", image: "klasické kočárky/stroller4.jpg" },
+
+                { name: "Roan Emma E - 54", priceWithVAT: "14 500 CZK", priceWithoutVAT: "11 983 CZK", availability: "2-3 týdny", colors: "Šedá, Stříbrná", specs: "12044", image: "klasické kočárky/stroller5.jpg" },
+                { name: "Roan Emma E - 64", priceWithVAT: "14 500 CZK", priceWithoutVAT: "11 983 CZK", availability: "2-3 týdny", colors: "Zelená, Černá", specs: "-", image: "klasické kočárky/stroller6.jpg" },
+                { name: "Roan Marita P - 195", priceWithVAT: "14 500 CZK", priceWithoutVAT: "11 983 CZK", availability: "2-3 týdny", colors: "Šedá, Stříbrná", specs: "-", image: "klasické kočárky/stroller7.jpg" },
+                { name: "Roan Marita P - 211", priceWithVAT: "14 500 CZK", priceWithoutVAT: "11 983 CZK", availability: "2-3 týdny", colors: "Zelená, Černá", specs: "-", image: "klasické kočárky/stroller8.jpg" },
+
+                { name: "Roan Coss Classic - Venice Night", priceWithVAT: "15 800 CZK", priceWithoutVAT: "13 058 CZK", availability: "2-3 týdny", colors: "Šedá, Stříbrná", specs: "-", image: "klasické kočárky/stroller9.jpg" },
+                { name: "Roan Coss Classic - Tahitian Vanilla", priceWithVAT: "15 800 CZK", priceWithoutVAT: "13 058 CZK", availability: "2-3 týdny", colors: "Zelená, Černá", specs: "-", image: "klasické kočárky/stroller10.jpg" },
+                { name: "Roan Coss Classic - Pure Cashmere", priceWithVAT: "15 800 CZK", priceWithoutVAT: "13 058 CZK", availability: "2-3 týdny", colors: "Šedá, Stříbrná", specs: "-", image: "klasické kočárky/stroller11.jpg" },
+                { name: "Roan Coss Classic - Botanical Garden", priceWithVAT: "15 800 CZK", priceWithoutVAT: "13 058 CZK", availability: "2-3 týdny", colors: "Zelená, Černá", specs: "-", image: "klasické kočárky/stroller12.jpg" }
+            ],
+            doplnkove: [
+                { name: "Roan Cosmo Black", priceWithVAT: "3500 CZK", priceWithoutVAT: "2900 CZK", availability: "2-3 týdny", colors: "Zelená, Černá", specs: "22004", image: "doplňky/autosedacka.jpg", description:  `
+        <p><b>Autosedačka pro děti od 0-13 kg</b></p>
+        <p class="extra-description">Charakteristika autosedačky Roan Cosmo:</p>
+        <p>- Kompatibilní se základnou Isofix IQ/ IQ 2.0 C<br>
+           - Nadprůměrná lehkost konstrukce<br>
+           - Vložka pro ergonomickou polohu<br>
+           - Nejnovější bezpečnostní standardy<br>
+           - Ochrana proti nárazu<br>
+           - Pohodlné polstrování pro maximální komfort dítěte<br>
+           - Snadná instalace do auta pomocí bezpečnostních pásů nebo Isofix základny<br>
+           - Sluneční stříška pro ochranu před sluncem a větrem</p>
+        <p class="extra-description">Technické parametry:</p>
+        <p>- Hmotnost autosedačky: cca 3,2 kg<br>
+           - Doporučená výška dítěte: 40-75 cm<br>
+           - Schváleno dle normy: ECE R129 i-Size<br>
+           - Možnost montáže po směru nebo proti směru jízdy</p>
+        `
+    },
+
+                { name: "Adaptéry na autosedačky pro kočárky Marita, Emma", priceWithVAT: "750 CZK", priceWithoutVAT: "600 CZK", availability: "2-3 týdny", colors: "Zelená, Černá", specs: "12050", image: "doplňky/adaptery.jpg", description:  `
+    <p><b>Adaptéry pro kočárky Roan Marita, Roan Emma.</b> Slouží k uchycení autosedaček k podvozku kočárku.</p>
+    <p class="extra-description">Kompatibilní jsou tyto autosedačky:</p>
+    <p>- Cybex Aton, Cybex Aton Basic, Cybex Aton Q, Cybex Aton 3 a 4, Cybex Cloud Q<br>
+       - BeSafe Izi Go<br>
+       - Maxi Cosi Pebble, Maxi Cosi Citi, Maxi Cosi CabrioFix<br>
+       - Recaro Privia<br>
+       - Kiddy Evolution</p>
+` },
+                { name: "Adaptéry na autosedačky pro kočárky Ivi, Bloom, Bass Next, Coss", priceWithVAT: "750 CZK", priceWithoutVAT: "600 CZK", availability: "2-3 týdny", colors: "Zelená, Černá", specs: "12049", image: "doplňky/adaptery2.jpg", description:
+    `<p><b>Adaptéry pro kočárky Roan Ivi, Roan Bloom, Roan Bass Next, Roan Coss a Roan Coss Classic.</b> Slouží k uchycení autosedačky k podvozku kočárku.</p>
+    <p class="extra-description">Kompatibilní jsou tyto autosedačky:</p>
+    <p>- Cybex Aton, Cybex Aton Basic, Cybex Aton Q, Cybex Aton 3 a 4, Cybex Cloud Q<br>
+       - BeSafe Izi Go, Be Safe<br>
+       - Maxi Cosi Pebble, Maxi Cosi Citi, Maxi Cosi CabrioFix</p>
+` }
+            ],
+            roanivivintage: [
+                { name: "Roan Ivi Vintage Iced Coffee Limited Edition", priceWithVAT: "19 200 CZK", priceWithoutVAT: "15 300 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller18.jpg" },
+                { name: "Roan Ivi Vintage Cooper Glow Limited Edition", priceWithVAT: "19 200 CZK", priceWithoutVAT: "15 300 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller19.jpg" },
+                { name: "Roan Ivi Vintage Marzipan", priceWithVAT: "19 200 CZK", priceWithoutVAT: "15 300 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller35.jpg" },
+                { name: "Roan Ivi Vintage Lobster", priceWithVAT: "19 200 CZK", priceWithoutVAT: "15 300 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller36.jpg" },
+
+                { name: "Roan Ivi Vintage Hazel", priceWithVAT: "19 200 CZK", priceWithoutVAT: "15 300 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller37.jpg" },
+                { name: "Roan Ivi Vintage Caviar", priceWithVAT: "19 200 CZK", priceWithoutVAT: "15 300 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller38.jpg" },
+                { name: "Roan Ivi Vintage Praline", priceWithVAT: "19 200 CZK", priceWithoutVAT: "15 300 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller40.jpg" },
+                { name: "Roan Ivi Vintage Sicilian Olive", priceWithVAT: "19 200 CZK", priceWithoutVAT: "15 300 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller41.jpg" },
+
+                { name: "Roan Ivi Vintage Collection Matcha", priceWithVAT: "19 200 CZK", priceWithoutVAT: "15 300 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller44.jpg" }
+            ],
+            ivi: [
+                { name: "Roan Ivi Black Forest", priceWithVAT: "18 700 CZK", priceWithoutVAT: "14 800 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller22.jpg" },
+                { name: "Roan Ivi Boho Green", priceWithVAT: "18 700 CZK", priceWithoutVAT: "14 800 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller23.jpg" },
+                { name: "Roan Ivi Cocoa", priceWithVAT: "18 700 CZK", priceWithoutVAT: "14 800 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller24.jpg" },
+                { name: "Roan Ivi Mystic Blue", priceWithVAT: "18 700 CZK", priceWithoutVAT: "14 800 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller25.jpg" },
+
+                { name: "Roan Ivi Pearl Shell", priceWithVAT: "18 700 CZK", priceWithoutVAT: "14 800 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller26.jpg" },
+                { name: "Roan Ivi Raven", priceWithVAT: "18 700 CZK", priceWithoutVAT: "14 800 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller27.jpg" },
+                { name: "Roan Ivi Sesame", priceWithVAT: "18 700 CZK", priceWithoutVAT: "14 800 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller28.jpg" },
+                { name: "Roan Ivi True Black", priceWithVAT: "18 700 CZK", priceWithoutVAT: "14 800 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller29.jpg" },
+
+                { name: "Roan Ivi Cocoa Rose Gold", priceWithVAT: "18 700 CZK", priceWithoutVAT: "14 800 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller30.jpg" },
+                { name: "Roan Ivi Choco", priceWithVAT: "18 700 CZK", priceWithoutVAT: "14 800 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller31.jpg" },
+                { name: "Roan Ivi Mystic Blue Rose Gold", priceWithVAT: "18 700 CZK", priceWithoutVAT: "14 800 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller32.jpg" },
+                { name: "Roan Ivi Viva Magenta", priceWithVAT: "18 700 CZK", priceWithoutVAT: "14 800 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller33.jpg" },
+
+                { name: "Roan Ivi Pine Green", priceWithVAT: "18 700 CZK", priceWithoutVAT: "14 800 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller34.jpg" },
+                { name: "Roan Ivi Mocca", priceWithVAT: "18 700 CZK", priceWithoutVAT: "14 800 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller39.jpg" },
+                { name: "Roan Ivi Taupe", priceWithVAT: "18 700 CZK", priceWithoutVAT: "14 800 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller42.jpg" },
+                { name: "Roan Ivi Tea Leaf", priceWithVAT: "18 700 CZK", priceWithoutVAT: "14 800 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller43.jpg" },
+            ],
+            bassnext:[
+                { name: "Roan Bass Next Amber", priceWithVAT: "18 000 CZK", priceWithoutVAT: "14 100 CZK", availability: "2-3 týdny", colors: "Zelená, Černá", specs: "12036", image: "kombinované kočárky/stroller1.jpg" },
+                { name: "Roan Bass Next Black", priceWithVAT: "18 000 CZK", priceWithoutVAT: "14 100 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "12035", image: "kombinované kočárky/stroller2.jpg" },
+                { name: "Roan Bass Next Misty Mood", priceWithVAT: "18 000 CZK", priceWithoutVAT: "14 100 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller3.jpg" },
+                { name: "Roan Bass Next Rosy Mood", priceWithVAT: "18 000 CZK", priceWithoutVAT: "14 100 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller4.jpg" },
+
+                { name: "Roan Bass Next Titanium", priceWithVAT: "18 000 CZK", priceWithoutVAT: "14 100 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "12034", image: "kombinované kočárky/stroller5.jpg" },
+                { name: "Roan Bass Next Night Green", priceWithVAT: "18 000 CZK", priceWithoutVAT: "14 100 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "12037", image: "kombinované kočárky/stroller6.jpg" },
+                { name: "Roan Bass Next Ocean Mood", priceWithVAT: "18 000 CZK", priceWithoutVAT: "14 100 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller7.jpg" },
+                { name: "Roan Bass Next Cypress", priceWithVAT: "18 000 CZK", priceWithoutVAT: "14 100 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller8.jpg" },
+
+                { name: "Roan Bass Next Oreo", priceWithVAT: "18 000 CZK", priceWithoutVAT: "14 100 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller9.jpg" },            
+                { name: "Roan Bass Next Hunter Queen", priceWithVAT: "18 000 CZK", priceWithoutVAT: "14 100 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller13.jpg" },
+                { name: "Roan Bass Next Resort Blue", priceWithVAT: "18 000 CZK", priceWithoutVAT: "14 100 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller14.jpg" },
+                { name: "Roan Bass Next Emerald Mood", priceWithVAT: "18 000 CZK", priceWithoutVAT: "14 100 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller20.jpg" },
+
+                { name: "Roan Bass Next Pacific Green", priceWithVAT: "18 000 CZK", priceWithoutVAT: "14 100 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller21.jpg" },
+               
+            ],
+            bloom:[
+                { name: "Roan Bloom - Night Green", priceWithVAT: "17 600 CZK", priceWithoutVAT: "13 800 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "12031", image: "kombinované kočárky/stroller10.jpg" },
+                { name: "Roan Bloom - Night Trip", priceWithVAT: "17 600 CZK", priceWithoutVAT: "13 800 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "12032", image: "kombinované kočárky/stroller11.jpg" },
+                { name: "Roan Bloom - Titanium", priceWithVAT: "17 600 CZK", priceWithoutVAT: "13 800 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "12032", image: "kombinované kočárky/stroller12.jpg" },
+
+            ],
+            coss:[
+                { name: "Roan Coss - Night Green", priceWithVAT: "17 100 CZK", priceWithoutVAT: "13 500 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller15.jpg" },
+                { name: "Roan Coss - Night Trip", priceWithVAT: "17 100 CZK", priceWithoutVAT: "13 500 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller16.jpg" },
+                { name: "Roan Coss - Titanium", priceWithVAT: "17 100 CZK", priceWithoutVAT: "13 500 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller17.jpg" },
+            ],
+            cossclassic:[
+                { name: "Roan Coss Classic - Night Green", priceWithVAT: "16 600 CZK", priceWithoutVAT: "13 100 CZK", availability: "2-3 týdny", colors: "Šedá, Stříbrná", specs: "12041", image: "klasické kočárky/stroller1.jpg" },
+                { name: "Roan Coss Classic - Night Trip", priceWithVAT: "16 600 CZK", priceWithoutVAT: "13 100 CZK", availability: "2-3 týdny", colors: "Zelená, Černá", specs: "12040", image: "klasické kočárky/stroller2.jpg" },
+                { name: "Roan Coss Classic - Titanium", priceWithVAT: "16 600 CZK", priceWithoutVAT: "13 100 CZK", availability: "2-3 týdny", colors: "Šedá, Stříbrná", specs: "12042", image: "klasické kočárky/stroller3.jpg" },
+                { name: "Roan Coss Classic - Venice Night", priceWithVAT: "16 600 CZK", priceWithoutVAT: "13 100 CZK", availability: "2-3 týdny", colors: "Šedá, Stříbrná", specs: "-", image: "klasické kočárky/stroller9.jpg" },
+
+                { name: "Roan Coss Classic - Tahitian Vanilla", priceWithVAT: "16 600 CZK", priceWithoutVAT: "13 100 CZK", availability: "2-3 týdny", colors: "Zelená, Černá", specs: "-", image: "klasické kočárky/stroller10.jpg" },
+                { name: "Roan Coss Classic - Pure Cashmere", priceWithVAT: "16 600 CZK", priceWithoutVAT: "13 100 CZK", availability: "2-3 týdny", colors: "Šedá, Stříbrná", specs: "-", image: "klasické kočárky/stroller11.jpg" },
+                { name: "Roan Coss Classic - Botanical Garden", priceWithVAT: "16 600 CZK", priceWithoutVAT: "13 100 CZK", availability: "2-3 týdny", colors: "Zelená, Černá", specs: "-", image: "klasické kočárky/stroller12.jpg" }
+            ],
+            emma:[
+                { name: "Roan Emma E - 92", priceWithVAT: "15 300 CZK", priceWithoutVAT: "11 900 CZK", availability: "2-3 týdny", colors: "Zelená, Černá", specs: "-", image: "klasické kočárky/stroller4.jpg" },
+                { name: "Roan Emma E - 54", priceWithVAT: "15 300 CZK", priceWithoutVAT: "11 900 CZK", availability: "2-3 týdny", colors: "Šedá, Stříbrná", specs: "12044", image: "klasické kočárky/stroller5.jpg" },
+                { name: "Roan Emma E - 64", priceWithVAT: "15 300 CZK", priceWithoutVAT: "11 900 CZK", availability: "2-3 týdny", colors: "Zelená, Černá", specs: "-", image: "klasické kočárky/stroller6.jpg" },
+            ],
+            marita:[
+                { name: "Roan Marita P - 195", priceWithVAT: "15 300 CZK", priceWithoutVAT: "11 900 CZK", availability: "2-3 týdny", colors: "Šedá, Stříbrná", specs: "-", image: "klasické kočárky/stroller7.jpg" },
+                { name: "Roan Marita P - 211", priceWithVAT: "15 300 CZK", priceWithoutVAT: "11 900 CZK", availability: "2-3 týdny", colors: "Zelená, Černá", specs: "-", image: "klasické kočárky/stroller8.jpg" },
+            ]
+        };
+
+        function showCategory(category, shouldScroll = false) {
+            document.getElementById("detail").style.display = "none";
+
+    const catalog = document.getElementById("catalog");
+    catalog.innerHTML = "";
+
+    products[category].forEach(product => {
+        const item = document.createElement("div");
+        item.classList.add("item");
+
+        item.innerHTML = `
+            <img src="${product.image}" alt="Kočárek">
+            <h3>${product.name}</h3>
+            <p><strong>Cena s DPH:</strong> ${product.priceWithVAT}</p>
+            <p><strong>Cena bez DPH:</strong> ${product.priceWithoutVAT}</p>
+        `;
+
+        item.onclick = () => openDetail(product);
+        catalog.appendChild(item);
+    });
+
+    // Posunutí obrazovky pouze při kliknutí na tlačítko (se zpožděním pro lepší vykreslení)
+    if (shouldScroll) {
+        setTimeout(() => {
+            catalog.scrollIntoView({ behavior: "smooth", block: "start" });
+        }, 250); // 100ms zpoždění pro plynulé posunutí
+    }
+}
+
+
+function openDetail(product) {
+    const detail = document.getElementById("detail");
+    detail.style.display = "flex";
+
+    document.getElementById("detailTitle").innerText = product.name;
+    document.getElementById("detailPriceWithVAT").innerText = product.priceWithVAT;
+    document.getElementById("detailPriceWithoutVAT").innerText = product.priceWithoutVAT;
+    document.getElementById("detailAvailability").innerText = product.availability;
+    document.getElementById("detailSpecs").innerText = product.specs;
+    document.getElementById("detailImage").src = product.image;
+
+    const colorsContainer = document.getElementById("detailColors");
+    colorsContainer.innerHTML = ""; // Vyčištění předchozích barev
+
+    const colors = product.colors.split(", ");
+    colors.forEach(color => {
+        const colorCircle = document.createElement("div");
+        colorCircle.classList.add("color-circle");
+        colorCircle.style.backgroundColor = getColorCode(color);
+        colorsContainer.appendChild(colorCircle);
+    });
+
+    // Dynamicky vkládáme unikátní popis
+    document.getElementById("expanded-section").innerHTML = `
+        <h3>Bližší popis produktu</h3>
+        <div class="expanded-section-des">
+            ${product.description || "<p>Popis není dostupný.</p>"}
+        </div>
+    `;
+
+    const rect = detail.getBoundingClientRect();
+const scrollX = window.scrollX;
+const scrollY = window.scrollY;
+const windowHeight = window.innerHeight;
+const windowWidth = window.innerWidth;
+
+window.scrollTo({
+    top: scrollY + rect.top - (windowHeight / 2) + (rect.height / 2),
+    left: scrollX + rect.left - (windowWidth / 2) + (rect.width / 2),
+    behavior: "smooth"
+});
+
+    
+}
+
+const descriptions = {
+    "Roan Bass Next": `
+        <p><b>Kočárek trojkombinace</b> nebo <b>dvojkombinace Roan Bass Next</b> moderní kočárek - model z dílny Roan.</p>
+        <p class="extra-description">Podvozek kočárku</p>
+        <p>- Lehký hliníkový rám, dostupný v barvě uvedené na fotografii<br>
+           - Přídavný tlumič nárazů umístěný v rámové konstrukci eliminuje vibrace a nerovnosti terénu<br>
+           - Měkké odpružení podvozku <br>
+           - Otočná přední kola s možností aretace<br>
+           - Bezúdržbová gelová kola - nízkoprofilová, náboje kol s dvojitými ložisky<br>
+           - Centrální brzda<br>
+           - Velký, uzavíratelný košík pod kočárkem<br>
+           - Nastavitelná koženková rukojeť<br>
+           - Jednoduchý systém „Click” na nacvaknutí hluboké vaničky, sportovní verze nebo autosedačky</p>
+        <p class="extra-description">Hluboký kočárek</p>
+        <p>- Prostorná, pohodlná hluboká vanička, čtyřstupňová regulace zádové opěrky<br>
+           - Vnitřní výstelka vaničky vyrobena z měkké bavlny, ta splňuje nejvyšší bezpečnostní standardy<br>
+           - Matrace<br>
+           - Boudička s ventilačním okénkem<br>
+           - Nánožník s ventilací (novinka mezi kočárky)<br>
+           - Vysoce kvalitní, atestované látky</p>
+        <p class="extra-description">Sportovní kočárek</p>
+        <p><b>- Velká komfortní sportovní nástavba s nánožníkem</b>, s možností nasadit po i proti směru jízdy<br>
+           - Prodloužená stříška s kšiltem chrání proti větru, nízkým teplotám a slunci<br>
+           - Ventilační okno (odepínací zadní část boudičky)<br>
+           - Měkké a pohodlné bavlněné polstrování v sedačce<br>
+           - Pětibodové bezpečnostní pásy s regulací výšky<br>
+           - Opěradlo nastavitelné do pozice lehu<br>
+           - Nastavitelná podnožka i do délky<br>
+           - Odepínací madlo s kvalitním koženkovým potahem</p>
+        <p>Na podvozek kočárku je možno nasadit autosedačku Roan Kite 0-13 kg nebo za pomocí adaptérů jiné značkové autosedačky (Maxi-Cosi, Besafe, Cybex Aton).</p>
+        <p class="extra-description">V sestavě kočárku je:</p>
+        <p>- Podvozek s velkým košíkem<br>
+           - Hluboká korba s boudou a nánožníkem<br>
+           - Sportovní nástavba s nánožníkem<br>
+           - Taška na kočárek</p>
+        <p class="extra-description">V ceně kočárku je bonusová výbava:</p>
+        <p>- Deka do kočárku<br>
+           - Moskytiéra<br>
+           - Pláštěnka</p>
+        <p class="extra-description">Technická data kočárku Roan Bass Next</p>
+        <p>- Hmotnost podvozku: cca 9,5 kg<br>
+           - Hmotnost korby: cca 4,9 kg<br>
+           - Hmotnost sportovní nástavby: cca 5,6 kg<br>
+           - Rozměr rozloženého podvozku (v x š): 85-113 x 60 cm<br>
+           - Rozměr složeného podvozku (v x š x d): 80 x 60 x 35 cm<br>
+           - Vnitřní rozměr u horního okraje korby (v x š x d): cca 80 x 37 x 20 cm<br>
+           - Sportovní nástavba:<br>
+             &nbsp;&nbsp;&nbsp;- Šířka sedáku: 28 cm<br>
+             &nbsp;&nbsp;&nbsp;- Hloubka sedáku: 26 cm<br>
+             &nbsp;&nbsp;&nbsp;- Výška opěradla: 50 cm<br>
+             &nbsp;&nbsp;&nbsp;- Délka opěrky nohou: 19 cm</p>
+    `,
+    "Roan Ivi": `
+        <p><b>Kočárek trojkombinace</b> nebo <b>dvojkombinace Roan Ivi</b> moderní kočárek - model z dílny Roan.</p>
+        
+        <p class="extra-description">Podvozek kočárku</p>
+        <p>- Lehký hliníkový rám<br>
+           - Přídavný tlumič nárazů umístěný v rámové konstrukci eliminuje vibrace a nerovnosti terénu<br>
+           - Měkké odpružení podvozku <br>
+           - Otočná přední kola s možností aretace<br>
+           - Bezúdržbová gelová kola - nízkoprofilová, náboje kol s dvojitými ložisky<br>
+           - Centrální brzda<br>
+           - Prostorný a přepracovaný košík pod kočárkem<br>
+           - Nastavitelná koženková rukojeť<br>
+           - Jednoduchý systém „Click” na nacvaknutí hluboké vaničky, sportovní verze nebo autosedačky</p>
+
+        <p class="extra-description">Hluboký kočárek</p>
+        <p>- Prostorná, pohodlná hluboká vanička<br>
+           - Vnitřní výstelka vaničky vyrobena z měkké bavlny, ta splňuje nejvyšší bezpečnostní standardy<br>
+           - Nánožník upevněný na magnetky (novinka mezi kočárky)<br>
+           - Vylepšené větrání celé korbičky<br>
+           - Přiznaná rukojeť pro jednodušší manipulaci s korbičkou<br>
+           - Skladatelná a odlehčená korbička<br>
+           - Vysoce kvalitní, atestované látky</p>
+
+        <p class="extra-description">Sportovní kočárek</p>
+        <p>- Velká komfortní sportovní nástavba s nánožníkem, s možností nasadit po i proti směru jízdy<br>
+           - Prodloužená stříška s kšiltem chrání proti větru, nízkým teplotám a slunci<br>
+           - Ventilační okno (odepínací zadní část boudičky)<br>
+           - Měkké a pohodlné bavlněné polstrování v sedačce<br>
+           - Pětibodové bezpečnostní pásy s regulací výšky<br>
+           - Opěradlo nastavitelné do pozice lehu<br>
+           - Nastavitelná podnožka i do délky<br>
+           - Odepínací madlo s kvalitním koženkovým potahem</p>
+
+        <p>Na podvozek kočárku je možno nasadit autosedačku Roan Kite 0-13 kg nebo za pomocí adaptérů jiné značkové autosedačky (Maxi-Cosi, Besafe, Cybex Aton).</p>
+
+        <p class="extra-description">V sestavě kočárku je:</p>
+        <p>- Podvozek s velkým košíkem<br>
+           - Hluboká korba s boudou a nánožníkem<br>
+           - Sportovní nástavba s nánožníkem<br>
+           - Taška na kočárek</p>
+
+        <p class="extra-description">V ceně kočárku je bonusová výbava:</p>
+        <p>- Držák na pití<br>
+           - Moskytiéra<br>
+           - Pláštěnka</p>
+
+        <p class="extra-description">Technická data kočárku Roan Ivi</p>
+        <p>- Hmotnost podvozku: cca 9,5 kg<br>
+           - Hmotnost korby: cca 4,9 kg<br>
+           - Hmotnost sportovní nástavby: cca 5,6 kg<br>
+           - Rozměr rozloženého podvozku (v x š): 85-113 x 60 cm<br>
+           - Rozměr složeného podvozku (v x š x d): 80 x 60 x 35 cm<br>
+           - Vnitřní rozměr u horního okraje korby (v x š x d): cca 80 x 37 x 20 cm<br>
+           - Sportovní nástavba:<br>
+             &nbsp;&nbsp;&nbsp;- Šířka sedáku: 28 cm<br>
+             &nbsp;&nbsp;&nbsp;- Hloubka sedáku: 26 cm<br>
+             &nbsp;&nbsp;&nbsp;- Výška opěradla: 50 cm<br>
+             &nbsp;&nbsp;&nbsp;- Délka opěrky nohou: 19 cm</p>
+    `,
+        "Roan Bloom": `    <p><b>Kočárek trojkombinace</b> nebo <b>dvojkombinace Roan Bloom</b> moderní kočárek - nejnovější model z dílny Roan. Specialitou je to, že se dá Roan Bloom poskládat ve sportovní sestavě celý včetně konstrukce.</p>
+    
+    <p class="extra-description">Podvozek kočárku</p>
+    <p>- Lehký hliníkový rám, dostupný v barvě uvedené na fotografii<br>
+       - Přídavný tlumič nárazů umístěný v rámové konstrukci eliminuje vibrace a nerovnosti terénu<br>
+       - Měkké odpružení podvozku <br>
+       - Otočná přední kola s možností aretace<br>
+       - Bezúdržbová gelová kola - nízkoprofilová, náboje kol s dvojitými ložisky<br>
+       - Centrální brzda<br>
+       - Velký, uzavíratelný košík pod kočárkem<br>
+       - Nastavitelná koženková rukojeť<br>
+       - Jednoduchý systém „Click” na nacvaknutí hluboké vaničky, sportovní verze nebo autosedačky</p>
+
+    <p class="extra-description">Hluboký kočárek</p>
+    <p>- Prostorná, pohodlná hluboká vanička, čtyřstupňová regulace zádové opěrky<br>
+       - Vnitřní výstelka vaničky vyrobena z měkké bavlny, ta splňuje nejvyšší bezpečnostní standardy<br>
+       - Matrace<br>
+       - Boudička s ventilačním okénkem<br>
+       - Nánožník s ventilací (novinka mezi kočárky)<br>
+       - Vysoce kvalitní, atestované látky</p>
+
+    <p class="extra-description">Sportovní kočárek</p>
+    <p>- Koncepčně nová, moderní sedačka kočárku se může nasadit po i proti směru jízdy<br>
+       - Prodloužená stříška s kšiltem chrání proti větru, nízkým teplotám a slunci<br>
+       - Ventilační okno (odepínací zadní část boudičky)<br>
+       - Měkké a pohodlné bavlněné polstrování v sedačce<br>
+       - Pětibodové bezpečnostní pásy s regulací výšky<br>
+       - Opěradlo nastavitelné do pozice lehu<br>
+       - Nastavitelná podnožka i do délky<br>
+       - Odepínací madlo s kvalitním koženkovým potahem</p>
+
+    <p>Na podvozek kočárku je možno nasadit autosedačku Roan Kite 0-13 kg nebo za pomocí adaptérů jiné značkové autosedačky (Maxi-Cosi, Besafe, Cybex Aton).</p>
+
+    <p class="extra-description">V sestavě kočárku je:</p>
+    <p>- Podvozek s velkým košíkem<br>
+       - Hluboká korba s boudou a nánožníkem<br>
+       - Sportovní nástavba s nánožníkem<br>
+       - Taška na kočárek</p>
+
+    <p class="extra-description">V ceně kočárku je bonusová výbava:</p>
+    <p>- Deka do kočárku<br>
+       - Moskytiéra<br>
+       - Pláštěnka</p>
+
+    <p class="extra-description">Technická data kočárku Roan Bloom</p>
+    <p>- Hmotnost konstrukce: 9,5 kg<br>
+       - Hmotnost hluboké vaničky: 4,9 kg<br>
+       - Hmotnost sportovní nástavby: 4 kg<br>
+       - Rozměr rozloženého podvozku (v x š): 85-113 x 60 cm<br>
+       - Rozměr složeného podvozku (v x š x d): 80 x 60 x 35 cm<br>
+       - Vnitřní rozměr korby (v x š x d): 80 x 37 x 20 cm<br>
+       - Sportovní nástavba:<br>
+         &nbsp;&nbsp;&nbsp;- Šíře sedáku: 32 cm<br>
+         &nbsp;&nbsp;&nbsp;- Hloubka sedáku: 24 cm<br>
+         &nbsp;&nbsp;&nbsp;- Výška opěradla: 55 cm<br>
+         &nbsp;&nbsp;&nbsp;- Šíře opěradla: 39 cm</p>
+`,
+"Roan Coss": `<p><b>Kočárek trojkombinace Raon Coss</b> - jeden z posledních modelů značky Roan. Tento kočárek se vyznačuje inovativním systémem skládání EASY FOLD, který umožňuje skládání kočárku jednou rukou.</p>
+
+<p class="extra-description">Podvozek kočárku</p>
+<p>- Lehký hliníkový rám, dostupný v barvě uvedené na fotografii<br>
+   - Měkké odpružení podvozku na zadních kolech<br>
+   - Otočná přední kola s možností aretace<br>
+   - Gelová kola - nízkoprofilová, náboje v zadních kolech s ložisky<br>
+   - Centrální brzda zajišťuje pohodlné zabrždění<br>
+   - Inovativní systém skládání EASY FOLD dovoluje skládání kočárku jednou rukou<br>
+   - Nadstandardně velký, uzavíratelný košík na zip pod kočárkem<br>
+   - Nastavitelná rukojeť kočárku s madlem z eko kůže<br>
+   - Jednoduchý systém „Click” na rychlé nacvaknutí hluboké vaničky, sportovní verze nebo autosedačky</p>
+
+<p class="extra-description">Hluboký kočárek</p>
+<p>- Velká a pohodlná hluboká vanička, čtyřstupňová regulace zádové opěrky pro miminko<br>
+   - Vnitřní výstelka vaničky vyrobena z měkké bavlny, splňuje nejvyšší bezpečnostní standardy<br>
+   - Matrací vyrobena z kokosového vlákna, zajišťující dokonalou cirkulaci vzduchu<br>
+   - Boudička s ventilačním okénkem a integrovanou sluneční clonou<br>
+   - Nánožník s ventilací (novinka mezi kočárky)<br>
+   - Praktická taška na rukojeť kočárku<br>
+   - Vysoce kvalitní, atestované látky</p>
+
+<p class="extra-description">Sportovní kočárek</p>
+<p>- Sedačka kočárku se může nasadit po i proti směru jízdy<br>
+   - Prodloužená stříška s kšiltem chrání proti větru, nízkým teplotám a slunci<br>
+   - Ventilační okno (odepínací zadní část boudičky)<br>
+   - Měkké a pohodlné bavlněné polstrování v sedačce<br>
+   - Pětibodové bezpečnostní pásy s regulací výšky<br>
+   - Opěradlo nastavitelné do úplného lehu<br>
+   - Nastavitelná podnožka<br>
+   - Oboustranně odepínací madlo</p>
+
+<p>Na podvozek kočárku je možno nasadit autosedačku Roan Kite 0-13 kg nebo za pomocí adaptérů jiné značkové autosedačky (Maxi-Cosi, Besafe, Cybex Aton).</p>
+
+<p class="extra-description">V sestavě kočárku je:</p>
+<p>- Podvozek s velkým košíkem<br>
+   - Hluboká korba s boudou a nánožníkem<br>
+   - Sportovní nástavba s nánožníkem<br>
+   - Taška na kočárek</p>
+
+<p class="extra-description">V ceně kočárku je bonusová výbava:</p>
+<p>- Deka do kočárku<br>
+   - Moskytiéra<br>
+   - Pláštěnka</p>
+
+<p class="extra-description">Technická data kočárku Roan Coss</p>
+<p>- Hmotnost konstrukce: 9,4 kg<br>
+   - Hmotnost hluboké vaničky: 4,9 kg<br>
+   - Hmotnost sportovní nástavby: 5,6 kg<br>
+   - Rozměr rozloženého podvozku (v x š): 86-110 x 61 x 105 cm<br>
+   - Rozměr složeného podvozku (v x š x d): 70 x 61 x 36 cm<br>
+   - Vnitřní rozměr korby (v x š x d): 21 x 36 x 83 cm<br>
+   - Sportovní nástavba:<br>
+     &nbsp;&nbsp;&nbsp;- Šíře sedáku: 28 cm<br>
+     &nbsp;&nbsp;&nbsp;- Hloubka sedáku: 26 cm<br>
+     &nbsp;&nbsp;&nbsp;- Výška opěradla: 50 cm<br>
+     &nbsp;&nbsp;&nbsp;- Délka opěrky nohou: 19 cm</p>
+`,
+"Roan Coss Classic": `<p><b>Kočárek trojkombinace Roan Coss Classic</b> - pohodlný, klasický retro kočárek značky Roan. Tento model spojuje tradiční design s moderními funkcemi.</p>
+
+<p class="extra-description">Podvozek kočárku</p>
+<p>- Klasická chromovaná konstrukce s velkým drátěným košíkem<br>
+   - Měkké zavěšení<br>
+   - Rukojeť kočárku z měkké eko kůže, výškově nastavitelná kloubovým mechanizmem<br>
+   - Velká nafukovací kola<br>
+   - Centrální brzda zajišťuje pohodlné zabrždění<br>
+   - Jednoduchý systém „Click” na rychlé nacvaknutí hluboké vaničky, sportovní verze nebo autosedačky</p>
+
+<p class="extra-description">Hluboký kočárek</p>
+<p>- Velká a pohodlná hluboká vanička, čtyřstupňová regulace zádové opěrky pro miminko<br>
+   - Vnitřní výstelka vaničky vyrobena z měkké bavlny, splňuje nejvyšší bezpečnostní standardy<br>
+   - Matrací vyrobena z kokosového vlákna, zajišťující dokonalou cirkulaci vzduchu<br>
+   - Boudička s ventilačním okénkem a integrovanou sluneční clonou<br>
+   - Nánožník s ventilací (novinka mezi kočárky)<br>
+   - Praktická taška na rukojeť kočárku<br>
+   - Vysoce kvalitní, atestované látky</p>
+
+<p class="extra-description">Sportovní kočárek</p>
+<p>- Sedačka kočárku se může nasadit po i proti směru jízdy<br>
+   - Prodloužená stříška s kšiltem chrání proti větru, nízkým teplotám a slunci<br>
+   - Ventilační okno (odepínací zadní část boudičky)<br>
+   - Měkké a pohodlné bavlněné polstrování v sedačce<br>
+   - Pětibodové bezpečnostní pásy s regulací výšky<br>
+   - Opěradlo nastavitelné do úplného lehu<br>
+   - Nastavitelná podnožka<br>
+   - Oboustranně odepínací madlo</p>
+
+<p>Na podvozek kočárku je možno nasadit autosedačku Roan Kite 0-13 kg nebo za pomocí adaptérů jiné značkové autosedačky (Maxi-Cosi, Besafe, Cybex Aton).</p>
+
+<p class="extra-description">V sestavě kočárku je:</p>
+<p>- Podvozek s velkým košíkem<br>
+   - Hluboká korba s boudou a nánožníkem<br>
+   - Sportovní nástavba s nánožníkem<br>
+   - Taška na kočárek</p>
+
+<p class="extra-description">V ceně kočárku je bonusová výbava:</p>
+<p>- Deka do kočárku<br>
+   - Moskytiéra<br>
+   - Pláštěnka</p>
+
+<p class="extra-description">Technická data kočárku Roan Coss Classic</p>
+<p>- Hmotnost konstrukce: 9,4 kg<br>
+   - Hmotnost hluboké vaničky: 4,9 kg<br>
+   - Hmotnost sportovní nástavby: 5,6 kg<br>
+   - Vnitřní rozměr korby (v x š x d): 21 x 36 x 83 cm<br>
+   - Sportovní nástavba:<br>
+     &nbsp;&nbsp;&nbsp;- Šíře sedáku: 28 cm<br>
+     &nbsp;&nbsp;&nbsp;- Hloubka sedáku: 26 cm<br>
+     &nbsp;&nbsp;&nbsp;- Výška opěradla: 50 cm<br>
+     &nbsp;&nbsp;&nbsp;- Délka opěrky nohou: 19 cm</p>
+`,
+"Roan Emma": `<p><b>Kombinovaný kočárek</b> Roan Emma je klasický, houpací kočárek - stará dobrá klasika s moderními funkcemi.</p>
+
+<p class="extra-description">Podvozek kočárku</p>
+<p>- Houpací podvozek<br>
+   - Ložisková, nafukovací kola (12" nebo 14" dle výběru), možnost vyměnit kola za pěnové 14" bílé<br>
+   - Nastavitelná rukojeť kočárku<br>
+   - Madlo pro přenášení kočárku<br>
+   - Kočárek má systém „Click” pro rychlé nacvaknutí hluboké korby nebo sportovní nástavby po směru i proti směru jízdy</p>
+
+<p class="extra-description">Hluboký kočárek</p>
+<p>- V hluboké korbě je měkká matrace<br>
+   - Zádovou opěrku v korbičce lze nastavit, dítě může sedět nebo ležet<br>
+   - Kočárek je vybaven nánožníkem pro ochranu před chladem<br>
+   - Kvalitní koženková rukojeť<br>
+   - Bezpečnostní atesty kočárku potvrzují jeho splnění nejvyšších standardů</p>
+
+<p class="extra-description">Sportovní kočárek</p>
+<p>- Sportovní nástavbu lze umístit na podvozek po směru i proti směru jízdy<br>
+   - Bezpečnostní 5bodové pásy a bezpečnostní madlo pro ochranu dítěte<br>
+   - Vnitřní rozměr sportovní sedačky je dostatečně prostorný pro pohodlí dítěte</p>
+
+<p>Ke standardnímu vybavení patří taška na rukojeť s několika kapsami pro uskladnění nezbytností.</p>
+
+<p class="extra-description">V ceně kočárku je:</p>
+<p>- Podvozek<br>
+   - Hluboká korba s nánožníkem<br>
+   - Sportovní korba s nánožníkem<br>
+   - Pevný, drátěný košík pod kočárek<br>
+   - Elegantní a prostorná taška na madlo kočárku<br>
+   - Nafukovací kola</p>
+
+<p>Na kočárek je možné dokoupit originál autosedačku Roan Millo 0-13 kg, která je kompatibilní s podvozkem. Také je možnost nasadit autosedačky značek Maxi-Cosi a Cybex (adaptéry nejsou součástí balení).</p>
+
+<p class="extra-description" style="margin-bottom: 12px; color: red;">Kočárek je dodáván od výrobce v šedo-stříbrném provedení konstrukce, za příplatek 400,-Kč dodáváme luxusní variantu na chromové konstrukci (viz. foto). V případě objednávky napište do objednávky (kolonka Poznámky) požadovaný typ koleček a konstrukce.</p>
+
+<p class="extra-description">Technická data kočárku Roan Emma</p>
+<p>- Celková výška: 120 cm<br>
+   - Celková šířka: 58 cm</p>
+
+<p><b>Vanička:</b></p>
+<p>- Výška od země: 60 cm<br>
+   - Vnitřní délka: 82 cm<br>
+   - Vnitřní šířka: 37 cm<br>
+   - Vnější délka: 87 cm<br>
+   - Vnější šířka: 42 cm<br>
+   - Výška vaničky: 24 cm</p>
+
+<p><b>Sportovní verze:</b></p>
+<p>- Výška sedáku od země: 60 cm<br>
+   - Vnitřní délka: 90 cm<br>
+   - Vnitřní šířka: 35 cm</p>
+
+<p><b>Podvozek:</b></p>
+<p>- Výška složeného podvozku vč. koleček: 40 cm<br>
+   - Výška složeného podvozku bez koleček: 25 cm<br>
+   - Šířka podvozku bez koleček: 60 cm<br>
+   - Nosnost kočárku: 15 kg<br>
+   - Nosnost košíku: 2 kg<br>
+   - Nosnost tašky: 1 kg<br>
+   - Váha kočárku: 15,5 kg<br>
+   - Váha konstrukce s koly: 10,5 kg<br>
+   - Váha vaničky: 5 kg<br>
+   - Váha sportovní sedačky: 4,5 kg</p>
+
+<p><b>Kolečka na kočárek:</b><br>
+   1. 12´´ nafukovací<br>
+   2. 14´´ nafukovací<br>
+   3. 14´´ pěnová</p>
+`,
+"Roan Marita": `<p><b>Kombinovaný kočárek Roan Marita</b> je legendou mezi kombinovanými kočárky, je jedním z prvních značkových kočárků na českém trhu.</p>
+
+<p class="extra-description">Součástí kočárku je:</p>
+<p>- Podvozek s košíkem a s nafukovacími koly<br>
+   - Hluboká korba se stříškou<br>
+   - Sportovní nástavba<br>
+   - Taška na kočárek<br>
+   - Nánožník na hlubokou a sportovní verzi<br>
+   - Pláštěnka a síťka proti hmyzu</p>
+
+<p class="extra-description">Kočárek Roan Marita má:</p>
+<p>- Houpací odpružení<br>
+   - Nafukovací kola<br>
+   - Výškově nastavitelnou rukojeť<br>
+   - Velkou hlubokou plastovou vaničku s polohovací zádovou opěrkou<br>
+   - Možnost nastavení sporťáku v obou směrech<br>
+   - 5ti bodové bezpečnostní nastavení pásů pro dítě<br>
+   - Velkou tašku na kočárek s univerzální pláštěnkou a moskytiérou</p>
+
+<p>Možnost dokoupit autosedačku Roan Milo nebo Maxi-Cosi, Cabrio fix.</p>
+
+<p>Doplatek 1000 Kč za celochromové provedení konstrukce.</p>
+
+<p class="extra-description">Možnost individuálního výběru kol:</p>
+<p>- Černá nafukovací, velikost 12" (Kola 12" nejsou již s bílým proužkem, pouze celá černá)<br>
+   - Černá nafukovací, velikost 14"<br>
+   - Bílá nenafukovací - pěnová, velikost 14"<br>
+   <strong>Zvolenou variantu uveďte do poznámky.</strong></p>
+
+<p class="extra-description">Parametry kočárku Roan Marita:</p>
+<p>Celková výška: 120 cm<br>
+   Celková šířka: 58 cm<br>
+   Celková délka min/max: 106/108 cm<br>
+   Celková délka vodítka min/max: 106/108 cm</p>
+
+<p><b>Hluboký kočárek:</b></p>
+<p>- Vzdálenost vaničky od země: 60 cm<br>
+   - Vnitřní šířka vaničky: 37 cm<br>
+   - Vnitřní délka vaničky: 82 cm<br>
+   - Vnější šířka vaničky: 42 cm<br>
+   - Vnější délka vaničky: 87 cm<br>
+   - Výška vaničky: 24 cm<br>
+   - Výška stříšky max: 40 cm</p>
+
+<p><b>Sportovní kočárek:</b></p>
+<p>- Vzdálenost sedáku od země: 60 cm<br>
+   - Vnitřní šířka sezení: 35 cm<br>
+   - Vnitřní délka sezení: 90 cm</p>
+
+<p><b>Podvozek:</b></p>
+<p>- Výška složeného podvozku vč. koleček: 40 cm<br>
+   - Výška bez kol: 25 cm<br>
+   - Šířka podvozku bez kol: 60 cm</p>
+
+<p><b>Váha:</b></p>
+<p>- Nosnost kočárku: 15 kg<br>
+   - Nosnost košíku: 2 kg<br>
+   - Nosnost tašky: 1 kg<br>
+   - Váha kočárku: 15,5 kg</p>
+
+`,
+
+    // Pokračuj pro ostatní modely: Roan Coss, Roan Bloom, Roan Coss Classic, Roan Emma, Roan Marita
+};
+
+// Přiřazení popisu všem produktům
+const categories = Object.keys(products);
+categories.forEach(category => {
+    products[category].forEach(product => {
+        // Kontrola, zda název modelu odpovídá některému z uvedených modelů
+        Object.keys(descriptions).forEach(model => {
+            if (product.name.includes(model)) {
+                product.description = descriptions[model];
+            }
+        });
+    });
+});
+
+
+// Převod názvu barvy na HEX kód
+function getColorCode(color) {
+    const colorMap = {
+        "Černá": "#000000",
+        "Bílá": "#ffffff",
+        "Červená": "#ff0000",
+        "Modrá": "#0000ff",
+        "Zelená": "#60635c",
+        "Šedá": "#808080",
+        "Stříbrná": "#c0c0c0"
+    };
+    return colorMap[color] || "#cccccc"; // Výchozí šedá, pokud barva není v seznamu
+}
+
+// Načíst výchozí kategorii při načtení stránky
+document.addEventListener("DOMContentLoaded", function () {
+    showCategory("kombinovane");
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const toggleButton = document.getElementById("toggle-panel");
+    const detailContainer = document.getElementById("detail");
+    const expandedSection = document.getElementById("expanded-section");
+
+    toggleButton.addEventListener("click", function (event) {
+        event.stopPropagation(); // Zabrání uzavření při kliknutí na tlačítko
+        detailContainer.classList.toggle("expanded");
+        expandedSection.classList.toggle("show");
+
+        if (expandedSection.classList.contains("show")) {
+            setTimeout(() => {
+                window.scrollTo({
+                    top: expandedSection.offsetTop - 150,
+                    behavior: "smooth"
+                });
+            }, 300);
+        }
+    });
+
+    // Přidání event listeneru pro zavření sekce při kliknutí kamkoliv jinam
+    document.addEventListener("click", function (event) {
+        if (!detailContainer.contains(event.target) && !toggleButton.contains(event.target)) {
+            detailContainer.classList.remove("expanded");
+            expandedSection.classList.remove("show");
+        }
+    });
+
+    expandedSection.addEventListener("click", function (event) {
+        event.stopPropagation(); // Zabrání zavření při kliknutí do samotného okna
+    });
+});
+
+let currentProductImages = []; 
+let currentIndex = 0; 
+
+const extraImages = {
+    "Roan Bass Next Black": [
+        "kombinované kočárky/stroller2n.jpg",
+    ],
+    "Roan Bass Next Misty Mood": [
+        "kombinované kočárky/stroller3n.jpg",
+    ],
+    "Roan Bass Next Rosy Mood": [
+        "kombinované kočárky/stroller4n.jpg",
+    ],
+    "Roan Bass Next Titanium": [
+        "kombinované kočárky/stroller5n.jpg",
+    ],
+    "Roan Bass Next Ocean Mood": [
+        "kombinované kočárky/stroller7n.jpg",
+    ],
+    "Roan Bass Next Emerald Mood": [
+        "kombinované kočárky/stroller20n.jpg",
+    ],
+    "Roan Bass Next Pacific Green": [
+        "kombinované kočárky/stroller21n.jpg",
+    ],
+    "Roan Ivi Cocoa": [
+        "kombinované kočárky/stroller24n.jpg",
+    ],
+    "Roan Ivi Cocoa Rose Gold": [
+        "kombinované kočárky/stroller30n.jpg",
+        "kombinované kočárky/stroller30nn.jpg",
+        "kombinované kočárky/stroller30nnn.jpg",
+        "kombinované kočárky/stroller30nnnn.jpg",
+    ],
+    "Roan Ivi Choco": [
+        "kombinované kočárky/stroller31n.jpg",
+        "kombinované kočárky/stroller31nn.jpg",
+        "kombinované kočárky/stroller31nnn.jpg",
+        "kombinované kočárky/stroller31nnnn.jpg",
+    ],
+    "Roan Ivi Mystic Blue Rose Gold": [
+        "kombinované kočárky/stroller32n.jpg",
+        "kombinované kočárky/stroller32nn.jpg",
+        "kombinované kočárky/stroller32nnn.jpg",
+        "kombinované kočárky/stroller32nnnn.jpg",
+    ],
+    "Roan Ivi Viva Magenta": [
+        "kombinované kočárky/stroller33n.jpg",
+        "kombinované kočárky/stroller33nn.jpg",
+        "kombinované kočárky/stroller33nnn.jpg",
+        "kombinované kočárky/stroller33nnnn.jpg",
+    ],
+    "Roan Ivi Pine Green": [
+        "kombinované kočárky/stroller34n.jpg",
+        "kombinované kočárky/stroller34nn.jpg",
+        "kombinované kočárky/stroller34nnn.jpg",
+        "kombinované kočárky/stroller34nnnn.jpg",
+    ],
+    "Roan Ivi Vintage Marzipan": [
+        "kombinované kočárky/stroller35n.jpg",
+    ],
+    "Roan Ivi Vintage Lobster": [
+        "kombinované kočárky/stroller36n.jpg",
+    ],
+    "Roan Ivi Vintage Hazel": [
+        "kombinované kočárky/stroller37n.jpg",
+    ],
+    "Roan Ivi Vintage Caviar": [
+        "kombinované kočárky/stroller38n.jpg",
+    ],
+    "Roan Ivi Mocca": [
+        "kombinované kočárky/stroller39n.jpg",
+    ],
+    "Roan Ivi Vintage Praline": [
+        "kombinované kočárky/stroller40n.jpg",
+    ],
+    "Roan Ivi Vintage Sicilian Olive": [
+        "kombinované kočárky/stroller41n.jpg",
+    ],
+    "Roan Ivi Taupe": [
+        "kombinované kočárky/stroller42n.jpg",
+    ],
+    "Roan Ivi Tea Leaf": [
+        "kombinované kočárky/stroller43n.jpg",
+    ],
+    "Roan Ivi Vintage Collection Matcha": [
+        "kombinované kočárky/stroller44n.jpg",
+    ],
+//klasické
+    "Roan Coss Classic - Night Green": [
+        "klasické kočárky/stroller1n.jpg",
+    ],
+    "Roan Coss Classic - Night Trip": [
+        "klasické kočárky/stroller2n.jpg",
+    ],
+    "Roan Coss Classic - Venice Night": [
+        "klasické kočárky/stroller9n.jpg",
+        "klasické kočárky/stroller9nn.jpg",
+        "klasické kočárky/stroller9nnn.jpg",
+    ],
+    "Roan Coss Classic - Tahitian Vanilla": [
+        "klasické kočárky/stroller10n.jpg",
+        "klasické kočárky/stroller10nn.jpg",
+        "klasické kočárky/stroller10nnn.jpg",
+    ],
+    "Roan Coss Classic - Pure Cashmere": [
+        "klasické kočárky/stroller11n.jpg",
+        "klasické kočárky/stroller11nn.jpg",
+        "klasické kočárky/stroller11nnn.jpg",
+    ],
+    "Roan Coss Classic - Botanical Garden": [
+        "klasické kočárky/stroller12n.jpg",
+        "klasické kočárky/stroller12nn.jpg",
+        "klasické kočárky/stroller12nnn.jpg",
+    ],
+    "Roan Cosmo Black": [
+        "doplňky/autosedacka1.jpg",
+        "doplňky/autosedacka2.jpg",
+        "doplňky/autosedacka3.jpg",
+    ]
+
+};
+
+// Otevření modálního okna s více obrázky
+function openImageModal() {
+    const detailImage = document.getElementById("detailImage").src;
+    const productName = document.getElementById("detailTitle").innerText;
+
+    currentProductImages = [detailImage]; // Hlavní obrázek vždy první
+    if (extraImages[productName]) {
+        currentProductImages = currentProductImages.concat(extraImages[productName]);
+    }
+
+    currentIndex = 0;
+    showImage(currentIndex);
+
+    // Zobrazit nebo skrýt šipky podle počtu obrázků
+    const prevBtn = document.querySelector(".prev");
+    const nextBtn = document.querySelector(".next");
+
+    if (currentProductImages.length > 1) {
+        prevBtn.style.display = "block";
+        nextBtn.style.display = "block";
+    } else {
+        prevBtn.style.display = "none";
+        nextBtn.style.display = "none";
+    }
+
+    document.getElementById("imageModal").style.display = "flex";
+}
+
+// Změna obrázku v modálním okně
+function showImage(index) {
+    if (index < 0) {
+        currentIndex = currentProductImages.length - 1;
+    } else if (index >= currentProductImages.length) {
+        currentIndex = 0;
+    } else {
+        currentIndex = index;
+    }
+    document.getElementById("modalImage").src = currentProductImages[currentIndex];
+}
+
+// Přepínání mezi obrázky
+function changeImage(direction) {
+    showImage(currentIndex + direction);
+}
+
+// Zavření modálního okna
+function closeImageModal() {
+    document.getElementById("imageModal").style.display = "none";
+}
+
+// Ovládání klávesnicí
+document.addEventListener("keydown", function (event) {
+    if (document.getElementById("imageModal").style.display === "flex") {
+        if (event.key === "ArrowRight" && currentProductImages.length > 1) {
+            changeImage(1);
+        } else if (event.key === "ArrowLeft" && currentProductImages.length > 1) {
+            changeImage(-1);
+        } else if (event.key === "Escape") {
+            closeImageModal();
+        }
+    }
+});
+    </script>
+</body>
+</html>
