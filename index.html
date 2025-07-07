@@ -631,6 +631,7 @@
 
         <div class="detail-text" >
             <h4 style="font-family:Arial, Helvetica, sans-serif" id="detailTitle"></h4>
+            <p id="extraNote" style="color: red; font-weight: bold;"></p>
             <p><strong>Kód:</strong> <span id="detailSpecs"></span></p>
             <p><strong>Cena s DPH:</strong> <span id="detailPriceWithVAT"></span></p>
             <p><strong>Cena bez DPH:</strong> <span id="detailPriceWithoutVAT"></span></p>
@@ -790,7 +791,7 @@
                 { name: "Roan Ivi Mystic Blue Rose Gold", priceWithVAT: "18 700 CZK", priceWithoutVAT: "14 800 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller32.jpg" },
                 { name: "Roan Ivi Viva Magenta", priceWithVAT: "18 700 CZK", priceWithoutVAT: "14 800 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller33.jpg" },
 
-                { name: "Roan Ivi Pine Green", priceWithVAT: "18 700 CZK", priceWithoutVAT: "14 800 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller34.jpg" },
+                    { name: "Roan Ivi Pine Green", priceWithVAT: "18 700 CZK", priceWithoutVAT: "14 800 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller34.jpg" },
                 { name: "Roan Ivi Mocca", priceWithVAT: "18 700 CZK", priceWithoutVAT: "14 800 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller39.jpg" },
                 { name: "Roan Ivi Taupe", priceWithVAT: "18 700 CZK", priceWithoutVAT: "14 800 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller42.jpg" },
                 { name: "Roan Ivi Tea Leaf", priceWithVAT: "18 700 CZK", priceWithoutVAT: "14 800 CZK", availability: "2-3 týdny", colors: "Černá, Šedá", specs: "-", image: "kombinované kočárky/stroller43.jpg" },
@@ -1007,6 +1008,13 @@ function openDetail(product) {
     document.getElementById("detailPriceWithVAT").innerText = product.priceWithVAT;
     document.getElementById("detailPriceWithoutVAT").innerText = product.priceWithoutVAT;
     document.getElementById("detailAvailability").innerText = product.availability;
+
+    const extraNote = document.getElementById("extraNote");
+if (product.name === "Roan Ivi Pine Green") {
+    extraNote.innerText = "Aktuálně dostupné pouze na nové konstrukci v barvě champagne (na obrázku)";
+} else {
+    extraNote.innerText = ""; // vyčisti pokud není tento produkt
+}
     document.getElementById("detailSpecs").innerText = product.specs;
     document.getElementById("detailImage").src = product.image;
 
@@ -1575,12 +1583,6 @@ const extraImages = {
         "kombinované kočárky/stroller33nn.jpg",
         "kombinované kočárky/stroller33nnn.jpg",
         "kombinované kočárky/stroller33nnnn.jpg",
-    ],
-    "Roan Ivi Pine Green": [
-        "kombinované kočárky/stroller34n.jpg",
-        "kombinované kočárky/stroller34nn.jpg",
-        "kombinované kočárky/stroller34nnn.jpg",
-        "kombinované kočárky/stroller34nnnn.jpg",
     ],
     "Roan Ivi Vintage Marzipan": [
         "kombinované kočárky/stroller35n.jpg",
