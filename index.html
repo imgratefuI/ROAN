@@ -7,8 +7,8 @@
     <link rel="icon" href="favicon.png" type="image/png">
     <style>
         body { 
-            font-family: 'Roboto', 'Arial', sans-serif;
-            text-align: center;
+            font-family: Roboto; 
+            text-align: center; 
             background-color: #f8f9fa; 
             margin: 0;
             padding: 0;
@@ -35,6 +35,7 @@
 
         .divh1{
             display: inline-flex; 
+            margin-bottom: 0px;
         }
 
         
@@ -49,12 +50,17 @@
     }
 }
 
-        .h1-background{
-            background: linear-gradient(135deg, #ec008c, #313131);
-            padding: 0;
-            margin: 0;
-            margin-bottom: 5px;
-        }
+.h1-background {
+    background: linear-gradient(
+        135deg,
+        rgba(236, 0, 140, 1),  /* růžová s 60% neprůhledností */
+        rgba(49, 49, 49, 0.6)    /* šedá s 60% neprůhledností */
+    );
+    padding: 0;
+    margin: 0;
+    margin-bottom: 2px;
+}
+
 
         h1 span {
             white-space: nowrap; /* Zabraňuje zalomení textu */
@@ -565,7 +571,29 @@
     <div class="h1-background"> 
         <div class="divh1"><h1>Katalog produktů <img src="ROAN logo bck.png" alt="Ikona"></h1></div>
     </div>
-    
+
+    <div style="display: flex; justify-content: center; margin-top: 7px;">
+<div class="h1-background" style="padding: 0.6rem; margin-top: 0px;   border-radius: 8px;     background: linear-gradient(
+        135deg,
+        rgba(236, 0, 140, 0.7),
+        rgba(26, 26, 26, 0.5)   /* 0.6 = 60% neprůhlednost */
+        
+    );
+">
+  <a href="zaffiro.html" style="
+            font-size: 1.3em; 
+            color: #ffffff; 
+            margin: 0px; 
+            text-shadow: 4px 4px 10px rgba(0,0,0,0.6); 
+            font-weight: bold;
+            letter-spacing: 1px;
+            display: block;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+    Katalog Zaffiro ZDE
+  </a>
+</div>
+    </div>
+
     <div class="nav">
         <button onclick="showCategory('klasicke', true)">KLASICKÉ KOČÁRKY</button>
         <button onclick="showCategory('kombinovane', true)">KOMBINOVANÉ KOČÁRKY</button>
@@ -1747,7 +1775,6 @@ document.addEventListener("keydown", function (event) {
     </script>
 </body>
 </html>
-
 
 
 
