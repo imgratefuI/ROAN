@@ -1,0 +1,2335 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog produktů Zaffiro</title>
+    <link rel="icon" href="ikony/favicon.png" type="image/png">
+    <style>
+        body { 
+            font-family: Roboto; 
+            text-align: center; 
+            background-color: #f8f9fa; 
+            margin: 0;
+            padding: 0;
+            background-size: cover;
+            overflow: visible; /* Zajistí, že se text nebude schovávat */
+            }
+
+        h1 { 
+            font-size: 3.5em; 
+            font-family: 'Times New Roman';
+            color: #ffffff; 
+            margin: 3px;
+            text-shadow: 4px 4px 10px rgba(0,0,0,0.6); 
+            font-weight: bold;
+            letter-spacing: 2px;
+            display: inline-flex; 
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            padding-top: 0px;
+            padding-bottom: 0px;
+            max-width: 100%;
+            flex-wrap: wrap; /* Umožní správné zalomení */
+            gap: 3px; /* Mezera mezi textem a obrázkem */
+        }
+
+        .divh1{
+            display: inline-flex; 
+        }
+
+        
+@media (max-width: 510px) {
+    .divh1 h1 {
+        font-size: 3rem;
+    }
+}
+@media (max-width: 450px) {
+    .divh1 h1 {
+        font-size: 2.7rem;
+    }
+}
+
+.h1-background {
+    background: linear-gradient(
+        135deg,
+        rgba(116, 74, 74, 1),   /* 0.6 = 60% neprůhlednost */
+        rgba(26, 26, 26, 0.6)
+    );
+    padding: 15px;
+    margin: 0;
+    margin-bottom: 5px;
+    border-radius: 15px;
+}
+
+h1 span {
+    white-space: nowrap; /* Zabraňuje zalomení textu */
+}
+
+h1 img {
+    width: 125px;
+    height: auto;
+    flex-shrink: 0; /* Zabrání zmenšování loga */
+}
+
+@media (max-width: 450px) {
+    .divh1 h1 img {
+        width: 100px;
+    }
+}
+
+.h5div {
+    display: flex;
+    justify-content: center;  /* centrování horizontálně */
+    align-items: center;      /* centrování vertikálně */
+    padding: 0;
+    margin: 0;
+    height: 100%;             /* nebo výška hlavičky, pokud máš */
+    cursor: pointer;
+}
+
+.h5div h5 {
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    height: 100px;               /* výchozí velikost */
+    transform: scale(1.3);       /* poměrové zvětšení */
+    transform-origin: center;
+    display: block;
+    margin-left: 15px;
+    margin-right: 25px;
+}
+
+/* Responsivní úpravy výšky loga místo textového font-size */
+@media (max-width: 768px) {
+    .logo {
+        height: 80px;
+    }
+}
+@media (max-width: 450px) {
+    .logo {
+        height: 65px;
+    }
+}
+@media (max-width: 390px) {
+    .logo {
+        height: 65px;
+    }
+}
+@media (max-width: 360px) {
+    .logo {
+        height: 65px;
+    }
+}
+
+h4 { 
+    font-size: 1.2em; 
+    color: #ffffff; 
+    margin: 0px; 
+    text-shadow: 4px 4px 10px rgba(0,0,0,0.6); 
+    font-weight: bold;
+    letter-spacing: 1px;
+    display: block;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+h2 { 
+    color: #ffffff; 
+    text-shadow: 4px 4px 10px rgba(0,0,0,0.6); 
+    background: linear-gradient(135deg, rgb(116, 74, 74), #313131);
+    padding: 15px 5px;
+    border-radius: 15px;
+    display: inline-block;
+    font-family: Arial;
+}
+
+/* ====== HLAVNÍ OBRÁZEK POD HEADEREM ====== */
+.header-container {
+    position: relative; /* přidáno kvůli overlay */
+    animation: backgroundAnimation 18s infinite linear;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 400px;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.2); 
+    background-position: center 0%; /* Posune obrázek níže */
+}
+
+/* přidáno: overlay pro vycentrování nadpisu */
+.header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* celá výška obrázku */
+    display: flex;
+    align-items: center;      /* vertikální střed */
+    justify-content: center;  /* horizontální střed */
+}
+
+/* přidáno: úprava pro nadpis a logo */
+.h1-background h1 {
+    margin: 0;
+    color: white;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.h1-background h1 img {
+    width: 170px;
+    height: auto;
+}
+
+/* Responsivní verze pro menší displeje */
+@media (max-width: 768px) {
+    .h1-background h1 {
+        flex-direction: column;
+        font-size: 1.8rem;
+    }
+
+    .h1-background h1 img {
+        width: 90px;
+    }
+}
+
+/* Animace pozadí zůstává beze změny */
+@keyframes backgroundAnimation {
+    0%, 100% { background-image: url('bck-zaf.png'); }
+    25% { background-image: url('bck-zaf2.png'); }
+    50% { background-image: url('bck-zaf2.png'); }
+    75% { background-image: url('bck-zaf.png'); }
+}
+
+/* === NAVIGAČNÍ BAR === */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background: linear-gradient(135deg, rgb(116, 74, 74,0.9), #313131);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 25px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  font-family: Arial, sans-serif;
+}
+
+/* Levá část s logem */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-shrink: 0;
+}
+
+.nav-left .logo {
+  height: 60px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+
+.nav-left .subtitle {
+  font-size: 0.9rem;
+  color: #fff;
+  font-family: 'Cambria', serif;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+  white-space: nowrap;
+}
+
+/* Pravá část – navigační odkazy */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-links button {
+  background: #fff;
+  color: #222;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.nav-links button:hover {
+  transform: scale(1.07);
+  background: #f2f2f2;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+}
+
+/* === HAMBURGER MENU (mobil) === */
+.hamburger {
+  display: none;
+  background: none;
+  color: #fff;
+  font-size: 2rem;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.hamburger:hover {
+  transform: scale(1.1);
+}
+
+/* Hamburger menu - fullscreen */
+@media (max-width: 850px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: fixed;      /* fullscreen */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.95); /* tmavý overlay */
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    z-index: 2000;
+    transition: opacity 0.3s ease;
+  }
+
+  .nav-links.active {
+    display: flex;
+    opacity: 1;
+  }
+
+  .nav-links button {
+    width: auto;
+    background: none;     /* žádné boxy */
+    color: #fff;
+    padding: 0;
+    font-size: 2rem;
+    font-weight: bold;
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.2s ease;
+  } 
+
+  .hamburger {
+    display: block;
+    z-index: 3000;
+    font-size: 2.5rem;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+
+  .nav-left .subtitle {
+    display: none;
+  }
+
+  .nav-left .logo {
+    height: 55px;
+  }
+}
+
+/* === KONTEJNER PRO KOLEKCE === */
+#collections-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* zarovnání na střed */
+  gap: 10px;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  width: fit-content;
+  margin: 0 auto 0 auto; /* vystředění bloku na střed */
+}
+
+/* Nadpis (pokud tam máš <h2>) */
+#collections-nav h2 {
+  font-size: 0.9rem;
+  color: white;
+  margin-bottom: 4px;
+  letter-spacing: 1px;
+}
+
+/* === TLAČÍTKA UVNITŘ KOLEKCE === */
+#collections-nav button {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  padding: 8px 12px; /* přesně kolem textu */
+  height: auto;
+  width: auto;
+  white-space: nowrap;
+  color: #222;
+  font-weight: bold;
+  margin: 2px; /* malé mezery mezi tlačítky */
+}
+
+/* Hover efekt */
+#collections-nav button:hover {
+  transform: scale(1.05);
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.4);
+  background-color: rgb(116, 74, 74);
+  color: white;
+}
+
+/* === KONTEJNER PRO KOLEKCE === */
+#collections-nav1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* zarovnání na střed */
+  gap: 10px;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  width: fit-content;
+  margin: 0 auto 0 auto; /* vystředění bloku na střed */
+}
+
+/* Nadpis (pokud tam máš <h2>) */
+#collections-nav1 h2 {
+  font-size: 0.9rem;
+  color: white;
+  margin-bottom: 4px;
+  letter-spacing: 1px;
+}
+
+/* === TLAČÍTKA UVNITŘ KOLEKCE === */
+#collections-nav1 button {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  padding: 8px 12px; /* přesně kolem textu */
+  height: auto;
+  width: auto;
+  white-space: nowrap;
+  color: #222;
+  font-weight: bold;
+  margin: 2px; /* malé mezery mezi tlačítky */
+}
+
+/* Hover efekt */
+#collections-nav1 button:hover {
+  transform: scale(1.05);
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.4);
+  background-color: rgb(116, 74, 74);
+  color: white;
+}
+
+
+
+/* Modelová část */
+        .models-container {
+            text-align: center;
+            padding: 20px;
+            margin-bottom: px;
+        }
+
+        .models-container h2 {
+            font-size: 1rem;
+            margin: 0 0 3px;
+            width: 300px;
+        }
+
+        .models-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .model-button {
+            font-family:Arial, Helvetica, sans-serif;
+            font-size: 0.85rem;
+            width: 120px;
+            height: 120px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            padding: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .model-button:hover {
+            transform: scale(1.1);
+            box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .model-button img {
+            width: 65px;
+            height: 65px;
+            object-fit: contain;
+            flex-shrink: 0;
+            margin-bottom: 8px;
+        }
+
+/* Specifikace konkrétního kočárku */
+        .catalog { 
+            display: flex; 
+            flex-wrap: wrap; 
+            gap: 24px; 
+            justify-content: center; 
+            padding: 40px 20px; 
+            background-image: url(bck.jpg);
+        }
+
+        .item { 
+            width: 250px; 
+            border: none; 
+            padding: 20px; 
+            text-align: center; 
+            cursor: pointer; 
+            border-radius: 12px; 
+            background-color: #fff; 
+            transition: transform 0.3s ease, box-shadow 0.3s ease; 
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); 
+            overflow: hidden;
+        }
+
+        .item:hover { 
+            transform: translateY(-5px); 
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15); 
+        }
+
+        .item img { 
+            width: 100%; 
+            border-radius: 12px; 
+            transition: opacity 0.3s;
+        }
+
+        .item:hover img { 
+            opacity: 0.9;
+        }
+
+        .item h3 { 
+            font-size: 18px; 
+            font-weight: bold; 
+            color: #333; 
+            margin: 12px 0 6px; 
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .item p { 
+            font-size: 15px; 
+            color: #666; 
+            margin: 4px 0; 
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+/* Bližší specifikace konkrétního kočárku */
+        .detail-container { 
+            max-width: 1000px;
+            margin: 50px auto; 
+            padding: 30px; 
+            border-radius: 12px; 
+            background: #fff; 
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15); 
+            position: relative; 
+            display: flex; 
+            align-items: center; 
+            flex-wrap: wrap; /* Povolení zalamování obsahu */
+            justify-content: center; /* Zarovná obsah na střed */
+            text-align: center; 
+            gap: 30px; 
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        .detail-container.show {
+            display: flex; 
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .detail-container img { 
+            flex: 1 1 330px; /* Obrázek bude mít minimálně 300px a přizpůsobí se */
+            max-width: 40%; /* Zabrání, aby byl moc velký */
+            border-radius: 12px;  
+            object-fit: cover;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        @media (max-width: 700px) {
+    .detail-container img {
+        max-width: 80%; /* Zabrání, aby byl moc velký */
+    }
+}
+
+@media (max-width: 500px) {
+    .detail-container img {
+        max-width: 90%; /* Zabrání, aby byl moc velký */
+    }
+}
+
+        .detail-container img:hover { 
+            transform: scale(1.05); 
+            cursor: pointer;
+        }
+
+        .detail-text { 
+            flex: 1 1 300px; /* Text se také přizpůsobí */
+            font-family: 'Arial', sans-serif;
+            color: #333;
+        }
+
+        .detail-text h4 { 
+        font-size: 25px; 
+        font-weight: bold; 
+        margin-bottom: 15px; 
+        color: #ffffff;
+        /* Box styling */
+        box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15); 
+        padding: 10px 15px; /* Vnitřní mezery */
+        display: inline-block; /* Přizpůsobení šířky textu */
+        border-radius: 8px; /* Zaoblené rohy */
+        background: linear-gradient(135deg, #313131de, rgb(116, 74, 74));
+        }
+
+        .detail-text p { 
+            font-size: 17px; 
+            margin: 8px 0; 
+            color: #555;
+        }
+
+        .detail-text strong { 
+            color: #000; 
+        }
+
+        .color-options { 
+            display: flex; 
+            justify-content: center;  /* Vycentrování horizontálně */
+            align-items: center;
+            gap: 8px; 
+            margin-top: 8px; 
+        }
+
+        .color-circle { 
+            width: 20px; 
+            height: 20px; 
+            border-radius: 50%; 
+            border: 2px solid #ddd; 
+            cursor: pointer; 
+            transition: transform 0.2s ease-in-out, border 0.2s ease-in-out;
+        }
+
+        .color-circle:hover { 
+            transform: scale(1.2); 
+            border: 1px solid #000000; 
+        }
+
+        .detail-container-button {
+        background: none; /* Žádné pozadí */
+        color: #757575; /* Fialová barva textu */
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 10px 15px;
+        border: none; /* Žádný okraj */
+        border-radius: 8px; /* Zaoblené rohy */
+        cursor: pointer;
+        transition: transform 0.2s, color 0.2s, text-shadow 0.2s;
+        margin-top: 1px;
+        }
+
+        .detail-container-button:hover {
+            transform: scale(1.1); /* Lehké zvětšení */
+            color: #000000; /* Tmavší fialová při hoveru */
+        }
+
+        .detail-container.expanded {
+            max-height: 800px; /* Když je otevřené, zvětší výšku */
+        }
+
+/* Skrytá sekce s popisem */
+        .expanded-section {
+            opacity: 0; /* Skryté při startu */
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out;
+            background: #f8f9fa;
+            padding: 0 20px;
+            border-top: 1px solid #ddd;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        /* Když se zobrazí */
+        .expanded-section.show {
+            max-height: 2000px; /* Roztáhne se */
+            opacity: 1;
+            padding: 20px;
+        }
+
+        .expanded-section h3 {
+            font-size: 1.2em;
+            margin-bottom: 5px;
+            color: rgb(116, 74, 74);
+        }
+
+        .expanded-section p {
+            font-size: 1em;
+            color: #333;
+            margin-top: 10px;
+        }
+
+        .extra-description{
+            font-weight: bold;
+            margin: 0px;
+            margin-bottom: 5px;
+        }
+
+        .expanded-section-des{
+            font-size: 16px;
+        }
+
+        .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        align-items: center;
+        justify-content: center;
+    }
+
+    .modal-content {
+        max-width: 80%;
+        max-height: 80%;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 15px;
+        right: 25px;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+    }
+
+    .prev, .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 40px;
+        color: rgb(0, 0, 0);
+        cursor: pointer;
+        padding: 10px;
+        z-index: 2;
+    }
+
+    .prev {
+        left: 20px;
+    }
+
+    .next {
+        right: 20px;
+    }
+
+    
+    @media (max-width: 768px) {
+    .contact-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }}
+
+    </style>
+</head>
+<body>
+<!-- HORNÍ NAVIGAČNÍ BAR -->
+<header class="navbar">
+  <div class="nav-left">
+    <div class="h5div" onclick="location.reload()">
+      <img src="logo.png" alt="Armami s. r. o." class="logo" />
+    </div>
+    <span class="subtitle">Oficiální distributor pro ROAN ČR/SK</span>
+  </div>
+
+  <button class="hamburger" onclick="toggleMenu()">☰</button>
+
+
+  <nav class="nav-links" id="nav-links">
+    <button onclick="selectMainCategory('fusaky')">FUSAKY</button>
+    <button onclick="selectMainCategory('rukavniky')">RUKÁVNÍKY</button>
+  </nav>
+</header>
+
+<!-- HLAVNÍ OBRÁZEK POD HEADEREM -->
+<section class="header-container">
+  <div class="header-overlay">
+    <div class="h1-background">
+      <h1 class="hero-title">
+        Katalog produktů 
+        <img src="zaffiro-logo1.png" alt="Zaffiro logo">
+      </h1>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Sekce pro kolekce (zůstává, ale bude se zobrazovat až po výběru hlavní kategorie) -->
+<div class="nav" id="collections-nav" style="display:none;">
+    <h2 style="font-size: smaller; padding: 9px;border-radius: 10px;">KOLEKCE</h2>
+    <button onclick="showCategory('sierra', true)">SIERRA</button>
+    <button onclick="showCategory('nevada', true)">NEVADA</button>
+    <button onclick="showCategory('nordico', true)">NORDICO</button>
+    <button onclick="showCategory('scandi', true)">SCANDI</button>
+    <button onclick="showCategory('aspen', true)">ASPEN</button>
+</div>
+
+<!-- Sekce pro kolekce (zůstává, ale bude se zobrazovat až po výběru hlavní kategorie) -->
+<div class="nav" id="collections-nav1" style="display:none;">
+    <h2 style="font-size: smaller; padding: 9px;border-radius: 10px;">KOLEKCE</h2>
+    <button onclick="showCategory('sierra1', true)">SIERRA</button>
+    <button onclick="showCategory('nevada1', true)">NEVADA</button>
+    <button onclick="showCategory('nordico1', true)">NORDICO</button>
+    <button onclick="showCategory('scandi1', true)">SCANDI</button>
+    <button onclick="showCategory('aspen1', true)">ASPEN</button>
+</div>
+
+<!-- Sekce pro modely (také se ukáže až po výběru) -->
+<div class="models-container" id="models-section" style="display:none; background: linear-gradient(135deg, rgb(193, 193, 193), #ffffff);">
+    <h2>MODELY</h2>
+    <div class="models-buttons">
+        <div class="model-button" onclick="showCategory('sleepgrow', true)">
+            <img src="ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/02.Taupe/02.Śpiworek/01.SleepGrow/5902745612669-00.jpg" alt="Model SleepGrow">
+            <span>SleepGrow</span>
+        </div>
+        <div class="model-button" onclick="showCategory('igrow', true)">
+            <img src="ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/02.Taupe/02.Śpiworek/02.iGrow/5902745612676-00.jpg" alt="Model iGrow">
+            <span>iGrow</span>
+        </div>
+        <div class="model-button" onclick="showCategory('evergrow', true)">
+            <img src="ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/02.Taupe/02.Śpiworek/03.EverGrow/5902745612683-00.jpg" alt="Model EverGrow">
+            <span>EverGrow</span>
+        </div>
+        <div class="model-button" onclick="showCategory('growup', true)">
+            <img src="ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/02.Taupe/02.Śpiworek/04.GrowUP/5902745612706-00.jpg" alt="Model GrowUp">
+            <span>GrowUp</span>
+        </div>
+        <div class="model-button" onclick="showCategory('maxi', true)">
+            <img src="ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/02.Brown/04.Śpiworek/Maxi 0-36m/5902745612515-00.jpg" alt="Model Maxi">
+            <span>Maxi</span>
+        </div>
+        <div class="model-button" onclick="showCategory('mini', true)">
+            <img src="ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/02.Brown/04.Śpiworek/Mini 0-18m/5902745612508-00.jpg" alt="Model Mini">
+            <span>Mini</span>
+        </div>
+    </div>
+</div>
+
+
+
+    <div class="catalog" id="catalog"></div>
+    
+    <div class="detail-container" id="detail" style="display: none;">
+        <img id="detailImage" src="kocarek.jpg" alt="Kočárek" onclick="openImageModal(this)">
+    <!-- Modální okno -->
+    <div id="imageModal" class="modal">
+        <span class="close-btn" onclick="closeImageModal()">&times;</span>
+        <span class="prev" onclick="changeImage(-1)">&#10094;</span>
+        <div class="imgdiv"><img id="modalImage" class="modal-content"></div>
+        <span class="next" onclick="changeImage(1)">&#10095;</span>
+    </div>
+
+        <div class="detail-text" >
+            <h4 style="font-family:Arial, Helvetica, sans-serif" id="detailTitle"></h4>
+            <p id="extraNote" style="color: red; font-weight: bold;"></p>
+            <p><strong>Kód:</strong> <span id="detailSpecs"></span></p>
+            <p><strong>Cena s DPH:</strong> <span id="detailPriceWithVAT"></span></p>
+            <p><strong>Cena bez DPH:</strong> <span id="detailPriceWithoutVAT"></span></p>
+            <p><strong>Dostupnost:</strong> <span id="detailAvailability"></span></p>
+                <div id="detailColors" class="color-options" style="display: none;"></div>
+
+            <button id="toggle-panel" class="detail-container-button">Zobrazit bližší popis</button>
+        </div>
+    
+    </div>
+
+    <div id="expanded-section" class="expanded-section">
+        <h3>Bližší popis produktu</h3>
+        <div class="expanded-section-des">
+            <!-- Sem se dynamicky vkládá popis -->
+        </div>
+    </div>
+    
+        
+    <div class="contact-card" style="margin: 0 auto; padding: 15px; background: linear-gradient(100deg, rgb(116, 74, 74), #0c0c0cdb); box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3); color: white; display: flex; justify-content: space-between; flex-wrap: wrap; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; border-top: solid 1px #000; ">
+        <!-- Kontakty -->
+        <div style="flex: 1 1 23%; padding: 8px; margin: 8px; background-color: #00000083; border-radius: 10px;">
+            <h5 style="font-size: 1.3em; text-align: center; margin-bottom: 5px;">Kontakty</h5>
+            <p><b>Adresa pro doručení:</b> Máchova 1147/1, 742 21 Kopřivnice</p>
+            <p><b>Telefon:</b> +420 608 616 027</p>
+            <p><b>Email:</b> <a href="mailto:armami@email.cz" style="color: #fff; text-decoration: underline;">armami@email.cz</a></p>
+            <p><b>Fakturační adresa:</b> Husova 388/7b</p>
+            <p>IČO: 22317031, DIČ: CZ22317031</p>
+        </div>
+    
+        <!-- O nás -->
+        <div style="flex: 1 1 23%; padding: 10px; margin: 8px; background-color: #00000083; border-radius: 10px;">
+            <h5 style="font-size: 1.3em; text-align: center; margin-bottom: 5px;">O nás</h5>
+            <p style="font-size: 1em;">Jsme firma s více než 20 lety zkušeností v oblasti kočárků a dětského zboží. Společnost ARMAMI s.r.o. je oficiálním distributorem značky ROAN pro Českou republiku a Slovensko. Nabízíme pouze kvalitní a moderní výrobky, které splňují nejvyšší standardy a nároky na bezpečnost a komfort.</p>
+        </div>
+    
+        <!-- Sociální sítě -->
+        <div style="flex: 1 1 23%; padding: 10px; margin: 8px; background-color: #00000083; border-radius: 10px;">
+            <h5 style="font-size: 1.3em; text-align: center; margin-bottom: 5px;">Sociální sítě</h5>
+            <p style="font-size: 1em; text-align: center; margin-bottom: 25px;">Sledujte nás na našich sociálních sítích pro novinky a inspiraci:</p>
+            <p style="display: flex; justify-content: center; align-items: center; gap: 15px;">
+                <a href="https://www.facebook.com">
+                    <img src="ikony/facebook.png " alt="Facebook" width="35" height="50">
+                </a>
+                <a href="https://www.youtube.com/channel/UCqmXOPQcLaGiNu4TeCRU5Mw">
+                    <img src="ikony/youtube.svg" alt="Pinterest" width="30" height="30">
+                </a>
+                <a href="https://www.instagram.com">
+                    <img src="ikony/instagram.svg" alt="Instagram" width="30" height="30">
+                </a>
+            </p>
+            
+        </div>
+    
+        <!-- Naše obchody -->
+<!-- Naše obchody -->
+<div style="
+    flex: 1 1 23%;
+    padding: 15px;
+    margin: 10px;
+    background-color: #00000083;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+">
+    <h5 style="font-size: 1.4em; margin-bottom: 5px;">Naše obchody</h5>
+    <p style="font-size: 1em; margin-bottom: 5px; margin-top: 5px;">
+        Naše produkty si můžete zakoupit v těchto obchodech:
+    </p>
+
+    <!-- Odkazy v gridu -->
+    <div style="
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 10px;
+        justify-content: center;
+        padding: 10px;
+        font-size: 15px;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        text-decoration: underline;
+
+        
+    ">
+        <a href="https://www.zirafa-shop.cz/" style="text-decoration: none; color: #fff; padding: 8px; border-radius: 5px; transition: 0.3s;">Dětský obchůdek Žirafa</a>
+        <a href="https://www.babyadore.sk/" style="text-decoration: none; color: #fff; padding: 8px; border-radius: 5px; transition: 0.3s;">BabyAdore</a>
+        <a href="https://www.bambino.cz/" style="text-decoration: none; color: #fff; padding: 8px; border-radius: 5px; transition: 0.3s;">Bambino.cz</a>
+        <a href="https://www.babyplace.cz/" style="text-decoration: none; color: #fff; padding: 8px; border-radius: 5px; transition: 0.3s;">BabyPlace</a>
+        <a href="https://www.kocarky.cz/" style="text-decoration: none; color: #fff; padding: 8px; border-radius: 5px; transition: 0.3s;">Daniela Kočárky</a>
+        <a href="https://www.detskydum.cz/" style="text-decoration: none; color: #fff; padding: 8px; border-radius: 5px; transition: 0.3s;">Dětský Dům</a>
+        <a href="https://www.eshopbaby.cz/" style="text-decoration: none; color: #fff; padding: 8px; border-radius: 5px; transition: 0.3s;">EshopBaby</a>
+        <a href="https://www.nakupujskacenkou.cz/" style="text-decoration: none; color: #fff; padding: 8px; border-radius: 5px; transition: 0.3s;">Dětský Svět</a>
+        <a href="https://www.kocarky-kocarek.cz/" style="text-decoration: none; color: #fff; padding: 8px; border-radius: 5px; transition: 0.3s;">HAPU</a>
+        <a href="https://www.nejlepsikocarky.cz/" style="text-decoration: none; color: #fff; padding: 8px; border-radius: 5px; transition: 0.3s;">John Nell</a>
+        <a href="https://www.mimisk.eu/" style="text-decoration: none; color: #fff; padding: 8px; border-radius: 5px; transition: 0.3s;">MimiSk</a>
+        <a href="https://shop.modrykonik.sk/sk-eur/sk/" style="text-decoration: none; color: #fff; padding: 8px; border-radius: 5px; transition: 0.3s;">ModrýKoník.sk</a>
+        <a href="https://www.malvik.cz/" style="text-decoration: none; color: #fff; padding: 8px; border-radius: 5px; transition: 0.3s;">Malvík</a>
+        <a href="https://www.mojkocik.sk/" style="text-decoration: none; color: #fff; padding: 8px; border-radius: 5px; transition: 0.3s;">MojKočík SK</a>
+        <a href="https://www.mujandilek.cz/" style="text-decoration: none; color: #fff; padding: 8px; border-radius: 5px; transition: 0.3s;">MůjAndílek</a>
+        <a href="https://www.kocarek.cz/" style="text-decoration: none; color: #fff; padding: 8px; border-radius: 5px; transition: 0.3s;">Kočárek.cz</a>
+        <a href="https://www.detskyruzek.cz/" style="text-decoration: none; color: #fff; padding: 8px; border-radius: 5px; transition: 0.3s;">Dětský Růžek</a>
+        <a href="http://www.bambino-mladaboleslav.cz/bambino" style="text-decoration: none; color: #fff; padding: 8px; border-radius: 5px; transition: 0.3s;">Bambino Mladá Boleslav</a>
+        <a href="https://www.sambaby.com/" style="text-decoration: none; color: #fff; padding: 8px; border-radius: 5px; transition: 0.3s;">SAMBABY</a>
+        <a href="https://www.123kociky.sk/" style="text-decoration: none; color: #fff; padding: 8px; border-radius: 5px; transition: 0.3s;">123kociky.sk</a>
+        <a href="https://www.kocarkov.cz/" style="text-decoration: none; color: #fff; padding: 8px; border-radius: 5px; transition: 0.3s;">Kočárkov</a>
+        <a href="http://www.bambinomelnik.cz/" style="text-decoration: none; color: #fff; padding: 8px; border-radius: 5px; transition: 0.3s;">Bambino Mělník</a>
+    </div>
+</div>
+
+    </div>
+
+    </div>
+
+    <script>
+// Toggle hamburger menu
+function toggleMenu() {
+  const links = document.querySelector('.nav-links');
+  if (!links) return;
+  links.classList.toggle('active');
+}
+
+// Zavření menu po kliknutí na odkaz
+document.querySelectorAll('.nav-links button').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const links = document.querySelector('.nav-links');
+    links.classList.remove('active'); // zavře menu
+  });
+});
+
+
+        const products = {
+            sierra: [
+                { name: "Zimní fusak Zaffiro Maxi Beige z ovčí vlny", priceWithVAT: "3490 CZK", priceWithoutVAT: "2884 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612478", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/01.Beige/04.Śpiworek/Maxi 0-36m/5902745612478-00.jpg" },
+                { name: "Zimní fusak Zaffiro Mini Beige z ovčí vlny", priceWithVAT: "2190 CZK", priceWithoutVAT: "1810 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745554006", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/01.Beige/04.Śpiworek/Mini 0-18m/5902745554006-00.jpg" },
+
+                { name: "Zimní fusak Zaffiro Maxi Brown z ovčí vlny", priceWithVAT: "3490 CZK", priceWithoutVAT: "2884 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612515", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/02.Brown/04.Śpiworek/Maxi 0-36m/5902745612515-00.jpg" },
+                { name: "Zimní fusak Zaffiro Mini Brown z ovčí vlny", priceWithVAT: "2190 CZK", priceWithoutVAT: "1810 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612508", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/02.Brown/04.Śpiworek/Mini 0-18m/5902745612508-00.jpg" },
+
+                { name: "Zimní fusak Zaffiro Maxi Grey z ovčí vlny", priceWithVAT: "3490 CZK", priceWithoutVAT: "2884 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612546", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/03.Grey/04.Śpiworek/Maxi 0-36m/5902745612546-00.jpg" },
+                { name: "Zimní fusak Zaffiro Mini Grey z ovčí vlny", priceWithVAT: "2190 CZK", priceWithoutVAT: "1810 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745554013", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/03.Grey/04.Śpiworek/Mini 0-18m/5902745554013-00.jpg" },
+
+                { name: "Zimní fusak Zaffiro Maxi Anthracite z ovčí vlny", priceWithVAT: "3490 CZK", priceWithoutVAT: "2884 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612584", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/04.Anthracite/04.Śpiworek/Maxi 0-36m/5902745612584-00.jpg" },
+                { name: "Zimní fusak Zaffiro Mini Anthracite z ovčí vlny", priceWithVAT: "2190 CZK", priceWithoutVAT: "1810 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612577", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/04.Anthracite/04.Śpiworek/Mini 0-18m/5902745612577-00.jpg" },
+            ],
+            nevada: [
+                { name: "Zimní fusak Zaffiro Mini Beige (Nevada) z ovčí vlny", priceWithVAT: "2190 CZK", priceWithoutVAT: "1810 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745613888", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/02.Nevada/01.Beige/06.Śpiworek/Mini 0-18m/5902745613888 -1.jpg" },
+                { name: "Zimní fusak Zaffiro Mini Brown (Nevada) z ovčí vlny", priceWithVAT: "2190 CZK", priceWithoutVAT: "1810 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745613871", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/02.Nevada/02.Brown/06.Śpiworek/Mini 0-18m/5902745613871-00.jpg" },
+                { name: "Zimní fusak Zaffiro Mini Grey (Nevada) z ovčí vlny", priceWithVAT: "2190 CZK", priceWithoutVAT: "1810 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745613895", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/02.Nevada/03.Grey/06.Śpiworek/Mini 0-18m/5902745613895-00.jpg" },
+                { name: "Zimní fusak Zaffiro Mini Anthracite (Nevada) z ovčí vlny", priceWithVAT: "2190 CZK", priceWithoutVAT: "1810 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745613901", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/02.Nevada/04.Anthracite/06.Śpiworek/Mini 0-18m/5902745613901-00.jpg" },
+            ],
+            nordico: [
+                { name: "Zimní fusak Zaffiro SleepGrow Beige z ovčí vlny", priceWithVAT: "1990 CZK", priceWithoutVAT: "1645 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612614", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/01.Beige/02.Śpiworek/01.SleepGrow/5902745612614-00.jpg" },
+                { name: "Zimní fusak Zaffiro iGrow Beige z ovčí vlny", priceWithVAT: "2490 CZK", priceWithoutVAT: "2058 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612621", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/01.Beige/02.Śpiworek/02.iGrow/5902745612621-00.jpg" },
+                { name: "Zimní fusak Zaffiro EverGrow Beige z ovčí vlny", priceWithVAT: "2990 CZK", priceWithoutVAT: "2471 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612638", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/01.Beige/02.Śpiworek/03.EverGrow/5902745612638-00.jpg" },
+                { name: "Zimní fusak Zaffiro GrowUP Beige z ovčí vlny", priceWithVAT: "3490 CZK", priceWithoutVAT: "2884 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612645", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/01.Beige/02.Śpiworek/04.GrowUP/5902745612645-00.jpg" },
+
+                { name: "Zimní fusak Zaffiro SleepGrow Taupe z ovčí vlny", priceWithVAT: "1990 CZK", priceWithoutVAT: "1645 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612669", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/02.Taupe/02.Śpiworek/01.SleepGrow/5902745612669-00.jpg" },
+                { name: "Zimní fusak Zaffiro iGrow Taupe z ovčí vlny", priceWithVAT: "2490 CZK", priceWithoutVAT: "2058 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612676", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/02.Taupe/02.Śpiworek/02.iGrow/5902745612676-00.jpg" },
+                { name: "Zimní fusak Zaffiro EverGrow Taupe z ovčí vlny", priceWithVAT: "2990 CZK", priceWithoutVAT: "2471 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612683", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/02.Taupe/02.Śpiworek/03.EverGrow/5902745612683-00.jpg" },
+                { name: "Zimní fusak Zaffiro GrowUP Taupe z ovčí vlny", priceWithVAT: "3490 CZK", priceWithoutVAT: "2884 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612706", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/02.Taupe/02.Śpiworek/04.GrowUP/5902745612706-00.jpg" },
+
+                { name: "Zimní fusak Zaffiro SleepGrow Bottle Green z ovčí vlny", priceWithVAT: "1990 CZK", priceWithoutVAT: "1645 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612713", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/03.Bottle Green/02.Śpiworek/01.SleepGrow/5902745612713-00.jpg" },
+                { name: "Zimní fusak Zaffiro iGrow Bottle Green z ovčí vlny", priceWithVAT: "2490 CZK", priceWithoutVAT: "2058 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612720", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/03.Bottle Green/02.Śpiworek/02.iGrow/5902745612720-00.jpg" },
+                { name: "Zimní fusak Zaffiro EverGrow Bottle Green z ovčí vlny", priceWithVAT: "2990 CZK", priceWithoutVAT: "2471 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612737", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/03.Bottle Green/02.Śpiworek/03.EverGrow/5902745612737-00.jpg" },
+                { name: "Zimní fusak Zaffiro GrowUP Bottle Green z ovčí vlny", priceWithVAT: "3490 CZK", priceWithoutVAT: "2884 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612744", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/03.Bottle Green/02.Śpiworek/04.GrowUP/5902745612744-00.jpg" },
+
+                { name: "Zimní fusak Zaffiro SleepGrow Black z ovčí vlny", priceWithVAT: "1990 CZK", priceWithoutVAT: "1645 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612768", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/04.Black/02.Śpiworek/01.SleepGrow/5902745612768-00.jpg" },
+                { name: "Zimní fusak Zaffiro iGrow Black z ovčí vlny", priceWithVAT: "2490 CZK", priceWithoutVAT: "2058 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612775", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/04.Black/02.Śpiworek/02.iGrow/5902745612775-00.jpg" },
+                { name: "Zimní fusak Zaffiro EverGrow Black z ovčí vlny", priceWithVAT: "2990 CZK", priceWithoutVAT: "2471 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612782", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/04.Black/02.Śpiworek/03.EverGrow/5902745612782-00.jpg" },
+                { name: "Zimní fusak Zaffiro GrowUP Black z ovčí vlny", priceWithVAT: "3490 CZK", priceWithoutVAT: "2884 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612799", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/04.Black/02.Śpiworek/04.GrowUP/5902745612799-00.jpg" },
+            ],
+            scandi: [
+                { name: "Zimní fusak Zaffiro SleepGrow Beige (Scandi) z ovčí vlny", priceWithVAT: "1990 CZK", priceWithoutVAT: "1645 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745613987", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/01.Beige/02.Śpiworek/01.SleepGrow/5902745613987-00.jpg" },
+                { name: "Zimní fusak Zaffiro iGrow Beige (Scandi) z ovčí vlny", priceWithVAT: "2490 CZK", priceWithoutVAT: "2058 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745613994", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/01.Beige/02.Śpiworek/02.iGrow/5902745613994-00.jpg" },
+                { name: "Zimní fusak Zaffiro EverGrow Beige (Scandi) z ovčí vlny", priceWithVAT: "2990 CZK", priceWithoutVAT: "2471 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745614007", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/01.Beige/02.Śpiworek/03.EverGrow/5902745614007-00.jpg" },
+                { name: "Zimní fusak Zaffiro GrowUP Beige (Scandi) z ovčí vlny", priceWithVAT: "3490 CZK", priceWithoutVAT: "2884 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745614014", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/01.Beige/02.Śpiworek/04.GrowUP/5902745614014-00.jpg" },
+
+                { name: "Zimní fusak Zaffiro SleepGrow Light Grey z ovčí vlny", priceWithVAT: "1990 CZK", priceWithoutVAT: "1645 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745614021", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/02.Light Grey/02.Śpiworek/01.SleepGrow/5902745614021-00.jpg" },
+                { name: "Zimní fusak Zaffiro iGrow Light Grey z ovčí vlny", priceWithVAT: "2490 CZK", priceWithoutVAT: "2058 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745614038", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/02.Light Grey/02.Śpiworek/02.iGrow/5902745614038-00.jpg" },
+                { name: "Zimní fusak Zaffiro EverGrow Light Grey z ovčí vlny", priceWithVAT: "2990 CZK", priceWithoutVAT: "2471 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745614045", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/02.Light Grey/02.Śpiworek/03.EverGrow/5902745614045-00.jpg" },
+                { name: "Zimní fusak Zaffiro GrowUP Light Grey z ovčí vlny", priceWithVAT: "3490 CZK", priceWithoutVAT: "2884 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745614052", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/02.Light Grey/02.Śpiworek/04.GrowUP/5902745614052-00.jpg" },
+
+                { name: "Zimní fusak Zaffiro SleepGrow Grey z ovčí vlny", priceWithVAT: "1990 CZK", priceWithoutVAT: "1645 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745614069", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/03.Grey/02.Śpiworek/01.SleepGrow/5902745614069-00.jpg" },
+                { name: "Zimní fusak Zaffiro iGrow Grey z ovčí vlny", priceWithVAT: "2490 CZK", priceWithoutVAT: "2058 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745614076", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/03.Grey/02.Śpiworek/02.iGrow/5902745614076-00.jpg" },
+                { name: "Zimní fusak Zaffiro EverGrow Grey z ovčí vlny", priceWithVAT: "2990 CZK", priceWithoutVAT: "2471 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745614083", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/03.Grey/02.Śpiworek/03.EverGrow/5902745614083-00.jpg" },
+                { name: "Zimní fusak Zaffiro GrowUP Grey z ovčí vlny", priceWithVAT: "3490 CZK", priceWithoutVAT: "2884 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745614090", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/03.Grey/02.Śpiworek/04.GrowUP/5902745614090-00.jpg" },
+
+                { name: "Zimní fusak Zaffiro SleepGrow Black z ovčí vlny", priceWithVAT: "1990 CZK", priceWithoutVAT: "1645 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745614106", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/04.Black/02.Śpiworek/01.SleepGrow/5902745614106-00.jpg" },
+                { name: "Zimní fusak Zaffiro iGrow Black z ovčí vlny", priceWithVAT: "2490 CZK", priceWithoutVAT: "2058 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745614113", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/04.Black/02.Śpiworek/02.iGrow/5902745614113-00.jpg" },
+                { name: "Zimní fusak Zaffiro EverGrow Black z ovčí vlny", priceWithVAT: "2990 CZK", priceWithoutVAT: "2471 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745614120", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/04.Black/02.Śpiworek/03.EverGrow/5902745614120-00.jpg" },
+                { name: "Zimní fusak Zaffiro GrowUP Black z ovčí vlny", priceWithVAT: "3490 CZK", priceWithoutVAT: "2884 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745614137", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/04.Black/02.Śpiworek/04.GrowUP/5902745614137-00.jpg" },                
+            ],
+            aspen: [
+                { name: "Zimní fusak Zaffiro SleepGrow Vanilla z ovčí vlny", priceWithVAT: "1990 CZK", priceWithoutVAT: "1645 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612812", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/01.Vanilla/02.Śpiworek/01.SleepGrow/5902745612812-00.jpg" },
+                { name: "Zimní fusak Zaffiro iGrow Vanilla z ovčí vlny", priceWithVAT: "2490 CZK", priceWithoutVAT: "2058 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612829", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/01.Vanilla/02.Śpiworek/02.iGrow/5902745612829-00.jpg" },
+                { name: "Zimní fusak Zaffiro EverGrow Vanilla z ovčí vlny", priceWithVAT: "2990 CZK", priceWithoutVAT: "2471 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612836", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/01.Vanilla/02.Śpiworek/03.EverGrow/5902745612836-00.jpg" },
+                { name: "Zimní fusak Zaffiro GrowUP Vanilla z ovčí vlny", priceWithVAT: "3490 CZK", priceWithoutVAT: "2884 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612843", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/01.Vanilla/02.Śpiworek/04.GrowUP/5902745612843-00.jpg" },
+
+                { name: "Zimní fusak Zaffiro SleepGrow Baby Pink z ovčí vlny", priceWithVAT: "1990 CZK", priceWithoutVAT: "1645 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612867", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/02.Baby Pink/02.Śpiworek/01.SleepGrow/5902745612867-00.jpg" },
+                { name: "Zimní fusak Zaffiro iGrow Baby Pink z ovčí vlny", priceWithVAT: "2490 CZK", priceWithoutVAT: "2058 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612874", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/02.Baby Pink/02.Śpiworek/02.iGrow/5902745612874-00.jpg" },
+                { name: "Zimní fusak Zaffiro EverGrow Baby Pink z ovčí vlny", priceWithVAT: "2990 CZK", priceWithoutVAT: "2471 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612881", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/02.Baby Pink/02.Śpiworek/03.EverGrow/5902745612881-00.jpg" },
+                { name: "Zimní fusak Zaffiro GrowUP Baby Pink z ovčí vlny", priceWithVAT: "3490 CZK", priceWithoutVAT: "2884 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612898", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/02.Baby Pink/02.Śpiworek/04.GrowUP/5902745612898-00.jpg" },
+
+                { name: "Zimní fusak Zaffiro SleepGrow Steal Grey z ovčí vlny", priceWithVAT: "1990 CZK", priceWithoutVAT: "1645 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612911", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/03.Steal Grey/02.Śpiworek/01.SleepGrow/5902745612911-00.jpg" },
+                { name: "Zimní fusak Zaffiro iGrow Steal Grey z ovčí vlny", priceWithVAT: "2490 CZK", priceWithoutVAT: "2058 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612928", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/03.Steal Grey/02.Śpiworek/02.iGrow/5902745612928-00.jpg" },
+                { name: "Zimní fusak Zaffiro EverGrow Steal Grey z ovčí vlny", priceWithVAT: "2990 CZK", priceWithoutVAT: "2471 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612935", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/03.Steal Grey/02.Śpiworek/03.EverGrow/5902745612935-00.jpg" },
+                { name: "Zimní fusak Zaffiro GrowUP Steal Grey z ovčí vlny", priceWithVAT: "3490 CZK", priceWithoutVAT: "2884 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612942", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/03.Steal Grey/02.Śpiworek/04.GrowUP/5902745612942-00.jpg" },
+
+                { name: "Zimní fusak Zaffiro SleepGrow Toffee z ovčí vlny", priceWithVAT: "1990 CZK", priceWithoutVAT: "1645 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612966", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/04.Toffee/02.Śpiworek/01.SleepGrow/5902745612966-00.jpg" },
+                { name: "Zimní fusak Zaffiro iGrow Toffee z ovčí vlny", priceWithVAT: "2490 CZK", priceWithoutVAT: "2058 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612973", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/04.Toffee/02.Śpiworek/02.iGrow/5902745612973-00.jpg" },
+                { name: "Zimní fusak Zaffiro EverGrow Toffee z ovčí vlny", priceWithVAT: "2990 CZK", priceWithoutVAT: "2471 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612980", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/04.Toffee/02.Śpiworek/03.EverGrow/5902745612980-00.jpg" },
+                { name: "Zimní fusak Zaffiro GrowUP Toffee z ovčí vlny", priceWithVAT: "3490 CZK", priceWithoutVAT: "2884 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612997", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/04.Toffee/02.Śpiworek/04.GrowUP/5902745612997-00.jpg" },                   
+           
+                { name: "Zimní fusak Zaffiro SleepGrow Latte z ovčí vlny", priceWithVAT: "1990 CZK", priceWithoutVAT: "1645 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745613017", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/05.Latte/02.Śpiworek/01.SleepGrow/5902745613017-00.jpg" },
+                { name: "Zimní fusak Zaffiro iGrow Latte z ovčí vlny", priceWithVAT: "2490 CZK", priceWithoutVAT: "2058 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745613024", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/05.Latte/02.Śpiworek/02.iGrow/5902745613024-00.jpg" },
+                { name: "Zimní fusak Zaffiro EverGrow Latte z ovčí vlny", priceWithVAT: "2990 CZK", priceWithoutVAT: "2471 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745613031", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/05.Latte/02.Śpiworek/03.EverGrow/5902745613031-00.jpg" },
+                { name: "Zimní fusak Zaffiro GrowUP Latte z ovčí vlny", priceWithVAT: "3490 CZK", priceWithoutVAT: "2884 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745613048", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/05.Latte/02.Śpiworek/04.GrowUP/5902745613048-00.jpg" },      
+         
+                { name: "Zimní fusak Zaffiro SleepGrow Anthracite z ovčí vlny", priceWithVAT: "1990 CZK", priceWithoutVAT: "1645 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745613062", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/06.Anthracite/02.Śpiworek/01.SleepGrow/5902745613062-00.jpg" },
+                { name: "Zimní fusak Zaffiro iGrow Anthracite z ovčí vlny", priceWithVAT: "2490 CZK", priceWithoutVAT: "2058 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745613079", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/06.Anthracite/02.Śpiworek/02.iGrow/5902745613079-00.jpg" },
+                { name: "Zimní fusak Zaffiro EverGrow Anthracite z ovčí vlny", priceWithVAT: "2990 CZK", priceWithoutVAT: "2471 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745613086", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/06.Anthracite/02.Śpiworek/03.EverGrow/5902745613086-00.jpg" },
+                { name: "Zimní fusak Zaffiro GrowUP Anthracite z ovčí vlny", priceWithVAT: "3490 CZK", priceWithoutVAT: "2884 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745613093", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/06.Anthracite/02.Śpiworek/04.GrowUP/5902745613093-00.jpg" },     
+                   
+                { name: "Zimní fusak Zaffiro SleepGrow Black (Aspen) z ovčí vlny", priceWithVAT: "1990 CZK", priceWithoutVAT: "1645 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745613116", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/07.Black/02.Śpiworek/01.SleepGrow/5902745613116-00.jpg" },
+                { name: "Zimní fusak Zaffiro iGrow Black (Aspen) z ovčí vlny", priceWithVAT: "2490 CZK", priceWithoutVAT: "2058 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745613123", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/07.Black/02.Śpiworek/02.iGrow/5902745613123-00.jpg" },
+                { name: "Zimní fusak Zaffiro EverGrow Black (Aspen) z ovčí vlny", priceWithVAT: "2990 CZK", priceWithoutVAT: "2471 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745613130", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/07.Black/02.Śpiworek/03.EverGrow/5902745613130-00.jpg" },
+                { name: "Zimní fusak Zaffiro GrowUP Black (Aspen) z ovčí vlny", priceWithVAT: "3490 CZK", priceWithoutVAT: "2884 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745613147", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/07.Black/02.Śpiworek/04.GrowUP/5902745613147-00.jpg" },  
+            ],
+
+            sleepgrow: [
+                { name: "Zimní fusak Zaffiro SleepGrow Beige z ovčí vlny", priceWithVAT: "1990 CZK", priceWithoutVAT: "1645 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612614", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/01.Beige/02.Śpiworek/01.SleepGrow/5902745612614-00.jpg" },
+                { name: "Zimní fusak Zaffiro SleepGrow Taupe z ovčí vlny", priceWithVAT: "1990 CZK", priceWithoutVAT: "1645 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612669", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/02.Taupe/02.Śpiworek/01.SleepGrow/5902745612669-00.jpg" },
+                { name: "Zimní fusak Zaffiro SleepGrow Bottle Green z ovčí vlny", priceWithVAT: "1990 CZK", priceWithoutVAT: "1645 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612713", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/03.Bottle Green/02.Śpiworek/01.SleepGrow/5902745612713-00.jpg" },
+                { name: "Zimní fusak Zaffiro SleepGrow Black z ovčí vlny", priceWithVAT: "1990 CZK", priceWithoutVAT: "1645 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612768", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/04.Black/02.Śpiworek/01.SleepGrow/5902745612768-00.jpg" },
+                { name: "Zimní fusak Zaffiro SleepGrow Beige (Scandi) z ovčí vlny", priceWithVAT: "1990 CZK", priceWithoutVAT: "1645 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745613987", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/01.Beige/02.Śpiworek/01.SleepGrow/5902745613987-00.jpg" },
+                { name: "Zimní fusak Zaffiro SleepGrow Light Grey z ovčí vlny", priceWithVAT: "1990 CZK", priceWithoutVAT: "1645 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745614021", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/02.Light Grey/02.Śpiworek/01.SleepGrow/5902745614021-00.jpg" },
+                { name: "Zimní fusak Zaffiro SleepGrow Grey z ovčí vlny", priceWithVAT: "1990 CZK", priceWithoutVAT: "1645 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745614069", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/03.Grey/02.Śpiworek/01.SleepGrow/5902745614069-00.jpg" },
+                { name: "Zimní fusak Zaffiro SleepGrow Black z ovčí vlny", priceWithVAT: "1990 CZK", priceWithoutVAT: "1645 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745614106", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/04.Black/02.Śpiworek/01.SleepGrow/5902745614106-00.jpg" },
+                { name: "Zimní fusak Zaffiro SleepGrow Vanilla z ovčí vlny", priceWithVAT: "1990 CZK", priceWithoutVAT: "1645 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612812", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/01.Vanilla/02.Śpiworek/01.SleepGrow/5902745612812-00.jpg" },
+                { name: "Zimní fusak Zaffiro SleepGrow Baby Pink z ovčí vlny", priceWithVAT: "1990 CZK", priceWithoutVAT: "1645 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612867", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/02.Baby Pink/02.Śpiworek/01.SleepGrow/5902745612867-00.jpg" },
+                { name: "Zimní fusak Zaffiro SleepGrow Steal Grey z ovčí vlny", priceWithVAT: "1990 CZK", priceWithoutVAT: "1645 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612911", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/03.Steal Grey/02.Śpiworek/01.SleepGrow/5902745612911-00.jpg" },
+                { name: "Zimní fusak Zaffiro SleepGrow Toffee z ovčí vlny", priceWithVAT: "1990 CZK", priceWithoutVAT: "1645 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612966", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/04.Toffee/02.Śpiworek/01.SleepGrow/5902745612966-00.jpg" },
+                { name: "Zimní fusak Zaffiro SleepGrow Latte z ovčí vlny", priceWithVAT: "1990 CZK", priceWithoutVAT: "1645 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745613017", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/05.Latte/02.Śpiworek/01.SleepGrow/5902745613017-00.jpg" },
+                { name: "Zimní fusak Zaffiro SleepGrow Anthracite z ovčí vlny", priceWithVAT: "1990 CZK", priceWithoutVAT: "1645 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745613062", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/06.Anthracite/02.Śpiworek/01.SleepGrow/5902745613062-00.jpg" },
+                { name: "Zimní fusak Zaffiro SleepGrow Black (Aspen) z ovčí vlny", priceWithVAT: "1990 CZK", priceWithoutVAT: "1645 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745613116", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/07.Black/02.Śpiworek/01.SleepGrow/5902745613116-00.jpg" },
+            ],
+
+            igrow:[
+                { name: "Zimní fusak Zaffiro iGrow Beige z ovčí vlny", priceWithVAT: "2490 CZK", priceWithoutVAT: "2058 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612621", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/01.Beige/02.Śpiworek/02.iGrow/5902745612621-00.jpg" },
+                { name: "Zimní fusak Zaffiro iGrow Taupe z ovčí vlny", priceWithVAT: "2490 CZK", priceWithoutVAT: "2058 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612676", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/02.Taupe/02.Śpiworek/02.iGrow/5902745612676-00.jpg" },
+                { name: "Zimní fusak Zaffiro iGrow Bottle Green z ovčí vlny", priceWithVAT: "2490 CZK", priceWithoutVAT: "2058 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612720", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/03.Bottle Green/02.Śpiworek/02.iGrow/5902745612720-00.jpg" },
+                { name: "Zimní fusak Zaffiro iGrow Black z ovčí vlny", priceWithVAT: "2490 CZK", priceWithoutVAT: "2058 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612775", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/04.Black/02.Śpiworek/02.iGrow/5902745612775-00.jpg" },
+                { name: "Zimní fusak Zaffiro iGrow Beige (Scandi) z ovčí vlny", priceWithVAT: "2490 CZK", priceWithoutVAT: "2058 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745613994", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/01.Beige/02.Śpiworek/02.iGrow/5902745613994-00.jpg" },
+                { name: "Zimní fusak Zaffiro iGrow Light Grey z ovčí vlny", priceWithVAT: "2490 CZK", priceWithoutVAT: "2058 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745614038", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/02.Light Grey/02.Śpiworek/02.iGrow/5902745614038-00.jpg" },
+                { name: "Zimní fusak Zaffiro iGrow Grey z ovčí vlny", priceWithVAT: "2490 CZK", priceWithoutVAT: "2058 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745614076", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/03.Grey/02.Śpiworek/02.iGrow/5902745614076-00.jpg" },
+                { name: "Zimní fusak Zaffiro iGrow Black z ovčí vlny", priceWithVAT: "2490 CZK", priceWithoutVAT: "2058 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745614113", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/04.Black/02.Śpiworek/02.iGrow/5902745614113-00.jpg" },
+                { name: "Zimní fusak Zaffiro iGrow Vanilla z ovčí vlny", priceWithVAT: "2490 CZK", priceWithoutVAT: "2058 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612829", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/01.Vanilla/02.Śpiworek/02.iGrow/5902745612829-00.jpg" },
+                { name: "Zimní fusak Zaffiro iGrow Baby Pink z ovčí vlny", priceWithVAT: "2490 CZK", priceWithoutVAT: "2058 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612874", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/02.Baby Pink/02.Śpiworek/02.iGrow/5902745612874-00.jpg" },
+                { name: "Zimní fusak Zaffiro iGrow Steal Grey z ovčí vlny", priceWithVAT: "2490 CZK", priceWithoutVAT: "2058 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612928", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/03.Steal Grey/02.Śpiworek/02.iGrow/5902745612928-00.jpg" },
+                { name: "Zimní fusak Zaffiro iGrow Toffee z ovčí vlny", priceWithVAT: "2490 CZK", priceWithoutVAT: "2058 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612973", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/04.Toffee/02.Śpiworek/02.iGrow/5902745612973-00.jpg" },
+                { name: "Zimní fusak Zaffiro iGrow Latte z ovčí vlny", priceWithVAT: "2490 CZK", priceWithoutVAT: "2058 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745613024", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/05.Latte/02.Śpiworek/02.iGrow/5902745613024-00.jpg" },
+                { name: "Zimní fusak Zaffiro iGrow Anthracite z ovčí vlny", priceWithVAT: "2490 CZK", priceWithoutVAT: "2058 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745613079", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/06.Anthracite/02.Śpiworek/02.iGrow/5902745613079-00.jpg" },
+                { name: "Zimní fusak Zaffiro iGrow Black (Aspen) z ovčí vlny", priceWithVAT: "2490 CZK", priceWithoutVAT: "2058 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745613123", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/07.Black/02.Śpiworek/02.iGrow/5902745613123-00.jpg" },
+            ],
+
+            evergrow: [
+                { name: "Zimní fusak Zaffiro EverGrow Beige z ovčí vlny", priceWithVAT: "2990 CZK", priceWithoutVAT: "2471 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612638", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/01.Beige/02.Śpiworek/03.EverGrow/5902745612638-00.jpg" },
+                { name: "Zimní fusak Zaffiro EverGrow Taupe z ovčí vlny", priceWithVAT: "2990 CZK", priceWithoutVAT: "2471 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612683", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/02.Taupe/02.Śpiworek/03.EverGrow/5902745612683-00.jpg" },
+                { name: "Zimní fusak Zaffiro EverGrow Bottle Green z ovčí vlny", priceWithVAT: "2990 CZK", priceWithoutVAT: "2471 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612737", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/03.Bottle Green/02.Śpiworek/03.EverGrow/5902745612737-00.jpg" },
+                { name: "Zimní fusak Zaffiro EverGrow Black z ovčí vlny", priceWithVAT: "2990 CZK", priceWithoutVAT: "2471 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612782", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/04.Black/02.Śpiworek/03.EverGrow/5902745612782-00.jpg" },
+                { name: "Zimní fusak Zaffiro EverGrow Beige (Scandi) z ovčí vlny", priceWithVAT: "2990 CZK", priceWithoutVAT: "2471 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745614007", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/01.Beige/02.Śpiworek/03.EverGrow/5902745614007-00.jpg" },
+                { name: "Zimní fusak Zaffiro EverGrow Light Grey z ovčí vlny", priceWithVAT: "2990 CZK", priceWithoutVAT: "2471 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745614045", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/02.Light Grey/02.Śpiworek/03.EverGrow/5902745614045-00.jpg" },
+                { name: "Zimní fusak Zaffiro EverGrow Grey z ovčí vlny", priceWithVAT: "2990 CZK", priceWithoutVAT: "2471 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745614083", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/03.Grey/02.Śpiworek/03.EverGrow/5902745614083-00.jpg" },
+                { name: "Zimní fusak Zaffiro EverGrow Black z ovčí vlny", priceWithVAT: "2990 CZK", priceWithoutVAT: "2471 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745614120", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/04.Black/02.Śpiworek/03.EverGrow/5902745614120-00.jpg" },
+                { name: "Zimní fusak Zaffiro EverGrow Vanilla z ovčí vlny", priceWithVAT: "2990 CZK", priceWithoutVAT: "2471 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612836", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/01.Vanilla/02.Śpiworek/03.EverGrow/5902745612836-00.jpg" },
+                { name: "Zimní fusak Zaffiro EverGrow Baby Pink z ovčí vlny", priceWithVAT: "2990 CZK", priceWithoutVAT: "2471 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612881", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/02.Baby Pink/02.Śpiworek/03.EverGrow/5902745612881-00.jpg" },
+                { name: "Zimní fusak Zaffiro EverGrow Steal Grey z ovčí vlny", priceWithVAT: "2990 CZK", priceWithoutVAT: "2471 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612935", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/03.Steal Grey/02.Śpiworek/03.EverGrow/5902745612935-00.jpg" },
+                { name: "Zimní fusak Zaffiro EverGrow Toffee z ovčí vlny", priceWithVAT: "2990 CZK", priceWithoutVAT: "2471 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612980", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/04.Toffee/02.Śpiworek/03.EverGrow/5902745612980-00.jpg" },
+                { name: "Zimní fusak Zaffiro EverGrow Latte z ovčí vlny", priceWithVAT: "2990 CZK", priceWithoutVAT: "2471 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745613031", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/05.Latte/02.Śpiworek/03.EverGrow/5902745613031-00.jpg" },
+                { name: "Zimní fusak Zaffiro EverGrow Anthracite z ovčí vlny", priceWithVAT: "2990 CZK", priceWithoutVAT: "2471 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745613086", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/06.Anthracite/02.Śpiworek/03.EverGrow/5902745613086-00.jpg" },
+                { name: "Zimní fusak Zaffiro EverGrow Black (Aspen) z ovčí vlny", priceWithVAT: "2990 CZK", priceWithoutVAT: "2471 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745613130", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/07.Black/02.Śpiworek/03.EverGrow/5902745613130-00.jpg" },
+            ],
+
+            growup:[
+                { name: "Zimní fusak Zaffiro GrowUP Beige z ovčí vlny", priceWithVAT: "3490 CZK", priceWithoutVAT: "2884 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612645", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/01.Beige/02.Śpiworek/04.GrowUP/5902745612645-00.jpg" },
+                { name: "Zimní fusak Zaffiro GrowUP Taupe z ovčí vlny", priceWithVAT: "3490 CZK", priceWithoutVAT: "2884 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612706", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/02.Taupe/02.Śpiworek/04.GrowUP/5902745612706-00.jpg" },
+                { name: "Zimní fusak Zaffiro GrowUP Bottle Green z ovčí vlny", priceWithVAT: "3490 CZK", priceWithoutVAT: "2884 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612744", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/03.Bottle Green/02.Śpiworek/04.GrowUP/5902745612744-00.jpg" },
+                { name: "Zimní fusak Zaffiro GrowUP Black z ovčí vlny", priceWithVAT: "3490 CZK", priceWithoutVAT: "2884 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612799", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/04.Black/02.Śpiworek/04.GrowUP/5902745612799-00.jpg" },
+                { name: "Zimní fusak Zaffiro GrowUP Beige (Scandi) z ovčí vlny", priceWithVAT: "3490 CZK", priceWithoutVAT: "2884 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745614014", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/01.Beige/02.Śpiworek/04.GrowUP/5902745614014-00.jpg" },
+                { name: "Zimní fusak Zaffiro GrowUP Light Grey z ovčí vlny", priceWithVAT: "3490 CZK", priceWithoutVAT: "2884 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745614052", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/02.Light Grey/02.Śpiworek/04.GrowUP/5902745614052-00.jpg" },
+                { name: "Zimní fusak Zaffiro GrowUP Grey z ovčí vlny", priceWithVAT: "3490 CZK", priceWithoutVAT: "2884 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745614090", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/03.Grey/02.Śpiworek/04.GrowUP/5902745614090-00.jpg" },
+                { name: "Zimní fusak Zaffiro GrowUP Black z ovčí vlny", priceWithVAT: "3490 CZK", priceWithoutVAT: "2884 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745614137", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/04.Black/02.Śpiworek/04.GrowUP/5902745614137-00.jpg" },                
+                { name: "Zimní fusak Zaffiro GrowUP Vanilla z ovčí vlny", priceWithVAT: "3490 CZK", priceWithoutVAT: "2884 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612843", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/01.Vanilla/02.Śpiworek/04.GrowUP/5902745612843-00.jpg" },
+                { name: "Zimní fusak Zaffiro GrowUP Baby Pink z ovčí vlny", priceWithVAT: "3490 CZK", priceWithoutVAT: "2884 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612898", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/02.Baby Pink/02.Śpiworek/04.GrowUP/5902745612898-00.jpg" },
+                { name: "Zimní fusak Zaffiro GrowUP Steal Grey z ovčí vlny", priceWithVAT: "3490 CZK", priceWithoutVAT: "2884 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612942", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/03.Steal Grey/02.Śpiworek/04.GrowUP/5902745612942-00.jpg" },
+                { name: "Zimní fusak Zaffiro GrowUP Toffee z ovčí vlny", priceWithVAT: "3490 CZK", priceWithoutVAT: "2884 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612997", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/04.Toffee/02.Śpiworek/04.GrowUP/5902745612997-00.jpg" },                   
+                { name: "Zimní fusak Zaffiro GrowUP Latte z ovčí vlny", priceWithVAT: "3490 CZK", priceWithoutVAT: "2884 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745613048", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/05.Latte/02.Śpiworek/04.GrowUP/5902745613048-00.jpg" },      
+                { name: "Zimní fusak Zaffiro GrowUP Anthracite z ovčí vlny", priceWithVAT: "3490 CZK", priceWithoutVAT: "2884 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745613093", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/06.Anthracite/02.Śpiworek/04.GrowUP/5902745613093-00.jpg" },     
+                { name: "Zimní fusak Zaffiro GrowUP Black (Aspen) z ovčí vlny", priceWithVAT: "3490 CZK", priceWithoutVAT: "2884 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745613147", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/07.Black/02.Śpiworek/04.GrowUP/5902745613147-00.jpg" },  
+            ],
+
+            maxi:[
+                { name: "Zimní fusak Zaffiro Maxi Beige z ovčí vlny", priceWithVAT: "3490 CZK", priceWithoutVAT: "2884 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612478", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/01.Beige/04.Śpiworek/Maxi 0-36m/5902745612478-00.jpg" },
+                { name: "Zimní fusak Zaffiro Maxi Brown z ovčí vlny", priceWithVAT: "3490 CZK", priceWithoutVAT: "2884 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612515", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/02.Brown/04.Śpiworek/Maxi 0-36m/5902745612515-00.jpg" },
+                { name: "Zimní fusak Zaffiro Maxi Grey z ovčí vlny", priceWithVAT: "3490 CZK", priceWithoutVAT: "2884 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612546", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/03.Grey/04.Śpiworek/Maxi 0-36m/5902745612546-00.jpg" },
+                { name: "Zimní fusak Zaffiro Maxi Anthracite z ovčí vlny", priceWithVAT: "3490 CZK", priceWithoutVAT: "2884 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612584", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/04.Anthracite/04.Śpiworek/Maxi 0-36m/5902745612584-00.jpg" },
+            ],
+
+            mini:[
+                { name: "Zimní fusak Zaffiro Mini Beige z ovčí vlny", priceWithVAT: "2190 CZK", priceWithoutVAT: "1810 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745554006", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/01.Beige/04.Śpiworek/Mini 0-18m/5902745554006-00.jpg" },
+                { name: "Zimní fusak Zaffiro Mini Brown z ovčí vlny", priceWithVAT: "2190 CZK", priceWithoutVAT: "1810 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612508", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/02.Brown/04.Śpiworek/Mini 0-18m/5902745612508-00.jpg" },
+                { name: "Zimní fusak Zaffiro Mini Grey z ovčí vlny", priceWithVAT: "2190 CZK", priceWithoutVAT: "1810 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745554013", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/03.Grey/04.Śpiworek/Mini 0-18m/5902745554013-00.jpg" },
+                { name: "Zimní fusak Zaffiro Mini Anthracite z ovčí vlny", priceWithVAT: "2190 CZK", priceWithoutVAT: "1810 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612577", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/04.Anthracite/04.Śpiworek/Mini 0-18m/5902745612577-00.jpg" },
+                { name: "Zimní fusak Zaffiro Mini Beige (Nevada) z ovčí vlny", priceWithVAT: "2190 CZK", priceWithoutVAT: "1810 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745613888", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/02.Nevada/01.Beige/06.Śpiworek/Mini 0-18m/5902745613888 -1.jpg" },
+                { name: "Zimní fusak Zaffiro Mini Brown (Nevada) z ovčí vlny", priceWithVAT: "2190 CZK", priceWithoutVAT: "1810 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745613871", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/02.Nevada/02.Brown/06.Śpiworek/Mini 0-18m/5902745613871-00.jpg" },
+                { name: "Zimní fusak Zaffiro Mini Grey (Nevada) z ovčí vlny", priceWithVAT: "2190 CZK", priceWithoutVAT: "1810 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745613895", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/02.Nevada/03.Grey/06.Śpiworek/Mini 0-18m/5902745613895-00.jpg" },
+                { name: "Zimní fusak Zaffiro Mini Anthracite (Nevada) z ovčí vlny", priceWithVAT: "2190 CZK", priceWithoutVAT: "1810 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745613901", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/02.Nevada/04.Anthracite/06.Śpiworek/Mini 0-18m/5902745613901-00.jpg" },
+            ],
+
+            vsechno:
+            [
+            
+                { name: "Zimní fusak Zaffiro SleepGrow Beige z ovčí vlny", priceWithVAT: "1990 CZK", priceWithoutVAT: "1645 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612614", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/01.Beige/02.Śpiworek/01.SleepGrow/5902745612614-00.jpg" },
+                { name: "Zimní fusak Zaffiro SleepGrow Taupe z ovčí vlny", priceWithVAT: "1990 CZK", priceWithoutVAT: "1645 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612669", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/02.Taupe/02.Śpiworek/01.SleepGrow/5902745612669-00.jpg" },
+                { name: "Zimní fusak Zaffiro SleepGrow Bottle Green z ovčí vlny", priceWithVAT: "1990 CZK", priceWithoutVAT: "1645 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612713", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/03.Bottle Green/02.Śpiworek/01.SleepGrow/5902745612713-00.jpg" },
+                { name: "Zimní fusak Zaffiro SleepGrow Black z ovčí vlny", priceWithVAT: "1990 CZK", priceWithoutVAT: "1645 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612768", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/04.Black/02.Śpiworek/01.SleepGrow/5902745612768-00.jpg" },
+                { name: "Zimní fusak Zaffiro SleepGrow Beige (Scandi) z ovčí vlny", priceWithVAT: "1990 CZK", priceWithoutVAT: "1645 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745613987", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/01.Beige/02.Śpiworek/01.SleepGrow/5902745613987-00.jpg" },
+                { name: "Zimní fusak Zaffiro SleepGrow Light Grey z ovčí vlny", priceWithVAT: "1990 CZK", priceWithoutVAT: "1645 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745614021", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/02.Light Grey/02.Śpiworek/01.SleepGrow/5902745614021-00.jpg" },
+                { name: "Zimní fusak Zaffiro SleepGrow Grey z ovčí vlny", priceWithVAT: "1990 CZK", priceWithoutVAT: "1645 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745614069", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/03.Grey/02.Śpiworek/01.SleepGrow/5902745614069-00.jpg" },
+                { name: "Zimní fusak Zaffiro SleepGrow Black z ovčí vlny", priceWithVAT: "1990 CZK", priceWithoutVAT: "1645 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745614106", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/04.Black/02.Śpiworek/01.SleepGrow/5902745614106-00.jpg" },
+                { name: "Zimní fusak Zaffiro SleepGrow Vanilla z ovčí vlny", priceWithVAT: "1990 CZK", priceWithoutVAT: "1645 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612812", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/01.Vanilla/02.Śpiworek/01.SleepGrow/5902745612812-00.jpg" },
+                { name: "Zimní fusak Zaffiro SleepGrow Baby Pink z ovčí vlny", priceWithVAT: "1990 CZK", priceWithoutVAT: "1645 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612867", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/02.Baby Pink/02.Śpiworek/01.SleepGrow/5902745612867-00.jpg" },
+                { name: "Zimní fusak Zaffiro SleepGrow Steal Grey z ovčí vlny", priceWithVAT: "1990 CZK", priceWithoutVAT: "1645 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612911", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/03.Steal Grey/02.Śpiworek/01.SleepGrow/5902745612911-00.jpg" },
+                { name: "Zimní fusak Zaffiro SleepGrow Toffee z ovčí vlny", priceWithVAT: "1990 CZK", priceWithoutVAT: "1645 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612966", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/04.Toffee/02.Śpiworek/01.SleepGrow/5902745612966-00.jpg" },
+                { name: "Zimní fusak Zaffiro SleepGrow Latte z ovčí vlny", priceWithVAT: "1990 CZK", priceWithoutVAT: "1645 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745613017", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/05.Latte/02.Śpiworek/01.SleepGrow/5902745613017-00.jpg" },
+                { name: "Zimní fusak Zaffiro SleepGrow Anthracite z ovčí vlny", priceWithVAT: "1990 CZK", priceWithoutVAT: "1645 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745613062", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/06.Anthracite/02.Śpiworek/01.SleepGrow/5902745613062-00.jpg" },
+                { name: "Zimní fusak Zaffiro SleepGrow Black (Aspen) z ovčí vlny", priceWithVAT: "1990 CZK", priceWithoutVAT: "1645 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745613116", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/07.Black/02.Śpiworek/01.SleepGrow/5902745613116-00.jpg" },
+            
+
+            
+                { name: "Zimní fusak Zaffiro iGrow Beige z ovčí vlny", priceWithVAT: "2490 CZK", priceWithoutVAT: "2058 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612621", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/01.Beige/02.Śpiworek/02.iGrow/5902745612621-00.jpg" },
+                { name: "Zimní fusak Zaffiro iGrow Taupe z ovčí vlny", priceWithVAT: "2490 CZK", priceWithoutVAT: "2058 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612676", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/02.Taupe/02.Śpiworek/02.iGrow/5902745612676-00.jpg" },
+                { name: "Zimní fusak Zaffiro iGrow Bottle Green z ovčí vlny", priceWithVAT: "2490 CZK", priceWithoutVAT: "2058 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612720", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/03.Bottle Green/02.Śpiworek/02.iGrow/5902745612720-00.jpg" },
+                { name: "Zimní fusak Zaffiro iGrow Black z ovčí vlny", priceWithVAT: "2490 CZK", priceWithoutVAT: "2058 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612775", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/04.Black/02.Śpiworek/02.iGrow/5902745612775-00.jpg" },
+                { name: "Zimní fusak Zaffiro iGrow Beige (Scandi) z ovčí vlny", priceWithVAT: "2490 CZK", priceWithoutVAT: "2058 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745613994", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/01.Beige/02.Śpiworek/02.iGrow/5902745613994-00.jpg" },
+                { name: "Zimní fusak Zaffiro iGrow Light Grey z ovčí vlny", priceWithVAT: "2490 CZK", priceWithoutVAT: "2058 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745614038", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/02.Light Grey/02.Śpiworek/02.iGrow/5902745614038-00.jpg" },
+                { name: "Zimní fusak Zaffiro iGrow Grey z ovčí vlny", priceWithVAT: "2490 CZK", priceWithoutVAT: "2058 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745614076", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/03.Grey/02.Śpiworek/02.iGrow/5902745614076-00.jpg" },
+                { name: "Zimní fusak Zaffiro iGrow Black z ovčí vlny", priceWithVAT: "2490 CZK", priceWithoutVAT: "2058 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745614113", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/04.Black/02.Śpiworek/02.iGrow/5902745614113-00.jpg" },
+                { name: "Zimní fusak Zaffiro iGrow Vanilla z ovčí vlny", priceWithVAT: "2490 CZK", priceWithoutVAT: "2058 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612829", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/01.Vanilla/02.Śpiworek/02.iGrow/5902745612829-00.jpg" },
+                { name: "Zimní fusak Zaffiro iGrow Baby Pink z ovčí vlny", priceWithVAT: "2490 CZK", priceWithoutVAT: "2058 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612874", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/02.Baby Pink/02.Śpiworek/02.iGrow/5902745612874-00.jpg" },
+                { name: "Zimní fusak Zaffiro iGrow Steal Grey z ovčí vlny", priceWithVAT: "2490 CZK", priceWithoutVAT: "2058 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612928", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/03.Steal Grey/02.Śpiworek/02.iGrow/5902745612928-00.jpg" },
+                { name: "Zimní fusak Zaffiro iGrow Toffee z ovčí vlny", priceWithVAT: "2490 CZK", priceWithoutVAT: "2058 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612973", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/04.Toffee/02.Śpiworek/02.iGrow/5902745612973-00.jpg" },
+                { name: "Zimní fusak Zaffiro iGrow Latte z ovčí vlny", priceWithVAT: "2490 CZK", priceWithoutVAT: "2058 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745613024", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/05.Latte/02.Śpiworek/02.iGrow/5902745613024-00.jpg" },
+                { name: "Zimní fusak Zaffiro iGrow Anthracite z ovčí vlny", priceWithVAT: "2490 CZK", priceWithoutVAT: "2058 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745613079", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/06.Anthracite/02.Śpiworek/02.iGrow/5902745613079-00.jpg" },
+                { name: "Zimní fusak Zaffiro iGrow Black (Aspen) z ovčí vlny", priceWithVAT: "2490 CZK", priceWithoutVAT: "2058 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745613123", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/07.Black/02.Śpiworek/02.iGrow/5902745613123-00.jpg" },
+            
+
+            
+                { name: "Zimní fusak Zaffiro EverGrow Beige z ovčí vlny", priceWithVAT: "2990 CZK", priceWithoutVAT: "2471 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612638", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/01.Beige/02.Śpiworek/03.EverGrow/5902745612638-00.jpg" },
+                { name: "Zimní fusak Zaffiro EverGrow Taupe z ovčí vlny", priceWithVAT: "2990 CZK", priceWithoutVAT: "2471 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612683", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/02.Taupe/02.Śpiworek/03.EverGrow/5902745612683-00.jpg" },
+                { name: "Zimní fusak Zaffiro EverGrow Bottle Green z ovčí vlny", priceWithVAT: "2990 CZK", priceWithoutVAT: "2471 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612737", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/03.Bottle Green/02.Śpiworek/03.EverGrow/5902745612737-00.jpg" },
+                { name: "Zimní fusak Zaffiro EverGrow Black z ovčí vlny", priceWithVAT: "2990 CZK", priceWithoutVAT: "2471 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612782", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/04.Black/02.Śpiworek/03.EverGrow/5902745612782-00.jpg" },
+                { name: "Zimní fusak Zaffiro EverGrow Beige (Scandi) z ovčí vlny", priceWithVAT: "2990 CZK", priceWithoutVAT: "2471 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745614007", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/01.Beige/02.Śpiworek/03.EverGrow/5902745614007-00.jpg" },
+                { name: "Zimní fusak Zaffiro EverGrow Light Grey z ovčí vlny", priceWithVAT: "2990 CZK", priceWithoutVAT: "2471 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745614045", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/02.Light Grey/02.Śpiworek/03.EverGrow/5902745614045-00.jpg" },
+                { name: "Zimní fusak Zaffiro EverGrow Grey z ovčí vlny", priceWithVAT: "2990 CZK", priceWithoutVAT: "2471 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745614083", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/03.Grey/02.Śpiworek/03.EverGrow/5902745614083-00.jpg" },
+                { name: "Zimní fusak Zaffiro EverGrow Black z ovčí vlny", priceWithVAT: "2990 CZK", priceWithoutVAT: "2471 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745614120", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/04.Black/02.Śpiworek/03.EverGrow/5902745614120-00.jpg" },
+                { name: "Zimní fusak Zaffiro EverGrow Vanilla z ovčí vlny", priceWithVAT: "2990 CZK", priceWithoutVAT: "2471 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612836", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/01.Vanilla/02.Śpiworek/03.EverGrow/5902745612836-00.jpg" },
+                { name: "Zimní fusak Zaffiro EverGrow Baby Pink z ovčí vlny", priceWithVAT: "2990 CZK", priceWithoutVAT: "2471 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612881", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/02.Baby Pink/02.Śpiworek/03.EverGrow/5902745612881-00.jpg" },
+                { name: "Zimní fusak Zaffiro EverGrow Steal Grey z ovčí vlny", priceWithVAT: "2990 CZK", priceWithoutVAT: "2471 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612935", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/03.Steal Grey/02.Śpiworek/03.EverGrow/5902745612935-00.jpg" },
+                { name: "Zimní fusak Zaffiro EverGrow Toffee z ovčí vlny", priceWithVAT: "2990 CZK", priceWithoutVAT: "2471 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612980", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/04.Toffee/02.Śpiworek/03.EverGrow/5902745612980-00.jpg" },
+                { name: "Zimní fusak Zaffiro EverGrow Latte z ovčí vlny", priceWithVAT: "2990 CZK", priceWithoutVAT: "2471 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745613031", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/05.Latte/02.Śpiworek/03.EverGrow/5902745613031-00.jpg" },
+                { name: "Zimní fusak Zaffiro EverGrow Anthracite z ovčí vlny", priceWithVAT: "2990 CZK", priceWithoutVAT: "2471 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745613086", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/06.Anthracite/02.Śpiworek/03.EverGrow/5902745613086-00.jpg" },
+                { name: "Zimní fusak Zaffiro EverGrow Black (Aspen) z ovčí vlny", priceWithVAT: "2990 CZK", priceWithoutVAT: "2471 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745613130", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/07.Black/02.Śpiworek/03.EverGrow/5902745613130-00.jpg" },
+            
+
+            
+                { name: "Zimní fusak Zaffiro GrowUP Beige z ovčí vlny", priceWithVAT: "3490 CZK", priceWithoutVAT: "2884 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612645", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/01.Beige/02.Śpiworek/04.GrowUP/5902745612645-00.jpg" },
+                { name: "Zimní fusak Zaffiro GrowUP Taupe z ovčí vlny", priceWithVAT: "3490 CZK", priceWithoutVAT: "2884 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612706", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/02.Taupe/02.Śpiworek/04.GrowUP/5902745612706-00.jpg" },
+                { name: "Zimní fusak Zaffiro GrowUP Bottle Green z ovčí vlny", priceWithVAT: "3490 CZK", priceWithoutVAT: "2884 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612744", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/03.Bottle Green/02.Śpiworek/04.GrowUP/5902745612744-00.jpg" },
+                { name: "Zimní fusak Zaffiro GrowUP Black z ovčí vlny", priceWithVAT: "3490 CZK", priceWithoutVAT: "2884 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612799", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/04.Black/02.Śpiworek/04.GrowUP/5902745612799-00.jpg" },
+                { name: "Zimní fusak Zaffiro GrowUP Beige (Scandi) z ovčí vlny", priceWithVAT: "3490 CZK", priceWithoutVAT: "2884 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745614014", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/01.Beige/02.Śpiworek/04.GrowUP/5902745614014-00.jpg" },
+                { name: "Zimní fusak Zaffiro GrowUP Light Grey z ovčí vlny", priceWithVAT: "3490 CZK", priceWithoutVAT: "2884 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745614052", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/02.Light Grey/02.Śpiworek/04.GrowUP/5902745614052-00.jpg" },
+                { name: "Zimní fusak Zaffiro GrowUP Grey z ovčí vlny", priceWithVAT: "3490 CZK", priceWithoutVAT: "2884 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745614090", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/03.Grey/02.Śpiworek/04.GrowUP/5902745614090-00.jpg" },
+                { name: "Zimní fusak Zaffiro GrowUP Black z ovčí vlny", priceWithVAT: "3490 CZK", priceWithoutVAT: "2884 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745614137", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/04.Black/02.Śpiworek/04.GrowUP/5902745614137-00.jpg" },                
+                { name: "Zimní fusak Zaffiro GrowUP Vanilla z ovčí vlny", priceWithVAT: "3490 CZK", priceWithoutVAT: "2884 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612843", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/01.Vanilla/02.Śpiworek/04.GrowUP/5902745612843-00.jpg" },
+                { name: "Zimní fusak Zaffiro GrowUP Baby Pink z ovčí vlny", priceWithVAT: "3490 CZK", priceWithoutVAT: "2884 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612898", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/02.Baby Pink/02.Śpiworek/04.GrowUP/5902745612898-00.jpg" },
+                { name: "Zimní fusak Zaffiro GrowUP Steal Grey z ovčí vlny", priceWithVAT: "3490 CZK", priceWithoutVAT: "2884 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612942", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/03.Steal Grey/02.Śpiworek/04.GrowUP/5902745612942-00.jpg" },
+                { name: "Zimní fusak Zaffiro GrowUP Toffee z ovčí vlny", priceWithVAT: "3490 CZK", priceWithoutVAT: "2884 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612997", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/04.Toffee/02.Śpiworek/04.GrowUP/5902745612997-00.jpg" },                   
+                { name: "Zimní fusak Zaffiro GrowUP Latte z ovčí vlny", priceWithVAT: "3490 CZK", priceWithoutVAT: "2884 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745613048", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/05.Latte/02.Śpiworek/04.GrowUP/5902745613048-00.jpg" },      
+                { name: "Zimní fusak Zaffiro GrowUP Anthracite z ovčí vlny", priceWithVAT: "3490 CZK", priceWithoutVAT: "2884 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745613093", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/06.Anthracite/02.Śpiworek/04.GrowUP/5902745613093-00.jpg" },     
+                { name: "Zimní fusak Zaffiro GrowUP Black (Aspen) z ovčí vlny", priceWithVAT: "3490 CZK", priceWithoutVAT: "2884 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745613147", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/07.Black/02.Śpiworek/04.GrowUP/5902745613147-00.jpg" },  
+            
+
+            
+                { name: "Zimní fusak Zaffiro Maxi Beige z ovčí vlny", priceWithVAT: "3490 CZK", priceWithoutVAT: "2884 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612478", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/01.Beige/04.Śpiworek/Maxi 0-36m/5902745612478-00.jpg" },
+                { name: "Zimní fusak Zaffiro Maxi Brown z ovčí vlny", priceWithVAT: "3490 CZK", priceWithoutVAT: "2884 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612515", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/02.Brown/04.Śpiworek/Maxi 0-36m/5902745612515-00.jpg" },
+                { name: "Zimní fusak Zaffiro Maxi Grey z ovčí vlny", priceWithVAT: "3490 CZK", priceWithoutVAT: "2884 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612546", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/03.Grey/04.Śpiworek/Maxi 0-36m/5902745612546-00.jpg" },
+                { name: "Zimní fusak Zaffiro Maxi Anthracite z ovčí vlny", priceWithVAT: "3490 CZK", priceWithoutVAT: "2884 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612584", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/04.Anthracite/04.Śpiworek/Maxi 0-36m/5902745612584-00.jpg" },
+            
+
+            
+                { name: "Zimní fusak Zaffiro Mini Beige z ovčí vlny", priceWithVAT: "2190 CZK", priceWithoutVAT: "1810 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745554006", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/01.Beige/04.Śpiworek/Mini 0-18m/5902745554006-00.jpg" },
+                { name: "Zimní fusak Zaffiro Mini Brown z ovčí vlny", priceWithVAT: "2190 CZK", priceWithoutVAT: "1810 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612508", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/02.Brown/04.Śpiworek/Mini 0-18m/5902745612508-00.jpg" },
+                { name: "Zimní fusak Zaffiro Mini Grey z ovčí vlny", priceWithVAT: "2190 CZK", priceWithoutVAT: "1810 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745554013", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/03.Grey/04.Śpiworek/Mini 0-18m/5902745554013-00.jpg" },
+                { name: "Zimní fusak Zaffiro Mini Anthracite z ovčí vlny", priceWithVAT: "2190 CZK", priceWithoutVAT: "1810 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612577", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/04.Anthracite/04.Śpiworek/Mini 0-18m/5902745612577-00.jpg" },
+                { name: "Zimní fusak Zaffiro Mini Beige (Nevada) z ovčí vlny", priceWithVAT: "2190 CZK", priceWithoutVAT: "1810 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745613888", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/02.Nevada/01.Beige/06.Śpiworek/Mini 0-18m/5902745613888 -1.jpg" },
+                { name: "Zimní fusak Zaffiro Mini Brown (Nevada) z ovčí vlny", priceWithVAT: "2190 CZK", priceWithoutVAT: "1810 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745613871", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/02.Nevada/02.Brown/06.Śpiworek/Mini 0-18m/5902745613871-00.jpg" },
+                { name: "Zimní fusak Zaffiro Mini Grey (Nevada) z ovčí vlny", priceWithVAT: "2190 CZK", priceWithoutVAT: "1810 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745613895", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/02.Nevada/03.Grey/06.Śpiworek/Mini 0-18m/5902745613895-00.jpg" },
+                { name: "Zimní fusak Zaffiro Mini Anthracite (Nevada) z ovčí vlny", priceWithVAT: "2190 CZK", priceWithoutVAT: "1810 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745613901", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/02.Nevada/04.Anthracite/06.Śpiworek/Mini 0-18m/5902745613901-00.jpg" },
+            
+            ],
+        nordico1:[
+                { name: "Rukávník na kočárek Zaffiro Beige z ovčí vlny", priceWithVAT: "990 CZK", priceWithoutVAT: "818 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612607", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/01.Beige/01.Mufka/5902745612607-00.jpg" },
+                { name: "Rukávník na kočárek Zaffiro Taupe z ovčí vlny", priceWithVAT: "990 CZK", priceWithoutVAT: "818 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612652", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/02.Taupe/01.Mufka/5902745612652-00.jpg" },
+                { name: "Rukávník na kočárek Zaffiro Bottle Green z ovčí vlny", priceWithVAT: "990 CZK", priceWithoutVAT: "818 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612690", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/03.Bottle Green/01.Mufka/5902745612690-00.jpg" },
+                { name: "Rukávník na kočárek Zaffiro Black z ovčí vlny", priceWithVAT: "990 CZK", priceWithoutVAT: "818 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612751", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/04.Black/01.Mufka/5902745612751-00.jpg" },      
+            ],
+        scandi1:[
+                { name: "Rukávník na kočárek Zaffiro Beige (Scandi) z ovčí vlny", priceWithVAT: "1090 CZK", priceWithoutVAT: "901 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745613949", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/01.Beige/01.Mufka/5902745613949-00.jpg" },
+                { name: "Rukávník na kočárek Zaffiro Light Grey z ovčí vlny", priceWithVAT: "1090 CZK", priceWithoutVAT: "901 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745613956", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/02.Light Grey/01.Mufka/5902745613956-00.jpg" },
+                { name: "Rukávník na kočárek Zaffiro Grey z ovčí vlny", priceWithVAT: "1090 CZK", priceWithoutVAT: "901 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745613963", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/03.Grey/01.Mufka/5902745613963-00.jpg" },
+                { name: "Rukávník na kočárek Zaffiro Black (Scandi) z ovčí vlny", priceWithVAT: "1090 CZK", priceWithoutVAT: "901 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745613970", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/04.Black/01.Mufka/5902745613970-00.jpg" },      
+            ],
+        aspen1:[
+                { name: "Rukávník na kočárek Zaffiro Vanilla z ovčí vlny", priceWithVAT: "1090 CZK", priceWithoutVAT: "901 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612805", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/01.Vanilla/01.Mufka/5902745612805-00.jpg" },
+                { name: "Rukávník na kočárek Zaffiro Baby Pink z ovčí vlny", priceWithVAT: "1090 CZK", priceWithoutVAT: "901 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612850", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/02.Baby Pink/01.Mufka/5902745612850-00.jpg" },
+                { name: "Rukávník na kočárek Zaffiro Steal Grey z ovčí vlny", priceWithVAT: "1090 CZK", priceWithoutVAT: "901 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612904", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/03.Steal Grey/01.Mufka/5902745612904-00.jpg" },
+                { name: "Rukávník na kočárek Zaffiro Toffee z ovčí vlny", priceWithVAT: "1090 CZK", priceWithoutVAT: "901 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612959", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/04.Toffee/01.Mufka/5902745612959-00.jpg" },      
+                { name: "Rukávník na kočárek Zaffiro Latte z ovčí vlny", priceWithVAT: "1090 CZK", priceWithoutVAT: "901 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745613000", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/05.Latte/01.Mufka/5902745613000-00.jpg" },      
+                { name: "Rukávník na kočárek Zaffiro Anthracite z ovčí vlny", priceWithVAT: "1090 CZK", priceWithoutVAT: "901 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745613055", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/06.Anthracite/01.Mufka/5902745613055-00.jpg" },      
+                { name: "Rukávník na kočárek Zaffiro Black (Aspen) z ovčí vlny", priceWithVAT: "1090 CZK", priceWithoutVAT: "901 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745613109", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/07.Black/01.Mufka/5902745613109-00.jpg" },      
+            ],
+        vsechno1:[
+                { name: "Rukávník na kočárek Zaffiro Beige z ovčí vlny", priceWithVAT: "990 CZK", priceWithoutVAT: "818 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745554006", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/01.Beige/01.Mufka/5902745612607-00.jpg" },
+                { name: "Rukávník na kočárek Zaffiro Taupe z ovčí vlny", priceWithVAT: "990 CZK", priceWithoutVAT: "818 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745554006", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/02.Taupe/01.Mufka/5902745612652-00.jpg" },
+                { name: "Rukávník na kočárek Zaffiro Bottle Green z ovčí vlny", priceWithVAT: "990 CZK", priceWithoutVAT: "818 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745554006", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/03.Bottle Green/01.Mufka/5902745612690-00.jpg" },
+                { name: "Rukávník na kočárek Zaffiro Black z ovčí vlny", priceWithVAT: "990 CZK", priceWithoutVAT: "818 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745554006", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/04.Black/01.Mufka/5902745612751-00.jpg" },      
+                { name: "Rukávník na kočárek Zaffiro Beige (Scandi) z ovčí vlny", priceWithVAT: "1090 CZK", priceWithoutVAT: "901 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745554006", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/01.Beige/01.Mufka/5902745613949-00.jpg" },
+                { name: "Rukávník na kočárek Zaffiro Light Grey z ovčí vlny", priceWithVAT: "1090 CZK", priceWithoutVAT: "901 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745554006", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/02.Light Grey/01.Mufka/5902745613956-00.jpg" },
+                { name: "Rukávník na kočárek Zaffiro Grey z ovčí vlny", priceWithVAT: "1090 CZK", priceWithoutVAT: "901 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745554006", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/03.Grey/01.Mufka/5902745613963-00.jpg" },
+                { name: "Rukávník na kočárek Zaffiro Black (Scandi) z ovčí vlny", priceWithVAT: "1090 CZK", priceWithoutVAT: "901 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745554006", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/04.Black/01.Mufka/5902745613970-00.jpg" },      
+                { name: "Rukávník na kočárek Zaffiro Vanilla z ovčí vlny", priceWithVAT: "1090 CZK", priceWithoutVAT: "901 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745554006", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/01.Vanilla/01.Mufka/5902745612805-00.jpg" },
+                { name: "Rukávník na kočárek Zaffiro Baby Pink z ovčí vlny", priceWithVAT: "1090 CZK", priceWithoutVAT: "901 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745554006", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/02.Baby Pink/01.Mufka/5902745612850-00.jpg" },
+                { name: "Rukávník na kočárek Zaffiro Steal Grey z ovčí vlny", priceWithVAT: "1090 CZK", priceWithoutVAT: "901 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745554006", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/03.Steal Grey/01.Mufka/5902745612904-00.jpg" },
+                { name: "Rukávník na kočárek Zaffiro Toffee z ovčí vlny", priceWithVAT: "1090 CZK", priceWithoutVAT: "901 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745554006", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/04.Toffee/01.Mufka/5902745612959-00.jpg" },      
+                { name: "Rukávník na kočárek Zaffiro Latte z ovčí vlny", priceWithVAT: "1090 CZK", priceWithoutVAT: "901 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745554006", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/05.Latte/01.Mufka/5902745613000-00.jpg" },      
+                { name: "Rukávník na kočárek Zaffiro Anthracite z ovčí vlny", priceWithVAT: "1090 CZK", priceWithoutVAT: "901 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745554006", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/06.Anthracite/01.Mufka/5902745613055-00.jpg" },      
+                { name: "Rukávník na kočárek Zaffiro Black (Aspen) z ovčí vlny", priceWithVAT: "1090 CZK", priceWithoutVAT: "901 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745554006", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/07.Black/01.Mufka/5902745613109-00.jpg" },   
+        ]
+        };
+
+function selectMainCategory(category) {
+    currentMainCategory = category;
+    const catalog = document.getElementById("catalog");
+    catalog.innerHTML = "";
+    document.getElementById("detail").style.display = "none";
+
+    // Nejprve skryj všechny collection navigace
+    document.getElementById("collections-nav").style.display = "none";
+    document.getElementById("collections-nav1").style.display = "none";
+
+    if (category === "fusaky") {
+        // Zobrazí jen fusaky navigaci
+        document.getElementById("collections-nav").style.display = "block";
+        document.getElementById("models-section").style.display = "block";
+
+        let allFusaky = [];
+        const fusakCollections = ["sierra", "nevada", "nordico", "scandi", "aspen"];
+
+        fusakCollections.forEach(col => {
+            if (products[col]) {
+                allFusaky = allFusaky.concat(products[col]);
+            }
+        });
+
+        if (allFusaky.length > 0) {
+            catalog.innerHTML = "";
+            allFusaky.forEach(product => {
+                const item = document.createElement("div");
+                item.classList.add("item");
+                item.innerHTML = `
+                    <img src="${product.image}" alt="${product.name}">
+                    <h3>${product.name}</h3>
+                    <p><strong>Cena s DPH:</strong> ${product.priceWithVAT}</p>
+                    <p><strong>Cena bez DPH:</strong> ${product.priceWithoutVAT}</p>
+                `;
+                item.onclick = () => openDetail(product);
+                catalog.appendChild(item);
+            });
+        } else {
+            catalog.innerHTML = "<p>Žádné fusaky nebyly nalezeny.</p>";
+        }
+
+} else if (category === "rukavniky") {
+    // Zobrazí jen rukavníky navigaci
+    document.getElementById("collections-nav1").style.display = "block";
+    document.getElementById("models-section").style.display = "none";
+
+    let allRukavniky = [];
+    const rukavnikyCollections = ["nordico1", "scandi1", "aspen1"]; 
+    // 👆 tady zadej přesné názvy kolekcí podle tvého objektu `products`
+
+    rukavnikyCollections.forEach(col => {
+        if (products[col]) {
+            allRukavniky = allRukavniky.concat(products[col]);
+        }
+    });
+
+    if (allRukavniky.length > 0) {
+        catalog.innerHTML = "";
+        allRukavniky.forEach(product => {
+            const item = document.createElement("div");
+            item.classList.add("item");
+            item.innerHTML = `
+                <img src="${product.image}" alt="${product.name}">
+                <h3>${product.name}</h3>
+                <p><strong>Cena s DPH:</strong> ${product.priceWithVAT}</p>
+                <p><strong>Cena bez DPH:</strong> ${product.priceWithoutVAT}</p>
+            `;
+            item.onclick = () => openDetail(product);
+            catalog.appendChild(item);
+        });
+    } else {
+        catalog.innerHTML = "<p>Žádné rukávníky nebyly nalezeny.</p>";
+    }
+}
+
+}
+
+
+
+
+        function showCategory(category, shouldScroll = false) {
+            document.getElementById("detail").style.display = "none";
+
+    const catalog = document.getElementById("catalog");
+    catalog.innerHTML = "";
+
+    products[category].forEach(product => {
+        const item = document.createElement("div");
+        item.classList.add("item");
+
+        item.innerHTML = `
+            <img src="${product.image}" alt="Kočárek">
+            <h3>${product.name}</h3>
+            <p><strong>Cena s DPH:</strong> ${product.priceWithVAT}</p>
+            <p><strong>Cena bez DPH:</strong> ${product.priceWithoutVAT}</p>
+        `;
+
+        item.onclick = () => openDetail(product);
+        catalog.appendChild(item);
+    });
+
+    // Posunutí obrazovky pouze při kliknutí na tlačítko (se zpožděním pro lepší vykreslení)
+    if (shouldScroll) {
+        setTimeout(() => {
+            catalog.scrollIntoView({ behavior: "smooth", block: "start" });
+        }, 250); // 100ms zpoždění pro plynulé posunutí
+    }
+}
+
+
+function openDetail(product) {
+    const detail = document.getElementById("detail");
+    detail.style.display = "flex";
+
+    document.getElementById("detailTitle").innerText = product.name;
+    document.getElementById("detailPriceWithVAT").innerText = product.priceWithVAT;
+    document.getElementById("detailPriceWithoutVAT").innerText = product.priceWithoutVAT;
+    document.getElementById("detailAvailability").innerText = product.availability;
+
+    const extraNote = document.getElementById("extraNote");
+if (product.name === "Roan Ivi Pine Green") {
+    extraNote.innerText = "Aktuálně dostupné pouze na nové konstrukci v barvě champagne (na obrázku)";
+} else {
+    extraNote.innerText = ""; // vyčisti pokud není tento produkt
+}
+    document.getElementById("detailSpecs").innerText = product.specs;
+    document.getElementById("detailImage").src = product.image;
+
+    const colorsContainer = document.getElementById("detailColors");
+    colorsContainer.innerHTML = ""; // Vyčištění předchozích barev
+
+    const colors = product.colors.split(", ");
+    colors.forEach(color => {
+        const colorCircle = document.createElement("div");
+        colorCircle.classList.add("color-circle");
+        colorCircle.style.backgroundColor = getColorCode(color);
+        colorsContainer.appendChild(colorCircle);
+    });
+
+    // Dynamicky vkládáme unikátní popis
+    document.getElementById("expanded-section").innerHTML = `
+        <h3>Bližší popis produktu</h3>
+        <div class="expanded-section-des">
+            ${product.description || "<p>Popis není dostupný.</p>"}
+        </div>
+    `;
+
+    const rect = detail.getBoundingClientRect();
+const scrollX = window.scrollX;
+const scrollY = window.scrollY;
+const windowHeight = window.innerHeight;
+const windowWidth = window.innerWidth;
+
+window.scrollTo({
+    top: scrollY + rect.top - (windowHeight / 2) + (rect.height / 2),
+    left: scrollX + rect.left - (windowWidth / 2) + (rect.width / 2),
+    behavior: "smooth"
+});
+
+    
+}
+
+const descriptions = {
+"Zimní fusak Zaffiro SleepGrow": `
+        <p><b>Univerzální zimní fusak Zaffiro SleepGrow </b> je určený pro miminka od narození až do cca 3–4 let.<br> Kombinuje moderní vzhled, přírodní materiály a praktické využití.</p>
+        <p class="extra-description">Hlavní vlastnosti</p>
+        <p>- vyrobený z ovčí vlny – hřeje, reguluje teplotu, odvádí vlhkost<br>
+           - nastavitelné délky 83–106 cm – fusak roste s dítětem<br>
+           - kompatibilní s většinou kočárků a autosedaček – univerzální otvory pro pásy<br>
+           - odolný materiál chrání před větrem, deštěm a špínou<br>
+           - variabilní použití – horní díl lze odepnout a využít samostatně<br>
+           - protiskluzový pruh – fusak drží na místě</p>
+        <p class="extra-description">Rozměry</p>
+        <p>- délka: 83 cm + 23 cm prodloužení (celkem 106 cm)<br>
+           - šířka: 50 cm</p>
+        <p class="extra-description">Materiál</p>
+        <p>- vnější: 100 % polyester<br>
+           - vnitřní: 100 % ovčí vlna<br>
+           - výplň: 100 % polyester</p>
+        <p>Fusak Zaffiro SleepGrow využijete v hlubokém i sportovním kočárku a autosedačce.<br> Díky ovčí vlně poskytne miminku maximální teplo a pohodlí během celé zimy.</p>
+    `,
+
+"Zimní fusak Zaffiro iGrow": `
+        <p><b>Univerzální zimní fusak Zaffiro iGrow</b> je určený pro miminka od narození až do 3 let.<br> Kombinuje moderní vzhled, přírodní materiály a praktické využití.</p>
+        <p class="extra-description">Hlavní vlastnosti</p>
+        <p>- vyrobený z ovčí vlny – hřeje, reguluje teplotu, odvádí vlhkost<br>
+           - nastavitelná délka 84–106 cm – fusak roste s dítětem<br>
+           - kompatibilní s většinou kočárků a autosedaček – univerzální otvory pro pásy<br>
+           - odolný materiál chrání před větrem, deštěm a špínou<br>
+           - variabilní použití – přední díl lze odepnout a využít samostatně<br>
+           - protiskluzový pruh – fusak drží na místě</p>
+        <p class="extra-description">Rozměry</p>
+        <p>- délka: 84 cm + 22 cm prodloužení (celkem 106 cm)<br>
+           - šířka: 45 cm</p>
+        <p class="extra-description">Materiál</p>
+        <p>- vnější: 100 % polyester<br>
+           - vnitřní: 100 % ovčí vlna<br>
+           - výplň: 100 % polyester</p>
+        <p>Fusak Zaffiro iGrow využijete v hlubokém i sportovním kočárku a autosedačce.<br> Díky ovčí vlně poskytne miminku maximální teplo a pohodlí během celé zimy.</p>
+    `,
+
+"Zimní fusak Zaffiro EverGrow": `
+        <p><b>Univerzální zimní fusak Zaffiro EverGrow</b> je určený pro děti od narození do 3–4 let.<br> Kombinuje přírodní ovčí vlnu, odolné materiály a praktické využití. Díky regulovatelné délce 88–107 cm roste společně s dítětem.</p>
+        <p class="extra-description">Hlavní vlastnosti</p>
+        <p>- 100% přírodní ovčí vlna – hřeje, dýchá a je hypoalergenní<br>
+           - regulovatelná délka 88–107 cm – fusak roste s dítětem<br>
+           - univerzální otvory na pásy – pasuje do většiny kočárků, autosedaček<br>
+           - vodoodpudivý a odolný materiál – ochrana před sněhem, deštěm i nečistotami<br>
+           - spodní část s ochrannou úpravou W/R – odolná pro dětské botičky<br>
+           - horní část lze stáhnout do kapuce – ochrana hlavičky před zimou a větrem<br>
+           - přední díl lze odepnout – využití jako teplá podložka do kočárku<br>
+           - protiskluzová vrstva – fusak drží na místě i při pohybu</p>
+        <p class="extra-description">Rozměry</p>
+        <p>- délka: 88 cm + 19 cm prodloužení (celkem 107 cm)<br>
+           - šířka: 45 cm</p>
+        <p class="extra-description">Materiál</p>
+        <p>- vnější: 100 % polyester (vodoodpudivý, odolný)<br>
+           - vnitřní: 100 % ovčí vlna<br>
+           - výplň: 100 % polyester (antialergenní vlákno 300 g/m²)</p>
+        <p>Fusak Zaffiro EverGrow poskytne dítěti maximální pohodlí a ochranu během celé zimy.<br> Díky ovčí vlně se postará o správnou regulaci teploty a zaručí komfort i v těch nejchladnějších dnech.</p>
+    `,
+
+"Zimní fusak Zaffiro GrowUP": `
+        <p><b>Univerzální fusak Zaffiro GrowUp </b> je určený pro děti od narození až do 3–4 let.<br> Spojuje elegantní design, přírodní ovčí vlnu a praktické využití v každém ročním období.</p>
+        <p class="extra-description">Hlavní vlastnosti</p>
+        <p>- vnitřní vrstva z ovčí vlny – hřeje, reguluje teplotu a odvádí vlhkost<br>
+           - nastavitelná délka 81–110 cm – fusak roste spolu s dítětem<br>
+           - kompatibilní s většinou kočárků, autosedaček i saní – univerzální otvory pro pásy<br>
+           - vnější tkanina s úpravou W/R – odolná vůči větru, vlhkosti a nečistotám<br>
+           - odnímatelný kožešinový lem – ochrana proti větru a chladu<br>
+           - dolní část s nepromokavou úpravou – ideální i pro starší děti s botičkami<br>
+           - možnost přeměny spodní části na praktickou tašku<br>
+           - protiskluzová zadní strana – fusak drží pevně na místě</p>
+        <p class="extra-description">Rozměry</p>
+        <p>- délka: 81 cm + 29 cm prodloužení (celkem 110 cm)<br>
+           - šířka: 45 cm</p>
+        <p class="extra-description">Materiál</p>
+        <p>- vnější: 100 % polyester<br>
+           - vnitřní: 100 % ovčí vlna<br>
+           - výplň: 100 % polyester (antialergická vlákna 300 g/m²)</p>
+        <p>Fusak Zaffiro GrowUp využijete v hlubokém i sportovním kočárku, autosedačce nebo na saních.<br> Díky přírodní ovčí vlně poskytne vašemu dítěti teplo a maximální pohodlí během celé zimy i chladných dní.</p>
+    `,
+
+
+};
+
+// Přiřazení popisu všem produktům
+const categories = Object.keys(products);
+categories.forEach(category => {
+    products[category].forEach(product => {
+        // Kontrola, zda název modelu odpovídá některému z uvedených modelů
+        Object.keys(descriptions).forEach(model => {
+            if (product.name.includes(model)) {
+                product.description = descriptions[model];
+            }
+        });
+    });
+});
+
+
+// Převod názvu barvy na HEX kód
+function getColorCode(color) {
+    const colorMap = {
+        "Černá": "#000000",
+        "Bílá": "#ffffff",
+        "Červená": "#ff0000",
+        "Modrá": "#0000ff",
+        "Zelená": "#60635c",
+        "Šedá": "#808080",
+        "Stříbrná": "#c0c0c0"
+    };
+    return colorMap[color] || "#cccccc"; // Výchozí šedá, pokud barva není v seznamu
+}
+
+// Načíst výchozí kategorii při načtení stránky
+document.addEventListener("DOMContentLoaded", function () {
+    showCategory("vsechno");
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const toggleButton = document.getElementById("toggle-panel");
+    const detailContainer = document.getElementById("detail");
+    const expandedSection = document.getElementById("expanded-section");
+
+    toggleButton.addEventListener("click", function (event) {
+        event.stopPropagation(); // Zabrání uzavření při kliknutí na tlačítko
+        detailContainer.classList.toggle("expanded");
+        expandedSection.classList.toggle("show");
+
+        if (expandedSection.classList.contains("show")) {
+            setTimeout(() => {
+                window.scrollTo({
+                    top: expandedSection.offsetTop - 150,
+                    behavior: "smooth"
+                });
+            }, 300);
+        }
+    });
+
+    // Přidání event listeneru pro zavření sekce při kliknutí kamkoliv jinam
+    document.addEventListener("click", function (event) {
+        if (!detailContainer.contains(event.target) && !toggleButton.contains(event.target)) {
+            detailContainer.classList.remove("expanded");
+            expandedSection.classList.remove("show");
+        }
+    });
+
+    expandedSection.addEventListener("click", function (event) {
+        event.stopPropagation(); // Zabrání zavření při kliknutí do samotného okna
+    });
+});
+
+let currentProductImages = []; 
+let currentIndex = 0; 
+
+const extraImages = {
+    //SIERRA
+    "Zimní fusak Zaffiro Maxi Beige z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/01.Beige/04.Śpiworek/Maxi 0-36m/5902745612478-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/01.Beige/04.Śpiworek/Maxi 0-36m/5902745612478-02.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/01.Beige/04.Śpiworek/Maxi 0-36m/5902745612478-03.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/01.Beige/04.Śpiworek/Maxi 0-36m/5902745612478-04.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/01.Beige/04.Śpiworek/Maxi 0-36m/5902745612478-06.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/01.Beige/04.Śpiworek/Maxi 0-36m/5902745612478-07.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/01.Beige/04.Śpiworek/Maxi 0-36m/5902745612478-08.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/01.Beige/04.Śpiworek/Maxi 0-36m/5902745612478-09.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/01.Beige/04.Śpiworek/Maxi 0-36m/5902745612478-10.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/01.Beige/04.Śpiworek/Maxi 0-36m/5902745612478-11.jpg",
+    ],
+
+    "Zimní fusak Zaffiro Mini Beige z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/01.Beige/04.Śpiworek/Mini 0-18m/5902745554006-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/01.Beige/04.Śpiworek/Mini 0-18m/5902745554006-02.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/01.Beige/04.Śpiworek/Mini 0-18m/5902745554006-03.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/01.Beige/04.Śpiworek/Mini 0-18m/5902745554006-04.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/01.Beige/04.Śpiworek/Mini 0-18m/5902745554006-05.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/01.Beige/04.Śpiworek/Mini 0-18m/5902745554006-06.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/01.Beige/04.Śpiworek/Mini 0-18m/5902745554006-07.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/01.Beige/04.Śpiworek/Mini 0-18m/5902745554006-08.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/01.Beige/04.Śpiworek/Mini 0-18m/5902745554006-09.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/01.Beige/04.Śpiworek/Mini 0-18m/5902745554006-20.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/01.Beige/04.Śpiworek/Mini 0-18m/5902745554006-21.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/01.Beige/04.Śpiworek/Mini 0-18m/5902745554006-22.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/01.Beige/04.Śpiworek/Mini 0-18m/5902745554006-23.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/01.Beige/04.Śpiworek/Mini 0-18m/5902745554006-24.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/01.Beige/04.Śpiworek/Mini 0-18m/5902745554006-25.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/01.Beige/04.Śpiworek/Mini 0-18m/5902745554006-26.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/01.Beige/04.Śpiworek/Mini 0-18m/5902745554006-28.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/01.Beige/04.Śpiworek/Mini 0-18m/5902745554006-29.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/01.Beige/04.Śpiworek/Mini 0-18m/5902745554006-30.jpg",
+    ],
+
+    "Zimní fusak Zaffiro Maxi Brown z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/02.Brown/04.Śpiworek/Maxi 0-36m/5902745612515-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/02.Brown/04.Śpiworek/Maxi 0-36m/5902745612515-02.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/02.Brown/04.Śpiworek/Maxi 0-36m/5902745612515-03.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/02.Brown/04.Śpiworek/Maxi 0-36m/5902745612515-04.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/02.Brown/04.Śpiworek/Maxi 0-36m/5902745612515-05.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/02.Brown/04.Śpiworek/Maxi 0-36m/5902745612515-06.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/02.Brown/04.Śpiworek/Maxi 0-36m/5902745612515-07.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/02.Brown/04.Śpiworek/Maxi 0-36m/5902745612515-08.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/02.Brown/04.Śpiworek/Maxi 0-36m/5902745612515-09.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/02.Brown/04.Śpiworek/Maxi 0-36m/5902745612515-10.jpg",
+    ],
+
+    "Zimní fusak Zaffiro Mini Brown z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/02.Brown/04.Śpiworek/Mini 0-18m/5902745612508-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/02.Brown/04.Śpiworek/Mini 0-18m/5902745612508-02.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/02.Brown/04.Śpiworek/Mini 0-18m/5902745612508-03.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/02.Brown/04.Śpiworek/Mini 0-18m/5902745612508-04.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/02.Brown/04.Śpiworek/Mini 0-18m/5902745612508-05.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/02.Brown/04.Śpiworek/Mini 0-18m/5902745612508-06.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/02.Brown/04.Śpiworek/Mini 0-18m/5902745612508-07.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/02.Brown/04.Śpiworek/Mini 0-18m/5902745612508-08.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/02.Brown/04.Śpiworek/Mini 0-18m/5902745612508-09.jpg",
+    ],
+
+    "Zimní fusak Zaffiro Maxi Grey z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/03.Grey/04.Śpiworek/Maxi 0-36m/5902745612546-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/03.Grey/04.Śpiworek/Maxi 0-36m/5902745612546-02.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/03.Grey/04.Śpiworek/Maxi 0-36m/5902745612546-03.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/03.Grey/04.Śpiworek/Maxi 0-36m/5902745612546-04.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/03.Grey/04.Śpiworek/Maxi 0-36m/5902745612546-05.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/03.Grey/04.Śpiworek/Maxi 0-36m/5902745612546-06.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/03.Grey/04.Śpiworek/Maxi 0-36m/5902745612546-07.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/03.Grey/04.Śpiworek/Maxi 0-36m/5902745612546-08.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/03.Grey/04.Śpiworek/Maxi 0-36m/5902745612546-09.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/03.Grey/04.Śpiworek/Maxi 0-36m/5902745612546-10.jpg",
+    ],
+
+    "Zimní fusak Zaffiro Mini Grey z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/03.Grey/04.Śpiworek/Mini 0-18m/5902745554013-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/03.Grey/04.Śpiworek/Mini 0-18m/5902745554013-02.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/03.Grey/04.Śpiworek/Mini 0-18m/5902745554013-03.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/03.Grey/04.Śpiworek/Mini 0-18m/5902745554013-04.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/03.Grey/04.Śpiworek/Mini 0-18m/5902745554013-05.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/03.Grey/04.Śpiworek/Mini 0-18m/5902745554013-06.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/03.Grey/04.Śpiworek/Mini 0-18m/5902745554013-07.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/03.Grey/04.Śpiworek/Mini 0-18m/5902745554013-08.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/03.Grey/04.Śpiworek/Mini 0-18m/5902745554013-09.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/03.Grey/04.Śpiworek/Mini 0-18m/5902745554013-20.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/03.Grey/04.Śpiworek/Mini 0-18m/5902745554013-21.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/03.Grey/04.Śpiworek/Mini 0-18m/5902745554013-22.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/03.Grey/04.Śpiworek/Mini 0-18m/5902745554013-23.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/03.Grey/04.Śpiworek/Mini 0-18m/5902745554013-24.jpg",
+    ],
+
+    "Zimní fusak Zaffiro Maxi Anthracite z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/04.Anthracite/04.Śpiworek/Maxi 0-36m/5902745612584-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/04.Anthracite/04.Śpiworek/Maxi 0-36m/5902745612584-02.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/04.Anthracite/04.Śpiworek/Maxi 0-36m/5902745612584-03.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/04.Anthracite/04.Śpiworek/Maxi 0-36m/5902745612584-04.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/04.Anthracite/04.Śpiworek/Maxi 0-36m/5902745612584-05.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/04.Anthracite/04.Śpiworek/Maxi 0-36m/5902745612584-06.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/04.Anthracite/04.Śpiworek/Maxi 0-36m/5902745612584-07.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/04.Anthracite/04.Śpiworek/Maxi 0-36m/5902745612584-08.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/04.Anthracite/04.Śpiworek/Maxi 0-36m/5902745612584-09.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/04.Anthracite/04.Śpiworek/Maxi 0-36m/5902745612584-10.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/04.Anthracite/04.Śpiworek/Maxi 0-36m/5902745612584-11.jpg",
+    ],
+
+    "Zimní fusak Zaffiro Mini Anthracite z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/04.Anthracite/04.Śpiworek/Mini 0-18m/5902745612577-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/04.Anthracite/04.Śpiworek/Mini 0-18m/5902745612577-02.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/04.Anthracite/04.Śpiworek/Mini 0-18m/5902745612577-03.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/04.Anthracite/04.Śpiworek/Mini 0-18m/5902745612577-00.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/04.Anthracite/04.Śpiworek/Mini 0-18m/5902745612577-05.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/04.Anthracite/04.Śpiworek/Mini 0-18m/5902745612577-06.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/04.Anthracite/04.Śpiworek/Mini 0-18m/5902745612577-07.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/04.Anthracite/04.Śpiworek/Mini 0-18m/5902745612577-08.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/04.Anthracite/04.Śpiworek/Mini 0-18m/5902745612577-09.jpg",
+    ],
+
+    //NEVADA
+    "Zimní fusak Zaffiro Mini Beige (Nevada) z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/02.Nevada/01.Beige/06.Śpiworek/Mini 0-18m/5902745613888 -2.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/02.Nevada/01.Beige/06.Śpiworek/Mini 0-18m/5902745613888 -3.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/02.Nevada/01.Beige/06.Śpiworek/Mini 0-18m/5902745613888 -4.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/02.Nevada/01.Beige/06.Śpiworek/Mini 0-18m/5902745613888 -5.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/02.Nevada/01.Beige/06.Śpiworek/Mini 0-18m/5902745613888 -6.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/02.Nevada/01.Beige/06.Śpiworek/Mini 0-18m/5902745613888 -7.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/02.Nevada/01.Beige/06.Śpiworek/Mini 0-18m/5902745613888 -8.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/02.Nevada/01.Beige/06.Śpiworek/Mini 0-18m/5902745613888 -9.jpg",
+    ],
+
+    "Zimní fusak Zaffiro Mini Brown (Nevada) z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/02.Nevada/02.Brown/06.Śpiworek/Mini 0-18m/5902745613871-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/02.Nevada/02.Brown/06.Śpiworek/Mini 0-18m/5902745613871-02.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/02.Nevada/02.Brown/06.Śpiworek/Mini 0-18m/5902745613871-03.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/02.Nevada/02.Brown/06.Śpiworek/Mini 0-18m/5902745613871-04.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/02.Nevada/02.Brown/06.Śpiworek/Mini 0-18m/5902745613871-05.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/02.Nevada/02.Brown/06.Śpiworek/Mini 0-18m/5902745613871-06.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/02.Nevada/02.Brown/06.Śpiworek/Mini 0-18m/5902745613871-07.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/02.Nevada/02.Brown/06.Śpiworek/Mini 0-18m/5902745613871-08.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/02.Nevada/02.Brown/06.Śpiworek/Mini 0-18m/5902745613871-09.jpg",
+    ],
+
+    "Zimní fusak Zaffiro Mini Grey (Nevada) z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/02.Nevada/03.Grey/06.Śpiworek/Mini 0-18m/5902745613895-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/02.Nevada/03.Grey/06.Śpiworek/Mini 0-18m/5902745613895-02.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/02.Nevada/03.Grey/06.Śpiworek/Mini 0-18m/5902745613895-03.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/02.Nevada/03.Grey/06.Śpiworek/Mini 0-18m/5902745613895-04.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/02.Nevada/03.Grey/06.Śpiworek/Mini 0-18m/5902745613895-05.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/02.Nevada/03.Grey/06.Śpiworek/Mini 0-18m/5902745613895-06.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/02.Nevada/03.Grey/06.Śpiworek/Mini 0-18m/5902745613895-07.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/02.Nevada/03.Grey/06.Śpiworek/Mini 0-18m/5902745613895-08.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/02.Nevada/03.Grey/06.Śpiworek/Mini 0-18m/5902745613895-09.jpg",
+    ],
+
+    "Zimní fusak Zaffiro Mini Anthracite (Nevada) z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/02.Nevada/04.Anthracite/06.Śpiworek/Mini 0-18m/5902745613901-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/02.Nevada/04.Anthracite/06.Śpiworek/Mini 0-18m/5902745613901-02.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/02.Nevada/04.Anthracite/06.Śpiworek/Mini 0-18m/5902745613901-03.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/02.Nevada/04.Anthracite/06.Śpiworek/Mini 0-18m/5902745613901-04.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/02.Nevada/04.Anthracite/06.Śpiworek/Mini 0-18m/5902745613901-05.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/02.Nevada/04.Anthracite/06.Śpiworek/Mini 0-18m/5902745613901-06.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/02.Nevada/04.Anthracite/06.Śpiworek/Mini 0-18m/5902745613901-07.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/02.Nevada/04.Anthracite/06.Śpiworek/Mini 0-18m/5902745613901-08.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/02.Nevada/04.Anthracite/06.Śpiworek/Mini 0-18m/5902745613901-09.jpg",
+    ],
+
+    //NORDICO
+    "Zimní fusak Zaffiro EverGrow Beige z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/01.Beige/02.Śpiworek/03.EverGrow/5902745612638-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/01.Beige/02.Śpiworek/03.EverGrow/5902745612638-02.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/01.Beige/02.Śpiworek/03.EverGrow/5902745612638-03.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/01.Beige/02.Śpiworek/03.EverGrow/5902745612638-04.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/01.Beige/02.Śpiworek/03.EverGrow/5902745612638-05.jpg",
+    ],
+
+    "Zimní fusak Zaffiro SleepGrow Beige z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/01.Beige/02.Śpiworek/01.SleepGrow/5902745612614-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/01.Beige/02.Śpiworek/01.SleepGrow/5902745612614-02.jpg",
+    ],
+
+    "Zimní fusak Zaffiro iGrow Beige z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/01.Beige/02.Śpiworek/02.iGrow/5902745612621-01.jpg", 
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/01.Beige/02.Śpiworek/02.iGrow/5902745612621-02.jpg",    
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/01.Beige/02.Śpiworek/02.iGrow/5902745612621-03.jpg",    
+    ],
+
+    "Zimní fusak Zaffiro GrowUP Beige z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/01.Beige/02.Śpiworek/04.GrowUP/5902745612645-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/01.Beige/02.Śpiworek/04.GrowUP/5902745612645-02.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/01.Beige/02.Śpiworek/04.GrowUP/5902745612645-03.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/01.Beige/02.Śpiworek/04.GrowUP/5902745612645-04.jpg",
+    ],
+
+    "Zimní fusak Zaffiro SleepGrow Taupe z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/02.Taupe/02.Śpiworek/01.SleepGrow/5902745612669-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/02.Taupe/02.Śpiworek/01.SleepGrow/5902745612669-02.jpg",
+    ],
+
+    "Zimní fusak Zaffiro iGrow Taupe z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/02.Taupe/02.Śpiworek/02.iGrow/5902745612676-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/02.Taupe/02.Śpiworek/02.iGrow/5902745612676-02.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/02.Taupe/02.Śpiworek/02.iGrow/5902745612676-03.jpg",
+    ],
+
+    "Zimní fusak Zaffiro EverGrow Taupe z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/02.Taupe/02.Śpiworek/03.EverGrow/5902745612683-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/02.Taupe/02.Śpiworek/03.EverGrow/5902745612683-02.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/02.Taupe/02.Śpiworek/03.EverGrow/5902745612683-03.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/02.Taupe/02.Śpiworek/03.EverGrow/5902745612683-04.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/02.Taupe/02.Śpiworek/03.EverGrow/5902745612683-05.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/02.Taupe/02.Śpiworek/03.EverGrow/5902745612683-06.jpg",
+    ],
+
+    "Zimní fusak Zaffiro GrowUP Taupe z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/02.Taupe/02.Śpiworek/04.GrowUP/5902745612706-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/02.Taupe/02.Śpiworek/04.GrowUP/5902745612706-02.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/02.Taupe/02.Śpiworek/04.GrowUP/5902745612706-03.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/02.Taupe/02.Śpiworek/04.GrowUP/5902745612706-04.jpg",
+    ],
+
+    "Zimní fusak Zaffiro SleepGrow Bottle Green z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/03.Bottle Green/02.Śpiworek/01.SleepGrow/5902745612713-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/03.Bottle Green/02.Śpiworek/01.SleepGrow/5902745612713-02.jpg",
+    ],
+
+    "Zimní fusak Zaffiro iGrow Bottle Green z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/03.Bottle Green/02.Śpiworek/02.iGrow/5902745612720-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/03.Bottle Green/02.Śpiworek/02.iGrow/5902745612720-02.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/03.Bottle Green/02.Śpiworek/02.iGrow/5902745612720-03.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/03.Bottle Green/02.Śpiworek/02.iGrow/5902745612720-04.jpg",
+    ],
+
+    "Zimní fusak Zaffiro EverGrow Bottle Green z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/03.Bottle Green/02.Śpiworek/03.EverGrow/5902745612737-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/03.Bottle Green/02.Śpiworek/03.EverGrow/5902745612737-02.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/03.Bottle Green/02.Śpiworek/03.EverGrow/5902745612737-03.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/03.Bottle Green/02.Śpiworek/03.EverGrow/5902745612737-04.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/03.Bottle Green/02.Śpiworek/03.EverGrow/5902745612737-05.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/03.Bottle Green/02.Śpiworek/03.EverGrow/5902745612737-06.jpg",
+    ],
+
+    "Zimní fusak Zaffiro GrowUP Bottle Green z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/03.Bottle Green/02.Śpiworek/04.GrowUP/5902745612744-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/03.Bottle Green/02.Śpiworek/04.GrowUP/5902745612744-02.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/03.Bottle Green/02.Śpiworek/04.GrowUP/5902745612744-03.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/03.Bottle Green/02.Śpiworek/04.GrowUP/5902745612744-04.jpg",
+
+    ],
+
+    "Zimní fusak Zaffiro SleepGrow Black z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/04.Black/02.Śpiworek/01.SleepGrow/5902745612768-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/04.Black/02.Śpiworek/01.SleepGrow/5902745612768-02.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/04.Black/02.Śpiworek/01.SleepGrow/5902745612768-03.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/04.Black/02.Śpiworek/01.SleepGrow/5902745612768-04.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/04.Black/02.Śpiworek/01.SleepGrow/5902745612768-05.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/04.Black/02.Śpiworek/01.SleepGrow/5902745612768-06.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/04.Black/02.Śpiworek/01.SleepGrow/5902745612768-20.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/04.Black/02.Śpiworek/01.SleepGrow/5902745612768-21.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/04.Black/02.Śpiworek/01.SleepGrow/5902745612768-22.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/04.Black/02.Śpiworek/01.SleepGrow/5902745612768-23.jpg",
+    ],
+
+    "Zimní fusak Zaffiro iGrow Black z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/04.Black/02.Śpiworek/02.iGrow/5902745612775-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/04.Black/02.Śpiworek/02.iGrow/5902745612775-02.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/04.Black/02.Śpiworek/02.iGrow/5902745612775-03.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/04.Black/02.Śpiworek/02.iGrow/5902745612775-04.jpg",
+    ],
+
+    "Zimní fusak Zaffiro EverGrow Black z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/04.Black/02.Śpiworek/03.EverGrow/5902745612782-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/04.Black/02.Śpiworek/03.EverGrow/5902745612782-02.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/04.Black/02.Śpiworek/03.EverGrow/5902745612782-03.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/04.Black/02.Śpiworek/03.EverGrow/5902745612782-04.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/04.Black/02.Śpiworek/03.EverGrow/5902745612782-05.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/04.Black/02.Śpiworek/03.EverGrow/5902745612782-06.jpg",
+    ],
+
+    "Zimní fusak Zaffiro GrowUP Black z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/04.Black/02.Śpiworek/04.GrowUP/5902745612799-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/04.Black/02.Śpiworek/04.GrowUP/5902745612799-02.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/04.Black/02.Śpiworek/04.GrowUP/5902745612799-03.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/04.Black/02.Śpiworek/04.GrowUP/5902745612799-04.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/03.Nordico/04.Black/02.Śpiworek/04.GrowUP/5902745612799-05.jpg",
+    ],
+//SCANDI
+    "Zimní fusak Zaffiro SleepGrow Beige (Scandi) z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/01.Beige/02.Śpiworek/01.SleepGrow/5902745613987-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/01.Beige/02.Śpiworek/01.SleepGrow/5902745613987-02.jpg",
+    ],
+
+    "Zimní fusak Zaffiro iGrow Beige (Scandi) z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/01.Beige/02.Śpiworek/02.iGrow/5902745613994-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/01.Beige/02.Śpiworek/02.iGrow/5902745613994-02.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/01.Beige/02.Śpiworek/02.iGrow/5902745613994-03.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/01.Beige/02.Śpiworek/02.iGrow/5902745613994-20.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/01.Beige/02.Śpiworek/02.iGrow/5902745613994-21.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/01.Beige/02.Śpiworek/02.iGrow/5902745613994-22.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/01.Beige/02.Śpiworek/02.iGrow/5902745613994-23.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/01.Beige/02.Śpiworek/02.iGrow/5902745613994-24.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/01.Beige/02.Śpiworek/02.iGrow/5902745613994-25.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/01.Beige/02.Śpiworek/02.iGrow/5902745613994-26.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/01.Beige/02.Śpiworek/02.iGrow/5902745613994-27.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/01.Beige/02.Śpiworek/02.iGrow/5902745613994-28.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/01.Beige/02.Śpiworek/02.iGrow/5902745613994-29.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/01.Beige/02.Śpiworek/02.iGrow/5902745613994-30.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/01.Beige/02.Śpiworek/02.iGrow/5902745613994-31.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/01.Beige/02.Śpiworek/02.iGrow/5902745613994-32.jpg",
+    ],
+
+    "Zimní fusak Zaffiro EverGrow Beige (Scandi) z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/01.Beige/02.Śpiworek/03.EverGrow/5902745614007-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/01.Beige/02.Śpiworek/03.EverGrow/5902745614007-02.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/01.Beige/02.Śpiworek/03.EverGrow/5902745614007-03.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/01.Beige/02.Śpiworek/03.EverGrow/5902745614007-04.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/01.Beige/02.Śpiworek/03.EverGrow/5902745614007-05.jpg",
+    ],
+
+    "Zimní fusak Zaffiro GrowUP Beige (Scandi) z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/01.Beige/02.Śpiworek/04.GrowUP/5902745614014-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/01.Beige/02.Śpiworek/04.GrowUP/5902745614014-02.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/01.Beige/02.Śpiworek/04.GrowUP/5902745614014-03.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/01.Beige/02.Śpiworek/04.GrowUP/5902745614014-04.jpg",
+    ],
+
+    "Zimní fusak Zaffiro SleepGrow Light Grey z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/02.Light Grey/02.Śpiworek/01.SleepGrow/5902745614021-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/02.Light Grey/02.Śpiworek/01.SleepGrow/5902745614021-02.jpg",
+    ],
+    
+    "Zimní fusak Zaffiro iGrow Light Grey z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/02.Light Grey/02.Śpiworek/02.iGrow/5902745614038-02.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/02.Light Grey/02.Śpiworek/02.iGrow/5902745614038-03.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/02.Light Grey/02.Śpiworek/02.iGrow/5902745614038-20.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/02.Light Grey/02.Śpiworek/02.iGrow/5902745614038-21.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/02.Light Grey/02.Śpiworek/02.iGrow/5902745614038-22.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/02.Light Grey/02.Śpiworek/02.iGrow/5902745614038-23.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/02.Light Grey/02.Śpiworek/02.iGrow/5902745614038-24.jpg",
+    ],
+
+    "Zimní fusak Zaffiro EverGrow Light Grey z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/02.Light Grey/02.Śpiworek/03.EverGrow/5902745614045-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/02.Light Grey/02.Śpiworek/03.EverGrow/5902745614045-02.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/02.Light Grey/02.Śpiworek/03.EverGrow/5902745614045-03.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/02.Light Grey/02.Śpiworek/03.EverGrow/5902745614045-04.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/02.Light Grey/02.Śpiworek/03.EverGrow/5902745614045-05.jpg",
+    ],
+
+    "Zimní fusak Zaffiro GrowUP Light Grey z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/02.Light Grey/02.Śpiworek/04.GrowUP/5902745614052-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/02.Light Grey/02.Śpiworek/04.GrowUP/5902745614052-02.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/02.Light Grey/02.Śpiworek/04.GrowUP/5902745614052-03.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/02.Light Grey/02.Śpiworek/04.GrowUP/5902745614052-04.jpg",
+    ],
+
+    "Zimní fusak Zaffiro SleepGrow Grey z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/03.Grey/02.Śpiworek/01.SleepGrow/5902745614069-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/03.Grey/02.Śpiworek/01.SleepGrow/5902745614069-02.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/03.Grey/02.Śpiworek/01.SleepGrow/5902745614069-20.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/03.Grey/02.Śpiworek/01.SleepGrow/5902745614069-21.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/03.Grey/02.Śpiworek/01.SleepGrow/5902745614069-22.jpg",
+    ],
+
+    "Zimní fusak Zaffiro iGrow Grey z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/03.Grey/02.Śpiworek/02.iGrow/5902745614076-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/03.Grey/02.Śpiworek/02.iGrow/5902745614076-02.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/03.Grey/02.Śpiworek/02.iGrow/5902745614076-03.jpg",
+    ],
+
+    "Zimní fusak Zaffiro EverGrow Grey z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/03.Grey/02.Śpiworek/03.EverGrow/5902745614083-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/03.Grey/02.Śpiworek/03.EverGrow/5902745614083-02.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/03.Grey/02.Śpiworek/03.EverGrow/5902745614083-03.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/03.Grey/02.Śpiworek/03.EverGrow/5902745614083-04.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/03.Grey/02.Śpiworek/03.EverGrow/5902745614083-05.jpg",
+    ],
+
+    "Zimní fusak Zaffiro GrowUP Grey z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/03.Grey/02.Śpiworek/04.GrowUP/5902745614090-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/03.Grey/02.Śpiworek/04.GrowUP/5902745614090-02.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/03.Grey/02.Śpiworek/04.GrowUP/5902745614090-03.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/03.Grey/02.Śpiworek/04.GrowUP/5902745614090-04.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/03.Grey/02.Śpiworek/04.GrowUP/5902745614090-20.jpg",
+    ],
+
+    "Zimní fusak Zaffiro SleepGrow Black z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/04.Black/02.Śpiworek/01.SleepGrow/5902745614106-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/04.Black/02.Śpiworek/01.SleepGrow/5902745614106-02.jpg",
+    ],
+
+    "Zimní fusak Zaffiro iGrow Black z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/04.Black/02.Śpiworek/02.iGrow/5902745614113-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/04.Black/02.Śpiworek/02.iGrow/5902745614113-02.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/04.Black/02.Śpiworek/02.iGrow/5902745614113-03.jpg",
+    ],
+
+    "Zimní fusak Zaffiro EverGrow Black z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/04.Black/02.Śpiworek/03.EverGrow/5902745614120-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/04.Black/02.Śpiworek/03.EverGrow/5902745614120-02.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/04.Black/02.Śpiworek/03.EverGrow/5902745614120-03.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/04.Black/02.Śpiworek/03.EverGrow/5902745614120-04.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/04.Black/02.Śpiworek/03.EverGrow/5902745614120-05.jpg",
+    ],
+
+    "Zimní fusak Zaffiro GrowUP Black z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/04.Black/02.Śpiworek/04.GrowUP/5902745614137-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/04.Black/02.Śpiworek/04.GrowUP/5902745614137-02.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/04.Black/02.Śpiworek/04.GrowUP/5902745614137-03.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/04.Scandi/04.Black/02.Śpiworek/04.GrowUP/5902745614137-04.jpg",
+    ],
+//ASPEN
+    "Zimní fusak Zaffiro SleepGrow Vanilla z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/01.Vanilla/02.Śpiworek/01.SleepGrow/5902745612812-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/01.Vanilla/02.Śpiworek/01.SleepGrow/5902745612812-02.jpg",
+    ],
+
+    "Zimní fusak Zaffiro iGrow Vanilla z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/01.Vanilla/02.Śpiworek/02.iGrow/5902745612829-01.jpg",   
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/01.Vanilla/02.Śpiworek/02.iGrow/5902745612829-02.jpg",    
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/01.Vanilla/02.Śpiworek/02.iGrow/5902745612829-03.jpg",   
+    ],
+
+    "Zimní fusak Zaffiro EverGrow Vanilla z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/01.Vanilla/02.Śpiworek/03.EverGrow/5902745612836-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/01.Vanilla/02.Śpiworek/03.EverGrow/5902745612836-02.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/01.Vanilla/02.Śpiworek/03.EverGrow/5902745612836-03.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/01.Vanilla/02.Śpiworek/03.EverGrow/5902745612836-04.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/01.Vanilla/02.Śpiworek/03.EverGrow/5902745612836-05.jpg",
+    ],
+
+    "Zimní fusak Zaffiro GrowUP Vanilla z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/01.Vanilla/02.Śpiworek/04.GrowUP/5902745612843-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/01.Vanilla/02.Śpiworek/04.GrowUP/5902745612843-02.jpg",   
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/01.Vanilla/02.Śpiworek/04.GrowUP/5902745612843-03.jpg",   
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/01.Vanilla/02.Śpiworek/04.GrowUP/5902745612843-04.jpg",   
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/01.Vanilla/02.Śpiworek/04.GrowUP/5902745612843-20.jpg",   
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/01.Vanilla/02.Śpiworek/04.GrowUP/5902745612843-21.jpg",   
+    ],
+
+    "Zimní fusak Zaffiro SleepGrow Baby Pink z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/02.Baby Pink/02.Śpiworek/01.SleepGrow/5902745612867-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/02.Baby Pink/02.Śpiworek/01.SleepGrow/5902745612867-02.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/02.Baby Pink/02.Śpiworek/01.SleepGrow/5902745612867-03.jpg",
+    ],
+
+    "Zimní fusak Zaffiro iGrow Baby Pink z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/02.Baby Pink/02.Śpiworek/02.iGrow/5902745612874-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/02.Baby Pink/02.Śpiworek/02.iGrow/5902745612874-02.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/02.Baby Pink/02.Śpiworek/02.iGrow/5902745612874-03.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/02.Baby Pink/02.Śpiworek/02.iGrow/5902745612874-04.jpg",
+    ],
+
+    "Zimní fusak Zaffiro EverGrow Baby Pink z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/02.Baby Pink/02.Śpiworek/03.EverGrow/5902745612881-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/02.Baby Pink/02.Śpiworek/03.EverGrow/5902745612881-02.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/02.Baby Pink/02.Śpiworek/03.EverGrow/5902745612881-03.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/02.Baby Pink/02.Śpiworek/03.EverGrow/5902745612881-04.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/02.Baby Pink/02.Śpiworek/03.EverGrow/5902745612881-05.jpg",
+    ],
+
+    "Zimní fusak Zaffiro GrowUP Baby Pink z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/02.Baby Pink/02.Śpiworek/04.GrowUP/5902745612898-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/02.Baby Pink/02.Śpiworek/04.GrowUP/5902745612898-02.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/02.Baby Pink/02.Śpiworek/04.GrowUP/5902745612898-03.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/02.Baby Pink/02.Śpiworek/04.GrowUP/5902745612898-20.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/02.Baby Pink/02.Śpiworek/04.GrowUP/5902745612898-21.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/02.Baby Pink/02.Śpiworek/04.GrowUP/5902745612898-22.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/02.Baby Pink/02.Śpiworek/04.GrowUP/5902745612898-23.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/02.Baby Pink/02.Śpiworek/04.GrowUP/5902745612898-24.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/02.Baby Pink/02.Śpiworek/04.GrowUP/5902745612898-25.jpg",
+    ],
+    
+    "Zimní fusak Zaffiro SleepGrow Steal Grey z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/03.Steal Grey/02.Śpiworek/01.SleepGrow/5902745612911-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/03.Steal Grey/02.Śpiworek/01.SleepGrow/5902745612911-02.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/03.Steal Grey/02.Śpiworek/01.SleepGrow/5902745612911-11.jpg",
+    ],
+
+    "Zimní fusak Zaffiro iGrow Steal Grey z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/03.Steal Grey/02.Śpiworek/02.iGrow/5902745612928-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/03.Steal Grey/02.Śpiworek/02.iGrow/5902745612928-02.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/03.Steal Grey/02.Śpiworek/02.iGrow/5902745612928-03.jpg",
+    ],
+
+    "Zimní fusak Zaffiro EverGrow Steal Grey z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/03.Steal Grey/02.Śpiworek/03.EverGrow/5902745612935-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/03.Steal Grey/02.Śpiworek/03.EverGrow/5902745612935-02.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/03.Steal Grey/02.Śpiworek/03.EverGrow/5902745612935-03.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/03.Steal Grey/02.Śpiworek/03.EverGrow/5902745612935-04.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/03.Steal Grey/02.Śpiworek/03.EverGrow/5902745612935-05.jpg",
+    ],
+
+    "Zimní fusak Zaffiro GrowUP Steal Grey z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/03.Steal Grey/02.Śpiworek/04.GrowUP/5902745612942-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/03.Steal Grey/02.Śpiworek/04.GrowUP/5902745612942-02.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/03.Steal Grey/02.Śpiworek/04.GrowUP/5902745612942-03.jpg",
+    ],
+
+    "Zimní fusak Zaffiro SleepGrow Toffee z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/04.Toffee/02.Śpiworek/01.SleepGrow/5902745612966-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/04.Toffee/02.Śpiworek/01.SleepGrow/5902745612966-02.jpg",
+    ],
+
+    "Zimní fusak Zaffiro iGrow Toffee z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/04.Toffee/02.Śpiworek/02.iGrow/5902745612973-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/04.Toffee/02.Śpiworek/02.iGrow/5902745612973-02.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/04.Toffee/02.Śpiworek/02.iGrow/5902745612973-03.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/04.Toffee/02.Śpiworek/02.iGrow/5902745612973-11.jpg",
+    ],
+
+    "Zimní fusak Zaffiro EverGrow Toffee z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/04.Toffee/02.Śpiworek/03.EverGrow/5902745612980-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/04.Toffee/02.Śpiworek/03.EverGrow/5902745612980-02.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/04.Toffee/02.Śpiworek/03.EverGrow/5902745612980-03.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/04.Toffee/02.Śpiworek/03.EverGrow/5902745612980-04.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/04.Toffee/02.Śpiworek/03.EverGrow/5902745612980-05.jpg",
+    ],
+
+    "Zimní fusak Zaffiro GrowUP Toffee z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/04.Toffee/02.Śpiworek/04.GrowUP/5902745612997-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/04.Toffee/02.Śpiworek/04.GrowUP/5902745612997-02.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/04.Toffee/02.Śpiworek/04.GrowUP/5902745612997-03.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/04.Toffee/02.Śpiworek/04.GrowUP/5902745612997-11.jpg",
+    ],
+
+    "Zimní fusak Zaffiro SleepGrow Latte z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/05.Latte/02.Śpiworek/01.SleepGrow/5902745613017-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/05.Latte/02.Śpiworek/01.SleepGrow/5902745613017-02.jpg",
+    ],
+
+    "Zimní fusak Zaffiro iGrow Latte z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/05.Latte/02.Śpiworek/02.iGrow/5902745613024-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/05.Latte/02.Śpiworek/02.iGrow/5902745613024-02.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/05.Latte/02.Śpiworek/02.iGrow/5902745613024-03.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/05.Latte/02.Śpiworek/02.iGrow/5902745613024-11.jpg",
+    ],
+
+    "Zimní fusak Zaffiro EverGrow Latte z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/05.Latte/02.Śpiworek/03.EverGrow/5902745613031-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/05.Latte/02.Śpiworek/03.EverGrow/5902745613031-02.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/05.Latte/02.Śpiworek/03.EverGrow/5902745613031-03.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/05.Latte/02.Śpiworek/03.EverGrow/5902745613031-04.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/05.Latte/02.Śpiworek/03.EverGrow/5902745613031-05.jpg",
+    ],
+
+    "Zimní fusak Zaffiro GrowUP Latte z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/05.Latte/02.Śpiworek/04.GrowUP/5902745613048-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/05.Latte/02.Śpiworek/04.GrowUP/5902745613048-02.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/05.Latte/02.Śpiworek/04.GrowUP/5902745613048-03.jpg",
+    ],
+    
+    "Zimní fusak Zaffiro SleepGrow Anthracite z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/06.Anthracite/02.Śpiworek/01.SleepGrow/5902745613062-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/06.Anthracite/02.Śpiworek/01.SleepGrow/5902745613062-02.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/06.Anthracite/02.Śpiworek/01.SleepGrow/5902745613062-11.jpg",
+    ],
+
+    "Zimní fusak Zaffiro iGrow Anthracite z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/06.Anthracite/02.Śpiworek/02.iGrow/5902745613079-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/06.Anthracite/02.Śpiworek/02.iGrow/5902745613079-02.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/06.Anthracite/02.Śpiworek/02.iGrow/5902745613079-03.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/06.Anthracite/02.Śpiworek/02.iGrow/5902745613079-11.jpg",
+    ],
+    
+    "Zimní fusak Zaffiro EverGrow Anthracite z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/06.Anthracite/02.Śpiworek/03.EverGrow/5902745613086-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/06.Anthracite/02.Śpiworek/03.EverGrow/5902745613086-02.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/06.Anthracite/02.Śpiworek/03.EverGrow/5902745613086-03.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/06.Anthracite/02.Śpiworek/03.EverGrow/5902745613086-04.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/06.Anthracite/02.Śpiworek/03.EverGrow/5902745613086-05.jpg",
+    ],
+    
+    "Zimní fusak Zaffiro GrowUP Anthracite z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/06.Anthracite/02.Śpiworek/04.GrowUP/5902745613093-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/06.Anthracite/02.Śpiworek/04.GrowUP/5902745613093-02.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/06.Anthracite/02.Śpiworek/04.GrowUP/5902745613093-03.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/06.Anthracite/02.Śpiworek/04.GrowUP/5902745613093-04.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/06.Anthracite/02.Śpiworek/04.GrowUP/5902745613093-11.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/06.Anthracite/02.Śpiworek/04.GrowUP/5902745613093-12.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/06.Anthracite/02.Śpiworek/04.GrowUP/5902745613093-14.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/06.Anthracite/02.Śpiworek/04.GrowUP/5902745613093-15.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/06.Anthracite/02.Śpiworek/04.GrowUP/5902745613093-16.jpg",
+    ],
+
+    "Zimní fusak Zaffiro SleepGrow Black (Aspen) z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/07.Black/02.Śpiworek/01.SleepGrow/5902745613116-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/07.Black/02.Śpiworek/01.SleepGrow/5902745613116-02.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/07.Black/02.Śpiworek/01.SleepGrow/5902745613116-11.jpg",
+    ],
+
+    "Zimní fusak Zaffiro iGrow Black (Aspen) z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/07.Black/02.Śpiworek/02.iGrow/5902745613123-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/07.Black/02.Śpiworek/02.iGrow/5902745613123-02.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/07.Black/02.Śpiworek/02.iGrow/5902745613123-03.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/07.Black/02.Śpiworek/02.iGrow/5902745613123-11.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/07.Black/02.Śpiworek/02.iGrow/5902745613123-20.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/07.Black/02.Śpiworek/02.iGrow/5902745613123-21.jpg",
+    ],
+
+    "Zimní fusak Zaffiro EverGrow Black (Aspen) z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/07.Black/02.Śpiworek/03.EverGrow/5902745613130-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/07.Black/02.Śpiworek/03.EverGrow/5902745613130-02.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/07.Black/02.Śpiworek/03.EverGrow/5902745613130-03.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/07.Black/02.Śpiworek/03.EverGrow/5902745613130-04.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/07.Black/02.Śpiworek/03.EverGrow/5902745613130-05.jpg",
+    ],
+
+    "Zimní fusak Zaffiro GrowUP Black (Aspen) z ovčí vlny": [
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/07.Black/02.Śpiworek/04.GrowUP/5902745613147-01.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/07.Black/02.Śpiworek/04.GrowUP/5902745613147-02.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/07.Black/02.Śpiworek/04.GrowUP/5902745613147-03.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/07.Black/02.Śpiworek/04.GrowUP/5902745613147-04.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/07.Black/02.Śpiworek/04.GrowUP/5902745613147-20.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/07.Black/02.Śpiworek/04.GrowUP/5902745613147-21.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/07.Black/02.Śpiworek/04.GrowUP/5902745613147-22.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/07.Black/02.Śpiworek/04.GrowUP/5902745613147-23.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/07.Black/02.Śpiworek/04.GrowUP/5902745613147-24.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/07.Black/02.Śpiworek/04.GrowUP/5902745613147-25.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/07.Black/02.Śpiworek/04.GrowUP/5902745613147-26.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/07.Black/02.Śpiworek/04.GrowUP/5902745613147-27.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/07.Black/02.Śpiworek/04.GrowUP/5902745613147-28.jpg",
+        "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/07.Black/02.Śpiworek/04.GrowUP/5902745613147-29.jpg",
+    ],
+
+};
+
+// Otevření modálního okna s více obrázky
+function openImageModal() {
+    const detailImage = document.getElementById("detailImage").src;
+    const productName = document.getElementById("detailTitle").innerText;
+
+    currentProductImages = [detailImage]; // Hlavní obrázek vždy první
+    if (extraImages[productName]) {
+        currentProductImages = currentProductImages.concat(extraImages[productName]);
+    }
+
+    currentIndex = 0;
+    showImage(currentIndex);
+
+    // Zobrazit nebo skrýt šipky podle počtu obrázků
+    const prevBtn = document.querySelector(".prev");
+    const nextBtn = document.querySelector(".next");
+
+    if (currentProductImages.length > 1) {
+        prevBtn.style.display = "block";
+        nextBtn.style.display = "block";
+    } else {
+        prevBtn.style.display = "none";
+        nextBtn.style.display = "none";
+    }
+
+    document.getElementById("imageModal").style.display = "flex";
+}
+
+// Změna obrázku v modálním okně
+function showImage(index) {
+    if (index < 0) {
+        currentIndex = currentProductImages.length - 1;
+    } else if (index >= currentProductImages.length) {
+        currentIndex = 0;
+    } else {
+        currentIndex = index;
+    }
+    document.getElementById("modalImage").src = currentProductImages[currentIndex];
+}
+
+// Přepínání mezi obrázky
+function changeImage(direction) {
+    showImage(currentIndex + direction);
+}
+
+// Zavření modálního okna
+function closeImageModal() {
+    document.getElementById("imageModal").style.display = "none";
+}
+
+// Ovládání klávesnicí
+document.addEventListener("keydown", function (event) {
+    if (document.getElementById("imageModal").style.display === "flex") {
+        if (event.key === "ArrowRight" && currentProductImages.length > 1) {
+            changeImage(1);
+        } else if (event.key === "ArrowLeft" && currentProductImages.length > 1) {
+            changeImage(-1);
+        } else if (event.key === "Escape") {
+            closeImageModal();
+        }
+    }
+});
+    </script>
+</body>
+</html>
