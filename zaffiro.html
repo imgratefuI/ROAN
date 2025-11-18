@@ -448,7 +448,55 @@ h2 {
   color: white;
 }
 
+/* === KONTEJNER PRO KOLEKCE === */
+#collections-nav2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* zarovnání na střed */
+  gap: 10px;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  width: fit-content;
+  margin: 0 auto 0 auto; /* vystředění bloku na střed */
+}
 
+/* Nadpis (pokud tam máš <h2>) */
+#collections-nav2 h2 {
+  font-size: 0.9rem;
+  color: white;
+  margin-bottom: 4px;
+  letter-spacing: 1px;
+}
+
+/* === TLAČÍTKA UVNITŘ KOLEKCE === */
+#collections-nav2 button {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  padding: 8px 12px; /* přesně kolem textu */
+  height: auto;
+  width: auto;
+  white-space: nowrap;
+  color: #222;
+  font-weight: bold;
+  margin: 2px; /* malé mezery mezi tlačítky */
+}
+
+/* Hover efekt */
+#collections-nav2 button:hover {
+  transform: scale(1.05);
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.4);
+  background-color: rgb(116, 74, 74);
+  color: white;
+}
 
 /* Modelová část */
         .models-container {
@@ -791,6 +839,7 @@ h2 {
   <nav class="nav-links" id="nav-links">
     <button onclick="selectMainCategory('fusaky')">FUSAKY</button>
     <button onclick="selectMainCategory('rukavniky')">RUKÁVNÍKY</button>
+    <button onclick="selectMainCategory('decky')">DEČKY</button>
   </nav>
 </header>
 
@@ -825,6 +874,12 @@ h2 {
     <button onclick="showCategory('nordico1', true)">NORDICO</button>
     <button onclick="showCategory('scandi1', true)">SCANDI</button>
     <button onclick="showCategory('aspen1', true)">ASPEN</button>
+</div>
+
+<!-- Sekce pro kolekce (zůstává, ale bude se zobrazovat až po výběru hlavní kategorie) -->
+<div class="nav" id="collections-nav2" style="display:none;">
+    <h2 style="font-size: smaller; padding: 9px;border-radius: 10px;">KOLEKCE</h2>
+    <button onclick="showCategory('nevada2', true)">NEVADA</button>
 </div>
 
 <!-- Sekce pro modely (také se ukáže až po výběru) -->
@@ -1332,6 +1387,17 @@ document.querySelectorAll('.nav-links button').forEach(btn => {
                 { name: "Rukávník na kočárek Zaffiro Latte z ovčí vlny", priceWithVAT: "1090 CZK", priceWithoutVAT: "901 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745554006", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/05.Latte/01.Mufka/5902745613000-00.jpg" },      
                 { name: "Rukávník na kočárek Zaffiro Anthracite z ovčí vlny", priceWithVAT: "1090 CZK", priceWithoutVAT: "901 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745554006", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/06.Anthracite/01.Mufka/5902745613055-00.jpg" },      
                 { name: "Rukávník na kočárek Zaffiro Black (Aspen) z ovčí vlny", priceWithVAT: "1090 CZK", priceWithoutVAT: "901 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745554006", image: "ZDJĘCIA ZAFFIRO KOLEKCJE/05.Aspen/07.Black/01.Mufka/5902745613109-00.jpg" },   
+        ],
+
+        nevada2:[
+                { name: "Vlněná deka pro miminko Zaffiro Beige 75×100 cm", priceWithVAT: "990 CZK", priceWithoutVAT: "818 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612461", image: "decky/decka1.jpg" },
+                { name: "Vlněná deka pro miminko Zaffiro Beige 100×150 cm", priceWithVAT: "1390 CZK", priceWithoutVAT: "1149 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612461", image: "decky/decka1.jpg" },
+                { name: "Vlněná deka pro miminko Zaffiro Brown 75×100 cm", priceWithVAT: "990 CZK", priceWithoutVAT: "818 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612461", image: "decky/decka2.jpg" },
+                { name: "Vlněná deka pro miminko Zaffiro Brown 100×150 cm", priceWithVAT: "1390 CZK", priceWithoutVAT: "1149 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612461", image: "decky/decka2.jpg" },
+                { name: "Vlněná deka pro miminko Zaffiro Grey 75×100 cm", priceWithVAT: "990 CZK", priceWithoutVAT: "818 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612461", image: "decky/decka3.jpg" },
+                { name: "Vlněná deka pro miminko Zaffiro Grey 100×150 cm", priceWithVAT: "1390 CZK", priceWithoutVAT: "1149 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612461", image: "decky/decka3.jpg" },
+                { name: "Vlněná deka pro miminko Zaffiro Anthracite 75×100 cm", priceWithVAT: "990 CZK", priceWithoutVAT: "818 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612461", image: "decky/decka4.jpg" },
+                { name: "Vlněná deka pro miminko Zaffiro Anthracite 100×150 cm", priceWithVAT: "1390 CZK", priceWithoutVAT: "1149 CZK", availability: "1 týden", colors: "Šedá, Stříbrná", specs: "5902745612461", image: "decky/decka4.jpg" },
         ]
         };
 
@@ -1344,6 +1410,8 @@ function selectMainCategory(category) {
     // Nejprve skryj všechny collection navigace
     document.getElementById("collections-nav").style.display = "none";
     document.getElementById("collections-nav1").style.display = "none";
+    document.getElementById("collections-nav2").style.display = "none";
+
 
     if (category === "fusaky") {
         // Zobrazí jen fusaky navigaci
@@ -1408,6 +1476,40 @@ function selectMainCategory(category) {
         });
     } else {
         catalog.innerHTML = "<p>Žádné rukávníky nebyly nalezeny.</p>";
+    }
+}
+
+ else if (category === "decky") {
+    // Zobrazí jen rukavníky navigaci
+    document.getElementById("collections-nav2").style.display = "block";
+    document.getElementById("models-section").style.display = "none";
+
+    let allRukavniky = [];
+    const rukavnikyCollections = ["nevada2"]; 
+    // 👆 tady zadej přesné názvy kolekcí podle tvého objektu `products`
+
+    rukavnikyCollections.forEach(col => {
+        if (products[col]) {
+            allRukavniky = allRukavniky.concat(products[col]);
+        }
+    });
+
+    if (allRukavniky.length > 0) {
+        catalog.innerHTML = "";
+        allRukavniky.forEach(product => {
+            const item = document.createElement("div");
+            item.classList.add("item");
+            item.innerHTML = `
+                <img src="${product.image}" alt="${product.name}">
+                <h3>${product.name}</h3>
+                <p><strong>Cena s DPH:</strong> ${product.priceWithVAT}</p>
+                <p><strong>Cena bez DPH:</strong> ${product.priceWithoutVAT}</p>
+            `;
+            item.onclick = () => openDetail(product);
+            catalog.appendChild(item);
+        });
+    } else {
+        catalog.innerHTML = "<p>Žádné dečky nebyly nalezeny.</p>";
     }
 }
 
@@ -1596,7 +1698,7 @@ const descriptions = {
         <p class="extra-description">Materiál</p>
         <p>- vnější: odolná tkanina (100 % polyester)<br>
            - vnitřní: 100 % ovčí vlna</p>
-        <p>Rukávník Zaffiro Anthracite bude tvým spolehlivým parťákem na všechny zimní procházky.<br> Dopřeje ti teplo, sucho a pohodlí i v těch nejchladnějších dnech.</p>
+        <p>Rukávník Zaffiro bude tvým spolehlivým parťákem na všechny zimní procházky.<br> Dopřeje ti teplo, sucho a pohodlí i v těch nejchladnějších dnech.</p>
     `,
 
 
@@ -2318,7 +2420,46 @@ const extraImages = {
         "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/04.Anthracite/03.Mufki/5902745612560-02.jpg",
         "ZDJĘCIA ZAFFIRO KOLEKCJE/01.Sierra/04.Anthracite/03.Mufki/5902745612560-04.jpg",
     ],
-
+    "Vlněná deka pro miminko Zaffiro Beige 75×100 cm":[
+        "decky/decka5.jpg",
+        "decky/decka6.jpg",
+        "decky/decka7.jpg",
+    ],
+        "Vlněná deka pro miminko Zaffiro Beige 100×150 cm":[
+        "decky/decka5.jpg",
+        "decky/decka6.jpg",
+        "decky/decka7.jpg",
+    ],
+        "Vlněná deka pro miminko Zaffiro Brown 75×100 cm":[
+        "decky/decka5.jpg",
+        "decky/decka6.jpg",
+        "decky/decka7.jpg",
+    ],
+    "Vlněná deka pro miminko Zaffiro Brown 100×150 cm":[
+        "decky/decka5.jpg",
+        "decky/decka6.jpg",
+        "decky/decka7.jpg",
+    ],
+        "Vlněná deka pro miminko Zaffiro Grey 75×100 cm":[
+        "decky/decka5.jpg",
+        "decky/decka6.jpg",
+        "decky/decka7.jpg",
+    ],
+        "Vlněná deka pro miminko Zaffiro Grey 100×150 cm":[
+        "decky/decka5.jpg",
+        "decky/decka6.jpg",
+        "decky/decka7.jpg",
+    ],
+        "Vlněná deka pro miminko Zaffiro Anthracite 75×100 cm":[
+        "decky/decka5.jpg",
+        "decky/decka6.jpg",
+        "decky/decka7.jpg",
+    ],
+        "Vlněná deka pro miminko Zaffiro Anthracite 100×150 cm":[
+        "decky/decka5.jpg",
+        "decky/decka6.jpg",
+        "decky/decka7.jpg",
+    ],
 };
 
 // Otevření modálního okna s více obrázky
